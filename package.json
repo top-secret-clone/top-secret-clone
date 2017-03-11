@@ -21,7 +21,8 @@
     "body-parser": "^1.17.1",
     "del": "^2.2.2",
     "express": "^4.15.2",
-    "express-session": "^1.15.1"
+    "express-session": "^1.15.1",
+    "mongoose": "^4.8.6"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
