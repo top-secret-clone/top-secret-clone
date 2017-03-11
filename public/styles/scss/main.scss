@@ -1,0 +1,126 @@
+// Table of Contents:
+// ~~~~~~~~~~~~~~~~~~~
+// 1.) Variables
+// 2.) Mixins
+// 3.) Base Styles
+// 4.) Typography (links)
+// 5.) Scaffolding
+// 6.) Helpers
+// 7.) Grid
+// 8.) Components
+
+// 1.) Variables:
+// ~~~~~~~~~~~~~~~
+
+/* Containers */
+$x-small: 600px;
+$small: 800px;
+$medium: 1000px;
+$large: 1200px;
+$full: 100%;
+
+// Breakpoints
+$mobile: $x-small;
+$desktop: $medium;
+
+/* Colors */
+
+/* Typography */
+
+/* Components */
+
+// 2.) Mixins:
+// ~~~~~~~~~~~~
+
+/* Breakpoints */
+
+// Small breakpoint
+@mixin small-breakpoint {
+	@media (min-width: #{$mobile}) {
+		@content;
+	}
+}
+
+// Large breakpoint
+@mixin large-breakpoint {
+	@media (min-width: #{$desktop}) {
+		@content;
+	}
+}
+
+// 3.) Base Styles:
+// ~~~~~~~~~~~~~~~~~
+
+//Reset Border Box:
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+// 4.) Typography:
+// ~~~~~~~~~~~~~~~~
+
+/* Font */
+
+// Headings
+
+// Body Font
+
+// Links:
+a {
+  cursor: pointer;
+}
+
+// 5.) Scaffolding:
+// ~~~~~~~~~~~~~~~~~
+
+// 6.) Helpers:
+// ~~~~~~~~~~~~~
+
+// 7.) Grid:
+// ~~~~~~~~~~
+
+// NOTE: Once this is completed and reliable, use this article ( https://kyusuf.com/post/almost-complete-guide-to-flexbox-without-flexbox ) to rewrite it w/out flexbox for all browser support.
+
+//NOTE If you just want evenly sized columns, just keep adding columns in a row.
+
+.container {
+  max-width: 70%; //BUG fix this so it's full on small screen. Has to do with % and px.
+	margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex-basis: 100%;
+
+	//NOTE This style is for testing purposes only. Remove when done. NOTE//
+  
+	background-color: grey;
+	border: solid 2px black;
+	height: 100px;
+	text-align: center;
+	align-items: center;
+}
+
+//NOTE If you just want specifically sized columns, specify the percetage.
+
+@media screen and (min-width: 800px) {
+  .column {
+    flex: 1;
+  }
+}
+
+// 8.) Components:
+// ~~~~~~~~~~~~~~~~
+
+/* Buttons */
