@@ -7,32 +7,32 @@ angular.module("topSecret", ["ui.router"])
   .state('home', {
     url: '/',
     templateUrl: './home/home.html',
-    controller: './home/home.js'
+    controller: 'homeController'
   })
   .state('caseStudies', {
     url: '/caseStudies',
     templateUrl: './caseStudies/caseStudies.html',
-    controller: './caseStudies/caseStudies.js'
+    controller: 'caseStudiesController'
   })
   .state('work', {
     url: '/work',
     templateUrl: './work/work.html',
-    controller: './work/work.js'
+    controller: 'workController'
   })
   .state('about', {
     url: '/about',
     templateUrl: './about/about.html',
-    controller: './about/about.js'
+    controller: 'aboutController'
   })
   .state('capabilities', {
     url: '/capabilities',
     templateUrl: './capabilities/capabilities.html',
-    controller: './capabilities/capabilities.js'
+    controller: 'capabilitiesController'
   })
   .state('connect', {
     url: '/connect',
     templateUrl: './connect/connect.html',
-    controller: './connect/connect.js'
+    controller: 'connectController'
   })
 
 });
