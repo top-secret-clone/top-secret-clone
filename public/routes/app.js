@@ -6,32 +6,32 @@ angular.module("topSecret", ["ui.router"])
   $stateProvider
   .state('home', {
     url: '/',
-    templateUrl: './home/home.html',
+    templateUrl: './routes/home/home.html',
     controller: 'homeController'
   })
   .state('caseStudies', {
     url: '/caseStudies',
-    templateUrl: './caseStudies/caseStudies.html',
+    templateUrl: './routes/caseStudies/caseStudies.html',
     controller: 'caseStudiesController'
   })
   .state('work', {
     url: '/work',
-    templateUrl: './work/work.html',
+    templateUrl: './routes/work/work.html',
     controller: 'workController'
   })
   .state('about', {
     url: '/about',
-    templateUrl: './about/about.html',
+    templateUrl: './routes/about/about.html',
     controller: 'aboutController'
   })
   .state('capabilities', {
     url: '/capabilities',
-    templateUrl: './capabilities/capabilities.html',
+    templateUrl: './routes/capabilities/capabilities.html',
     controller: 'capabilitiesController'
   })
   .state('connect', {
     url: '/connect',
-    templateUrl: './connect/connect.html',
+    templateUrl: './routes/connect/connect.html',
     controller: 'connectController'
   })
 
