@@ -1,0 +1,107 @@
+$gold:#88714D;
+$padding:5%;
+$margin:5%;
+$textColor:#777777;
+$iconColor: #a1a0a0;
+$cream: #E9E9E9;
+$formWidth: 75%;
+$formPadding: 12px 20px;
+$formMargin: 8px 0;
+
+.connect-container {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.connect-banner {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-image: url('https://dummyimage.com/1280x800/000/fff&text=Connect');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.block {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;;
+  align-items: flex-end;
+  background-image: url('./images/map.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border: 1px solid $gold;
+
+  div{
+    width: 50%;
+  }
+
+  .sub-row {
+    width: 50%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+  }
+  span {
+
+  }
+  .icon {
+    color: $iconColor;
+  }
+  h1 {
+  color: $gold;
+  margin: $margin;
+  }
+
+  p {
+    margin: $margin;
+    color: $textColor;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .left {
+    width: 575px;
+    margin-left:100px;
+    border: 1px solid $gold;
+    background-color: $cream;
+  }
+  .right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    border: 1px solid $gold;
+  }
+  input {
+    width: $formWidth;
+    padding: $formPadding;
+    margin: $formMargin;
+    box-sizing: border-box;
+  }
+  textarea {
+    width: $formWidth;
+    height: 150px;
+    padding: $formPadding;
+    margin: $formMargin
+  }
+  button {
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: green;
+  }
+}
