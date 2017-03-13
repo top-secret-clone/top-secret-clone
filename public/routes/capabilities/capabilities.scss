@@ -7,7 +7,7 @@ $textColor:#D1D1D1;
   width: 100vw;
   margin: 0;
   padding: 0;
-  background-color: black;
+  background-color: #c0c0c0;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -16,7 +16,7 @@ $textColor:#D1D1D1;
 .capabilities-banner {
   position: relative;
   top: 0;
-  left: 0;
+  left: 0px;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -26,7 +26,7 @@ $textColor:#D1D1D1;
 }
 
 
-.block {
+.capabilities-body {
   height: 100vh;
   width: 100vw;
   padding: $padding;
@@ -63,4 +63,21 @@ $textColor:#D1D1D1;
   a {
     text-decoration: none;
   }
+}
+
+/* background for parralax  */
+.slant-left {
+  background-color: white;
+  height:400px;
+  width: 400px;
+  margin: -400px;
+  position: left;
+  background-image: url('./images/slant-left.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  color: #fff;
+}
+.slant-right {
+  background-image: url('./images/slant-right.png');
 }
