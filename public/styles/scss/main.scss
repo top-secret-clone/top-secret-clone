@@ -82,6 +82,10 @@ a {
 // 6.) Helpers:
 // ~~~~~~~~~~~~~
 
+.responsive-img {
+	width: 100%;
+}
+
 // 7.) Grid:
 // ~~~~~~~~~~
 
@@ -104,7 +108,7 @@ a {
   flex-basis: 100%;
 
 	//NOTE This style is for testing purposes only. Remove when done. NOTE//
-  
+
 	background-color: grey;
 	border: solid 2px black;
 	height: 100px;
@@ -112,10 +116,55 @@ a {
 	align-items: center;
 }
 
-//NOTE If you just want specifically sized columns, specify the percetage.
+//NOTE For unevenly sized columns, use these
+
+.one-third-column {
+	flex-basis: calc(100% / 3);
+	//NOTE The below styling is for testing purposes only. Remove when done. NOTE//
+	background-color: grey;
+	border: solid 2px black;
+	height: 100px;
+}
+
+.two-thirds-column {
+	flex-basis: calc(100% * (2/3));
+	//NOTE The below styling is for testing purposes only. Remove when done. NOTE//
+	background-color: grey;
+	border: solid 2px black;
+	height: 100px;
+}
+
+.one-quarter-column {
+	flex-basis: calc(100% / 4);
+	//NOTE The below styling is for testing purposes only. Remove when done. NOTE//
+	background-color: grey;
+	border: solid 2px black;
+	height: 100px;
+}
+
+.one-half-column {
+	flex-basis: calc(100% / 2);
+	//NOTE The below styling is for testing purposes only. Remove when done. NOTE//
+	background-color: grey;
+	border: solid 2px black;
+	height: 100px;
+}
+
+.three-quarters-column {
+	flex-basis: calc(100% * (3/4));
+	//NOTE The below styling is for testing purposes only. Remove when done. NOTE//
+	background-color: grey;
+	border: solid 2px black;
+	height: 100px;
+}
 
 @media screen and (min-width: 800px) {
-  .column {
+  .column,
+	.one-third-column,
+	.two-thirds-column,
+	.one-quarter-column,
+	.one-half-column,
+	.three-quarters-column {
     flex: 1;
   }
 }
