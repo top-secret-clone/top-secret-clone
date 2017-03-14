@@ -20,6 +20,7 @@ $textColor:#D1D1D1;
   left: 0px;
   height: 100vh;
   width: 100vw;
+  z-index: 200;
   background-image: url(https://dummyimage.com/1280x800/000/fff&text=Capabilities);
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,7 +35,7 @@ $textColor:#D1D1D1;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(48,48,48);
+  background-color: transparent;
   border: 1px solid $gold;
 
   div{
@@ -66,18 +67,55 @@ $textColor:#D1D1D1;
 }
 
 /* background for parralax  */
+.parallax-container {
+  position: relative;
+  width: 100vw;
+  height: 4410px
+}
 .slant-left {
-  background-color: white;
-  height:400px;
-  width: 400px;
-  margin: -400px;
-  position: left;
-  background-image: url('./images/slant-left.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-
+  position: absolute;
+  height:1558px;
+  left: 0;
   color: #fff;
+
+
 }
 .slant-right {
-  background-image: url('./images/slant-right.png');
+  position: absolute;
+  // margin-right: -35px;
+  height:1558px;
+  right: 0px;
+  color: #fff;
+
+
+}
+
+.set-1-right {
+  z-index: 180;
+  top: 0;
+}
+.set-1-left {
+  z-index: 175;
+  top: 0;
+}
+
+.set-2 {
+  z-index: 150;
+  top: 565px;
+}
+.set-3 {
+  z-index: 120;
+  top: 1365px;
+}
+.set-4 {
+  z-index: 90;
+  top: 2184px;
+}
+.set-5 {
+  z-index: 60;
+  top: 3021px;
+}
+.set-6 {
+  z-index: 30;
+  top: 3897px;
 }
