@@ -3,7 +3,61 @@ body {
   height: 100%;
   width: 100%;
   background-color: black ;
+  overflow-x: hidden;
 }
+
+
+//This is the styling for the fluid effect
+
+#fluid_wrapper{
+  position: static;
+  opacity: 1;
+  z-index: -10;
+}
+#overlay{
+  z-index: -10;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  pointer-events: none;
+}
+#fluid_container{
+  z-index: -11;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  opacity: 1;
+}
+
+
+//Styling for the hamburger menu
+#hamburger_menu {
+  width: 67px;
+  cursor: pointer
+}
+@media (max-width: 667px) {
+   #hamburger_menu {
+    width:57px;
+  }
+}
+.gold_fill {
+  fill: #89714D
+}
+
+.gray_fill {
+  fill: #B7B7B8
+}
+ #hamburger_menu #box_tight #hamburger_menu #box rect {
+  fill: #89714D
+}
+ #hamburger_menu {
+  width: 67px;
+  cursor: pointer
+}
+#hamburger_menu #box_tight #hamburger_menu #box rect {
+  fill: #89714D
+}
+//hamburger sections
 
 .home-nav-container {
   position: fixed;
@@ -12,10 +66,14 @@ body {
 }
 .home-nav {
   position: absolute;
-  height: 8vh;
-  width: 8vh;
-  background-color: #89714D;
+  //height: 8vh;
+  //width: 8vh;
+  //background-color: #89714D;
 }
+//end of hamburger menu style
+
+
+
 .sound-icon-container{
   position: fixed;
   bottom: 2vh;
@@ -29,6 +87,32 @@ body {
 }
 #home-main-header{
   margin-top: 37vh;
+}
+
+
+//Main Title
+.the-sprite{
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.sprite-container{
+  position: relative;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50%);
+  height: 149px;
+  width: 767px;
+}
+#title-sprite{
+  position: relative;
+  zoom: 1000%;
+  height: 149px;
+  width: 767px;
+  top:-879%;
+  left: -303%;
 }
 
 .home-footer-container{
@@ -185,6 +269,8 @@ a {
 }
 
 .home-main-row {
+  position: relative;
+  top: 100vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
