@@ -1,0 +1,66 @@
+$gold:#88714D;
+$padding:5%;
+$margin:5%;
+$textColor:#D1D1D1;
+
+.capabilities-container {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.capabilities-banner {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-image: url(https://dummyimage.com/1280x800/000/fff&text=Capabilities);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.block {
+  height: 100vh;
+  width: 100vw;
+  padding: $padding;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(48,48,48);
+  border: 1px solid $gold;
+
+  div{
+    width: 50%;
+  }
+
+  .sub-row {
+    width: 50%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+  }
+  span {
+
+  }
+  h1 {
+  color: $gold;
+  margin: $margin;
+  }
+
+  p {
+    margin: $margin;
+    color: $textColor;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
