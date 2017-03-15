@@ -1,4 +1,9 @@
 angular.module("topSecret")
-.controller("capabilitiesController", function($scope, $stateParams){
- $scope.test = 'capabilities'
+.controller("capabilitiesController", function($scope, $stateParams, $window){
+
+ $scope.test = 'capabilities';
+
+
+
+
 })

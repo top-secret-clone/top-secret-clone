@@ -4,7 +4,10 @@ $margin:5%;
 $textColor:#D1D1D1;
 $wide: 100vw;
 $high: 775px;
-
+.test{
+  background-color: red !important;
+  z-index: 500 !important;
+}
 .capabilities-container {
   width: 100vw;
   margin: 0;
@@ -14,6 +17,7 @@ $high: 775px;
   flex-flow: column;
   align-items: center;
   position: relative;
+  color: white;
 }
 
 .capabilities-banner {
@@ -21,6 +25,7 @@ $high: 775px;
   top: 0;
   left: 0px;
   height: 100vh;
+  min-height: 775px;
   width: 100vw;
   z-index: 200;
   background-image: url(https://dummyimage.com/1280x800/000/fff&text=Capabilities);
@@ -30,7 +35,7 @@ $high: 775px;
 
 
 .capabilities-main {
-  position: relative;
+  position: absolute;
   top: 775px;
   height: 3900px;
   width: 100vw;
@@ -42,7 +47,6 @@ $high: 775px;
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  border: 1px solid $gold;
 
   div{
 
@@ -93,16 +97,21 @@ $high: 775px;
   width: 690px;
   height: 600px;
   position: absolute;
-  top: $high + 10px;
+  top: 10px;
   z-index: 200;
+  border: 1px solid $gold;
 }
 .capabilities-body{
   margin: 50px;
+  display: flex;
+  justify-content: center;
+
   .strategy {
+    border: 1px solid $gold;
     width: 690px;
     height: 600px;
     position: absolute;
-    top: $high * 2;
+    top: $high;
     z-index: 170;
     background: transparent;
     p{
@@ -116,29 +125,33 @@ $high: 775px;
     }
   }
   .advertising{
+    border: 1px solid gold;
+    width: 690px;
+    height: 600px;
+    position: absolute;
+    top: $high * 2;
+
+  }
+  .design{
+    border: 1px solid gold;
     width: 690px;
     height: 600px;
     position: absolute;
     top: $high * 3;
-
   }
-  .design{
+  .interactive{
+    border: 1px solid gold;
     width: 690px;
     height: 600px;
     position: absolute;
     top: $high * 4;
   }
-  .interactive{
+  .studios{
+    border: 1px solid gold;
     width: 690px;
     height: 600px;
     position: absolute;
     top: $high * 5;
-  }
-  .studios{
-    width: 690px;
-    height: 600px;
-    position: absolute;
-    top: $high * 6;
   }
 }
 
@@ -164,7 +177,6 @@ $high: 775px;
 }
 .slant-right {
   position: absolute;
-  // margin-right: -35px;
   width:$wide * 1.1;
   height: $wide * 1.1;
   right: 0px;
