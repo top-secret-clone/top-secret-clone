@@ -26,7 +26,7 @@ angular.module("topSecret", ["ui.router"])
   })
   .state('capabilities', {
     url: '/capabilities',
-    templateUrl: './routes/capabilities/capabilities.html',
+    templateUrl: './app/routes/capabilities/capabilities.html',
     controller: 'capabilitiesController'
   })
   .state('connect', {
