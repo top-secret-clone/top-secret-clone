@@ -1,11 +1,13 @@
-body {
+.home-main-container {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: black ;
   overflow-x: hidden;
 }
-
+.home-main-wrapper{
+  position: relative;
+  margin: 0 0 0 0;
+}
 
 //This is the styling for the fluid effect
 
@@ -66,9 +68,6 @@ body {
 }
 .home-nav {
   position: absolute;
-  //height: 8vh;
-  //width: 8vh;
-  //background-color: #89714D;
 }
 //end of hamburger menu style
 
@@ -144,18 +143,186 @@ body {
   margin-left: auto;
   margin-right:auto;
 }
-#work{
-  background-image: url('http://www.wearetopsecret.com/images/view-work-cta.jpg');
+
+//Case studies
+.case-studies-container{
+  position: relative;
+  top: 100vh;
+  height: 43vh;
+  width: 100vw;
+  margin-left: 0;
+}
+
+#case-studies{
+  position: absolute;
+  height: 100%;
+  width: 70vw;
+  margin-left: 15vw;
+  perspective: 1px;
+  overflow: hidden;
+}
+#case-studies-parallax-holder{
+  height: 100%;
+  background-image: url('http://www.wearetopsecret.com/images/case-studies-home-page.jpg');
+  //background-attachment: fixed;
+  //background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(0);
+}
+
+.case-studies-title-container{
+  z-index: 10;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+#case-studies-title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -136%);
+  color: #89714d;
+  font-family: 'built-titling', sans-serif;
+  text-transform: uppercase;
+  font-size: 453%;
+  letter-spacing: 20px;
+}
+
+.home-main-container{
+  position: absolute;
+  margin: 0 0 0 0;
+}
+
+//about sts container
+.about-sts-container{
+  position: relative;
+  top: 100vh;
+  width: 100vw;
+  margin: 0 0 0 0;
+  height: 50vh;
+}
+.about-sts{
+  margin-top: 15vh;
+}
+#about-sts-title{
+  font-size: 523%;
+  letter-spacing: 20px;
+  z-index: 2;
+  left: 50%;
+  top: 5%;
+  transform: translate(-47%);
+  position: absolute;
+  color: #88714D;
+  text-transform: uppercase;
+  font-family: 'built-titling', sans-serif;
+}
+#triangle{
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+#redacted{
+  z-index: 1;
+  position: absolute;
+  left: 55%;
+  top: 20%;
+}
+
+//bottom three
+.bottom-three-container{
+  position: relative;
+  overflow: hidden;
+  top: 80vh;
+  height: 50vh;
+  width: 100vw;
+  margin: 0 0 0 0;
+  display: flex;
+  align-content: center;
+}
+.home-bottom-three-wrapper{
+  position: relative;
+  margin-top: 12vh;
+  width: 87vw;
+  left: 50%;
+  transform: translate(-50%);
+}
+.bottom-three{
+  border: none;
+  height: 40vh;
+  width: 28vw;
+  overflow: hidden;
+}
+.bottom-three-title-wrapper{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.bottom-three-title{
+  font-size: 500%;
+  letter-spacing: 15px;
+  z-index: 3;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%);
+  position: absolute;
+  color: #88714D;
+  text-transform: uppercase;
+  font-family: 'built-titling', sans-serif;
+}
+.bottom-three-titles{
+  position: absolute;
+  margin-top: 12vh;
+  width: 87vw;
+  height: 50vh;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+}
+.bottom-three-title-wrapper{
+  border: none;
+  height: 40vh;
+  width: 28vw;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+#work{
+  position: relative;
+ zoom: 80%;
+  top: -25%;
+  left: -13%;
 }
 #capabilities{
-  background-image: url('http://www.wearetopsecret.com/images/new-landing/Capabilities.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+  zoom: 80%;
+  top: -25%;
+  left: -13%;
 }
 #connect{
-  background-image: url('http://www.wearetopsecret.com/images/join-team-cta.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+  zoom: 80%;
+  top: -25%;
+  left: -13%;
+}
+
+
+//home footer
+.home-footer-container{
+  position: relative;
+  top: 76vh;
+  width: 100vw;
+  margin-top: 10vh;
+  height: 6vh;
+  background-color: #1c1c1c;
 }
