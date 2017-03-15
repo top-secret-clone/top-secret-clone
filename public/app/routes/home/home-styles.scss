@@ -1,9 +1,65 @@
-body {
+.home-main-container {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: black ;
+  overflow-x: hidden;
 }
+.home-main-wrapper{
+  position: relative;
+  margin: 0 0 0 0;
+}
+
+//This is the styling for the fluid effect
+
+#fluid_wrapper{
+  position: static;
+  opacity: 1;
+  z-index: -10;
+}
+#overlay{
+  z-index: -10;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  pointer-events: none;
+}
+#fluid_container{
+  z-index: -11;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  opacity: 1;
+}
+
+
+//Styling for the hamburger menu
+#hamburger_menu {
+  width: 67px;
+  cursor: pointer
+}
+@media (max-width: 667px) {
+   #hamburger_menu {
+    width:57px;
+  }
+}
+.gold_fill {
+  fill: #89714D
+}
+
+.gray_fill {
+  fill: #B7B7B8
+}
+ #hamburger_menu #box_tight #hamburger_menu #box rect {
+  fill: #89714D
+}
+ #hamburger_menu {
+  width: 67px;
+  cursor: pointer
+}
+#hamburger_menu #box_tight #hamburger_menu #box rect {
+  fill: #89714D
+}
+//hamburger sections
 
 .home-nav-container {
   position: fixed;
@@ -12,10 +68,11 @@ body {
 }
 .home-nav {
   position: absolute;
-  height: 8vh;
-  width: 8vh;
-  background-color: #89714D;
 }
+//end of hamburger menu style
+
+
+
 .sound-icon-container{
   position: fixed;
   bottom: 2vh;
@@ -29,6 +86,32 @@ body {
 }
 #home-main-header{
   margin-top: 37vh;
+}
+
+
+//Main Title
+.the-sprite{
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.sprite-container{
+  position: relative;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50%);
+  height: 149px;
+  width: 767px;
+}
+#title-sprite{
+  position: relative;
+  zoom: 1000%;
+  height: 149px;
+  width: 767px;
+  top:-879%;
+  left: -303%;
 }
 
 .home-footer-container{
@@ -60,200 +143,186 @@ body {
   margin-left: auto;
   margin-right:auto;
 }
-#work{
-  background-image: url('http://www.wearetopsecret.com/images/view-work-cta.jpg');
+
+//Case studies
+.case-studies-container{
+  position: relative;
+  top: 100vh;
+  height: 43vh;
+  width: 100vw;
+  margin-left: 0;
+}
+
+#case-studies{
+  position: absolute;
+  height: 100%;
+  width: 70vw;
+  margin-left: 15vw;
+  perspective: 1px;
+  overflow: hidden;
+}
+#case-studies-parallax-holder{
+  height: 100%;
+  background-image: url('http://www.wearetopsecret.com/images/case-studies-home-page.jpg');
+  //background-attachment: fixed;
+  //background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(0);
 }
-#capabilities{
-  background-image: url('http://www.wearetopsecret.com/images/new-landing/Capabilities.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+.case-studies-title-container{
+  z-index: 10;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
-#connect{
-  background-image: url('http://www.wearetopsecret.com/images/join-team-cta.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-//#home-main-header{
-//  height: 100vh;
-//  width: 100vw;
-//  background-color: ;
-//}
-
-
-
-// Table of Contents:
-// ~~~~~~~~~~~~~~~~~~~
-// 1.) Variables
-// 2.) Mixins
-// 3.) Base Styles
-// 4.) Typography (links)
-// 5.) Scaffolding
-// 6.) Helpers
-// 7.) Grid
-// 8.) Components
-
-// 1.) Variables:
-// ~~~~~~~~~~~~~~~
-
-/* Containers */
-$x-small: 600px;
-$small: 800px;
-$medium: 1000px;
-$large: 1200px;
-$full: 100%;
-
-// Breakpoints
-$mobile: $x-small;
-$desktop: $medium;
-
-/* Colors */
-
-/* Typography */
-
-/* Components */
-
-// 2.) Mixins:
-// ~~~~~~~~~~~~
-
-/* Breakpoints */
-
-// Small breakpoint
-@mixin small-breakpoint {
-  @media (min-width: #{$mobile}) {
-    @content;
-  }
+#case-studies-title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -136%);
+  color: #89714d;
+  font-family: 'built-titling', sans-serif;
+  text-transform: uppercase;
+  font-size: 453%;
+  letter-spacing: 20px;
 }
 
-// Large breakpoint
-@mixin large-breakpoint {
-  @media (min-width: #{$desktop}) {
-    @content;
-  }
+.home-main-container{
+  position: absolute;
+  margin: 0 0 0 0;
 }
 
-// 3.) Base Styles:
-// ~~~~~~~~~~~~~~~~~
-
-//Reset Border Box:
-
-html {
-  box-sizing: border-box;
+//about sts container
+.about-sts-container{
+  position: relative;
+  top: 100vh;
+  width: 100vw;
+  margin: 0 0 0 0;
+  height: 50vh;
+}
+.about-sts{
+  margin-top: 15vh;
+}
+#about-sts-title{
+  font-size: 523%;
+  letter-spacing: 20px;
+  z-index: 2;
+  left: 50%;
+  top: 5%;
+  transform: translate(-47%);
+  position: absolute;
+  color: #88714D;
+  text-transform: uppercase;
+  font-family: 'built-titling', sans-serif;
+}
+#triangle{
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+#redacted{
+  z-index: 1;
+  position: absolute;
+  left: 55%;
+  top: 20%;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+//bottom three
+.bottom-three-container{
+  position: relative;
+  overflow: hidden;
+  top: 80vh;
+  height: 50vh;
+  width: 100vw;
+  margin: 0 0 0 0;
+  display: flex;
+  align-content: center;
 }
-
-
-// 4.) Typography:
-// ~~~~~~~~~~~~~~~~
-
-/* Font */
-
-// Headings
-
-// Body Font
-
-// Links:
-a {
-  cursor: pointer;
+.home-bottom-three-wrapper{
+  position: relative;
+  margin-top: 12vh;
+  width: 87vw;
+  left: 50%;
+  transform: translate(-50%);
 }
-
-// 5.) Scaffolding:
-// ~~~~~~~~~~~~~~~~~
-
-// 6.) Helpers:
-// ~~~~~~~~~~~~~
-
-.responsive-img {
+.bottom-three{
+  border: none;
+  height: 40vh;
+  width: 28vw;
+  overflow: hidden;
+}
+.bottom-three-title-wrapper{
+  position: relative;
+  height: 100%;
   width: 100%;
 }
-
-// 7.) Grid:
-// ~~~~~~~~~~
-
-// NOTE: Once this is completed and reliable, use this article ( https://kyusuf.com/post/almost-complete-guide-to-flexbox-without-flexbox ) to rewrite it w/out flexbox for all browser support.
-
-//NOTE If you just want evenly sized columns, just keep adding columns in a row.
-
-.home-main-container {
-  max-width: 70%; //BUG fix this so it's full on small screen. Has to do with % and px.
-  margin: 0 auto;
+.bottom-three-title{
+  font-size: 500%;
+  letter-spacing: 15px;
+  z-index: 3;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%);
+  position: absolute;
+  color: #88714D;
+  text-transform: uppercase;
+  font-family: 'built-titling', sans-serif;
 }
-
-.home-main-row {
+.bottom-three-titles{
+  position: absolute;
+  margin-top: 12vh;
+  width: 87vw;
+  height: 50vh;
+  left: 50%;
+  transform: translate(-50%);
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+}
+.bottom-three-title-wrapper{
+  border: none;
+  height: 40vh;
+  width: 28vw;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+#work{
+  position: relative;
+ zoom: 80%;
+  top: -25%;
+  left: -13%;
+}
+#capabilities{
+  position: relative;
+  zoom: 80%;
+  top: -25%;
+  left: -13%;
+}
+#connect{
+  position: relative;
+  zoom: 80%;
+  top: -25%;
+  left: -13%;
 }
 
-.home-main-column {
-  flex-basis: 100%;
-  margin-top: 37vh;
 
-  //NOTE This style is for testing purposes only. Remove when done. NOTE//
-
-  background-color: grey;
-  border: solid 2px black;
-  height: 100px;
-  text-align: center;
-  align-items: center;
+//home footer
+.home-footer-container{
+  position: relative;
+  top: 76vh;
+  width: 100vw;
+  margin-top: 10vh;
+  height: 6vh;
+  background-color: #1c1c1c;
 }
 
-//NOTE For unevenly sized columns, use these
-
-.one-third-column {
-  flex-basis: calc(100% / 3);
-  //NOTE The below styling is for testing purposes only. Remove when done. NOTE//
-  background-color: grey;
-  border: solid 2px black;
-  height: 100px;
-}
-
-.two-thirds-column {
-  flex-basis: calc(100% * (2/3));
-  //NOTE The below styling is for testing purposes only. Remove when done. NOTE//
-  background-color: grey;
-  border: solid 2px black;
-  height: 100px;
-}
-
-.one-quarter-column {
-  flex-basis: calc(100% / 4);
-  //NOTE The below styling is for testing purposes only. Remove when done. NOTE//
-  background-color: grey;
-  border: solid 2px black;
-  height: 100px;
-}
-
-.one-half-column {
-  flex-basis: calc(100% / 2);
-  //NOTE The below styling is for testing purposes only. Remove when done. NOTE//
-  background-color: grey;
-  border: solid 2px black;
-  height: 100px;
-}
-
-.three-quarters-column {
-  flex-basis: calc(100% * (3/4));
-  //NOTE The below styling is for testing purposes only. Remove when done. NOTE//
-  background-color: grey;
-  border: solid 2px black;
-  height: 100px;
-}
-
-// Responsive Grid Media Query:
-@media screen and (min-width: 800px) {
-  .column
-   {
-    flex: 1;
-  }
-}
-
-// 8.) Components:
-// ~~~~~~~~~~~~~~~~
-
-/* Buttons */

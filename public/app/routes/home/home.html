@@ -1,38 +1,69 @@
 <body>
 
+<div id="fluid_wrapper">
+    <div id="overlay" class="glass"></div>
+    <canvas id="fluid_container"></canvas>
+</div>
+
     <div class="home-main-container" id="home-main-container">
 
 
         <div class="home-main-wrapper">
+
+
+
+        <div class="the-sprite">
+            <div class="sprite-container">
+                <img id="title-sprite" src="http://www.wearetopsecret.com/images/spritesheet-sts-standard-res.png">
+            </div>
         </div>
 
-        <div class="home-main-row" id="home-main-row">
-            <div class="home-main-column" id="home-main-header">
-                <p>we are</p>
-                <h1>super top secret</h1>
-                <p>view reel</p>
-            </div>
-            <div class="home-main-column">
-                <h1>case studies</h1>
-            </div>
-            <div class="home-main-column">
-                <h1>about sts</h1>
-            </div>
-            <div class="home-main-column" id="home-bottom-three">
-                <div class="home-bottom-three-wrapper">
-                    <div class="bottom-three" id="work">work</div>
-                    <div class="bottom-three" id="capabilities">capabilities</div>
-                    <div class="bottom-three" id="connect">connect</div>
+
+
+            <div class="case-studies-container">
+                <div id="case-studies">
+                        <div class="case-studies-title-container">
+                            <p id="case-studies-title">case studies</p>
+                        </div>
+                        <div id="case-studies-parallax-holder">
+                        </div>
                 </div>
             </div>
 
-        </div>
-
-        <div class="home-footer-container">
-            <div class="home-footer">
-                this is the footer
+            <div class="about-sts-container">
+                <div class="about-sts">
+                    <p id="about-sts-title">about sts</p>
+                    <img id="triangle" src="http://www.wearetopsecret.com/images/new-landing/about-eye.png">
+                    <img id="redacted" src="http://www.wearetopsecret.com/images/case-studies/case-files-redacted.png">
+                </div>
             </div>
-        </div>
+
+            <div class="bottom-three-container">
+                <div class="home-bottom-three-wrapper">
+                    <div class="bottom-three">
+                        <img  id="work" src="http://www.wearetopsecret.com/images/view-work-cta.jpg">
+                    </div>
+                    <div class="bottom-three">
+                        <img  id="capabilities" src="http://www.wearetopsecret.com/images/new-landing/Capabilities.jpg">
+                    </div>
+                    <div class="bottom-three">
+                        <img  id="connect" src="http://www.wearetopsecret.com/images/join-team-cta.jpg">
+                    </div>
+                </div>
+                <div class="bottom-three-titles">
+                    <div class="bottom-three-title-wrapper">
+                        <p class="bottom-three-title">work</p>
+                    </div>
+                    <div class="bottom-three-title-wrapper">
+                        <p class="bottom-three-title">capabilities</p>
+                    </div>
+                    <div class="bottom-three-title-wrapper">
+                        <p class="bottom-three-title">connect</p>
+                    </div>
+                </div>
+            </div>
+
+        <div class="home-footer-container"></div>
 
 
             <div class="home-nav-container">
@@ -47,11 +78,21 @@
 				</svg>
 
                 </div>
-    </div>
-            <div class="sound-icon-container">
+            </div>
+
+
+        <div class="sound-icon-container">
             </div>
 
 
     </div>
+
+    </div>
+
+
+<script src="http://www.wearetopsecret.com/js/fluid_effect.js"></script>
+<script>
+    require(['main']);
+</script>
 
 </body>

@@ -6,22 +6,22 @@ angular.module("topSecret", ["ui.router"])
   $stateProvider
   .state('home', {
     url: '/',
-    templateUrl: './routes/home/home.html',
+    templateUrl: './app/routes/home/home.html',
     controller: 'homeController'
   })
   .state('caseStudies', {
     url: '/caseStudies',
-    templateUrl: './routes/caseStudies/caseStudies.html',
+    templateUrl: './app/routes/caseStudies/caseStudies.html',
     controller: 'caseStudiesController'
   })
   .state('work', {
     url: '/work',
-    templateUrl: './routes/work/work.html',
+    templateUrl: './app/routes/work/work.html',
     controller: 'workController'
   })
   .state('about', {
     url: '/about',
-    templateUrl: './routes/about/about.html',
+    templateUrl: './app/routes/about/about.html',
     controller: 'aboutController'
   })
   .state('capabilities', {
@@ -31,7 +31,7 @@ angular.module("topSecret", ["ui.router"])
   })
   .state('connect', {
     url: '/connect',
-    templateUrl: './routes/connect/connect.html',
+    templateUrl: './app/routes/connect/connect.html',
     controller: 'connectController'
   })
 
