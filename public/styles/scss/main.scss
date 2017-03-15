@@ -8,6 +8,7 @@
 // 6.) Helpers
 // 7.) Grid
 // 8.) Components
+// 9.) Pages
 
 // 1.) Variables:
 // ~~~~~~~~~~~~~~~
@@ -86,17 +87,38 @@ a {
 	width: 100%;
 }
 
+.bordered {
+	border: solid 2px black;
+}
+
+.centered {
+	justify-content: center;
+}
+
+.text-centered {
+	text-align: center;
+}
+
 // 7.) Grid:
 // ~~~~~~~~~~
-
-// NOTE: Once this is completed and reliable, use this article ( https://kyusuf.com/post/almost-complete-guide-to-flexbox-without-flexbox ) to rewrite it w/out flexbox for all browser support.
 
 //NOTE If you just want evenly sized columns, just keep adding columns in a row.
 
 .container {
-  max-width: 70%; //BUG fix this so it's full on small screen. Has to do with % and px.
-	margin: 0 auto;
-}
+	max-width: $full;
+};
+.x-small-container {
+	max-width: $x-small;
+};
+.small-container {
+	max-width: $small;
+};
+.medium-container {
+	max-width: $medium;
+};
+.large-container {
+	max-width: $large;
+};
 
 .row {
   display: flex;
@@ -106,66 +128,33 @@ a {
 
 .column {
   flex-basis: 100%;
-
-	//NOTE This style is for testing purposes only. Remove when done. NOTE//
-
-	background-color: grey;
-	border: solid 2px black;
-	height: 100px;
-	text-align: center;
-	align-items: center;
 }
 
 //NOTE For unevenly sized columns, use these
 
 .one-third-column {
 	flex-basis: calc(100% / 3);
-	//NOTE The below styling is for testing purposes only. Remove when done. NOTE//
-	background-color: grey;
-	border: solid 2px black;
-	height: 100px;
 }
 
 .two-thirds-column {
 	flex-basis: calc(100% * (2/3));
-	//NOTE The below styling is for testing purposes only. Remove when done. NOTE//
-	background-color: grey;
-	border: solid 2px black;
-	height: 100px;
 }
 
 .one-quarter-column {
 	flex-basis: calc(100% / 4);
-	//NOTE The below styling is for testing purposes only. Remove when done. NOTE//
-	background-color: grey;
-	border: solid 2px black;
-	height: 100px;
 }
 
 .one-half-column {
 	flex-basis: calc(100% / 2);
-	//NOTE The below styling is for testing purposes only. Remove when done. NOTE//
-	background-color: grey;
-	border: solid 2px black;
-	height: 100px;
 }
 
 .three-quarters-column {
 	flex-basis: calc(100% * (3/4));
-	//NOTE The below styling is for testing purposes only. Remove when done. NOTE//
-	background-color: grey;
-	border: solid 2px black;
-	height: 100px;
 }
 
 // Responsive Grid Media Query:
 @media screen and (min-width: 800px) {
-  .column,
-	.one-third-column,
-	.two-thirds-column,
-	.one-quarter-column,
-	.one-half-column,
-	.three-quarters-column {
+  .column {
     flex: 1;
   }
 }
@@ -174,3 +163,156 @@ a {
 // ~~~~~~~~~~~~~~~~
 
 /* Buttons */
+
+/* Sticky-Nav */
+//
+$stickyNavHeight: 40px;
+
+.sticky-nav {
+	background-color: white;
+	ul {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+}
+
+.fix {
+  top: 0px;
+  position: fixed;
+	background-color: white;
+	width: 100%;
+}
+
+.jump-fix {
+	height: $stickyNavHeight;
+}
+
+// 9.) Pages:
+// ~~~~~~~~~~
+
+/*~~~~~~~~~~~~~~~ Home ~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~ Case Studies ~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~ Work ~~~~~~~~~~~~~~~*/
+
+//NOTE Make this a mix-in
+
+//Banner
+.work-banner {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 800px;
+	width: 100%;
+	display: flex;
+	background-image: url(https://dummyimage.com/1280x800/000/fff&text=Work);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*~~~~~~~~~~~~~~~ About ~~~~~~~~~~~~~~~*/
+
+//Banner
+.about-banner {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 800px;
+	width: 100%;
+	display: flex;
+	background-image: url(https://dummyimage.com/1280x800/000/fff&text=About);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.what-we-do {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 800px;
+	width: 100%;
+	display: flex;
+	background-image: url(https://dummyimage.com/1280x800/d3d3d3/fff);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 265px 10%;
+}
+
+.clients-served {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 800px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background-image: url(https://dummyimage.com/1280x800/a8a8a8/fff);
+	background-repeat: no-repeat;
+	background-size: cover;
+	h1 {
+		padding: 80px 0 60px 0;
+	}
+	ul {
+		list-style-type: none;
+	}
+}
+
+.who-we-are {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 800px;
+	width: 100%;
+	display: flex;
+	background-image: url(https://dummyimage.com/1280x800/d3d3d3/fff);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 265px 10%;
+}
+
+.the-shop {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 800px;
+	width: 100%;
+	display: flex;
+	background-image: url(https://dummyimage.com/1280x800/a8a8a8/fff);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 265px 10%;
+}
+
+.slider-placeholder {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 800px;
+	width: 100%;
+	display: flex;
+	background-image: url(https://dummyimage.com/1280x800/d3d3d3/fff&text=Slider+Placeholder);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 265px 10%;
+}
+
+.manifesto {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 800px;
+	width: 100%;
+	display: flex;
+	background-image: url(https://dummyimage.com/1280x800/a8a8a8/fff);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 265px 10%;
+}
+
+/*~~~~~~~~~~~~~~~ Capabilities ~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~ Connect ~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~ 404 ~~~~~~~~~~~~~~~*/
