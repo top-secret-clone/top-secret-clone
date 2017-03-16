@@ -2,43 +2,55 @@ $gold:#88714D;
 $padding:5%;
 $margin:5%;
 $textColor:#D1D1D1;
-
+$wide: 100vw;
+$high: 775px;
+.test{
+  background-color: red !important;
+  z-index: 500 !important;
+}
 .capabilities-container {
   width: 100vw;
   margin: 0;
   padding: 0;
-  background-color: black;
+  background-color: #c0c0c0;
   display: flex;
   flex-flow: column;
   align-items: center;
+  position: relative;
+  color: white;
 }
 
 .capabilities-banner {
+  border: 1px solid white;
   position: relative;
   top: 0;
-  left: 0;
+  left: 0px;
   height: 100vh;
+  min-height: 775px;
   width: 100vw;
-  display: flex;
+  z-index: 200;
   background-image: url(https://dummyimage.com/1280x800/000/fff&text=Capabilities);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 
-.block {
-  height: 100vh;
+.capabilities-main {
+  position: absolute;
+  top: 775px;
+  height: 3600px;
   width: 100vw;
-  padding: $padding;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(48,48,48);
-  border: 1px solid $gold;
+  background-color: transparent;
 
   div{
-    width: 50%;
+
   }
 
   .sub-row {
@@ -51,16 +63,158 @@ $textColor:#D1D1D1;
 
   }
   h1 {
-  color: $gold;
-  margin: $margin;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 200px;
+    color: $gold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: $margin;
   }
 
   p {
-    margin: $margin;
+    font-family: "Crimson Text", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.75em;
+    text-align: right;
+    padding: 0 15px;
     color: $textColor;
   }
 
   a {
     text-decoration: none;
   }
+
+  hr {
+    width: 30px;
+    justify-content: right;
+    color: $gold;
+  }
+}
+.main{
+  width: 690px;
+  height: 600px;
+  position: absolute;
+  top: 10px;
+  z-index: 200;
+  border: 1px solid $gold;
+}
+.capabilities-body{
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+
+  .strategy {
+    border: 1px solid $gold;
+    width: 690px;
+    height: 600px;
+    position: absolute;
+    top: $high;
+    z-index: 170;
+    background: transparent;
+    p{
+      span{
+        font-weight: 100;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-style: italic;
+        text-align: right;
+      }
+    }
+  }
+  .advertising{
+    border: 1px solid gold;
+    width: 690px;
+    height: 600px;
+    position: absolute;
+    top: $high * 2;
+
+  }
+  .design{
+    border: 1px solid gold;
+    width: 690px;
+    height: 600px;
+    position: absolute;
+    top: $high * 3;
+  }
+  .interactive{
+    border: 1px solid gold;
+    width: 690px;
+    height: 600px;
+    position: absolute;
+    top: $high * 4;
+  }
+  .studios{
+    border: 1px solid gold;
+    width: 690px;
+    height: 600px;
+    position: absolute;
+    top: $high * 5;
+  }
+}
+
+/* background for parralax  */
+.parallax-container {
+  position: relative;
+  width: 100vw;
+  height: 4410px
+}
+.slant-left {
+  position: absolute;
+  width:$wide * 1.1;
+  height: $wide * 1.1;
+  left: 0;
+  color: #fff;
+  img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: $wide * .75;
+  }
+
+}
+.slant-right {
+  position: absolute;
+  width:$wide * 1.1;
+  height: $wide * 1.1;
+  right: 0px;
+  color: #fff;
+  img {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: $wide * .75;
+  }
+
+}
+
+.set-1-right {
+  z-index: 180;
+}
+.set-1-left {
+  z-index: 175;
+}
+
+.set-2 {
+  z-index: 150;
+  top: 565px;
+}
+.set-3 {
+  z-index: 120;
+  top: 1365px;
+}
+.set-4 {
+  z-index: 90;
+  top: 2184px;
+}
+.set-5 {
+  z-index: 60;
+  top: 3021px;
+}
+.set-6 {
+  z-index: 30;
+  top: 3897px;
 }
