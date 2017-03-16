@@ -7,28 +7,61 @@ angular.module('topSecret').directive('goldOutline', function(){
     return {
         restrict: 'E',
         templateUrl: './app/directives/gold-outline.html',
+        scope: {
+            cname: '='
+        },
         controller: function($scope){
+
+            let minusHeight;
+            let minusWidth;
+            let minusWidth2;
+            let rightWidth;
+            let topRight;
+            let parentHeight;
+            let parentWidth;
+            setTimeout(function() {
+                minusHeight = document.getElementsByClassName($scope.cname)[0].parentElement.parentElement.clientHeight * .15;
+                minusWidth = (document.getElementsByClassName($scope.cname)[0].parentElement.parentElement.clientWidth * .05);
+                minusWidth2 = (document.getElementsByClassName($scope.cname)[0].parentElement.parentElement.clientWidth * .10);
+                rightWidth = document.getElementsByClassName($scope.cname)[0].parentElement.parentElement.clientWidth - minusWidth2 + 'px';
+                topRight =(document.getElementsByClassName($scope.cname)[0].parentElement.parentElement.clientWidth / 2) - minusWidth + 'px';
+                parentHeight = (document.getElementsByClassName($scope.cname)[0].parentElement.parentElement.clientHeight - minusHeight) + 'px';
+                parentWidth = document.getElementsByClassName($scope.cname)[0].parentElement.parentElement.clientWidth + 'px';
+            }, 0);
+
             $scope.worm = function () {
-                console.log('the worm....');
-                TweenMax.to(document.getElementById('gold-top-right'), 0.5, {width: '249px'});
-                        TweenMax.to(document.getElementById('gold-right'), 0.5, {delay: '0.5',height: '365px'});
-                        TweenMax.to(document.getElementById('gold-bottom'), 0.5, {delay: '1', width: '497px'});
-                        TweenMax.to(document.getElementById('gold-left'), 0.5, {delay: '1.5', height: '365px'});
-                        TweenMax.to(document.getElementById('gold-top-left'), 0.5, {delay: '2', width: '255px'});
+                setTimeout(function () {
+                    console.log('WHERE ARE YOU??????????')
+                    TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[1], 0.25, {width: topRight});
+                    TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[3], 0.25, {
+                        delay: 0.25,
+                        height: parentHeight
+                    });
+                    TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[5], 0.25, {
+                        delay: 0.5,
+                        width: rightWidth
+                    });
+                    TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[7], 0.25, {
+                        delay: 0.75,
+                        height: parentHeight
+                    });
+                    TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[9], 0.25, {
+                        delay: 1,
+                        width: topRight
+                    });
+                }, 0)
+            };
+
+            $scope.reverseWorm = function(){
+                setTimeout( function(){
+                TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[9], 0.25, {width: 0});
+                TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[7], 0.25, {delay: 0.25, height: 0});
+                TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[5], 0.25, {delay: 0.5, width: 0});
+                TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[3], 0.25, {delay: 0.75, height: 0});
+                TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[1], 0.25, {delay: 1, width: 0});
+            }, 1250)
             }
         }
-        // link: function(scope, element, attributes){
-        //
-        //
-        //     element.on('mouseover', function(){
-        //         console.log('yo');
-        //         TweenMax.to($('.gold-top-right'), 0.5, {width: '249px'});
-        //         TweenMax.to($('.gold-right'), 0.5, {delay: '0.5',height: '365px'});
-        //         TweenMax.to($('.gold-bottom', 0.5, {delay: '1', width: '497px'}));
-        //         TweenMax.to($('.gold-left'), 0.5, {delay: '1.5', height: '365px'});
-        //         TweenMax.to($('.gold-top-left'), 0.5, {delay: '2', width: '255px'});
-        //     });
-        //
-        // }
+
     }
 });
