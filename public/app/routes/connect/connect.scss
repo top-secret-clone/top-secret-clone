@@ -45,7 +45,7 @@ $formMargin: 8px 0;
   position: absolute;
   top: 100vh;
   left: 0;
-  height: 220vh;
+  height: 1570px;
   width: 100vw;
   display: flex;
   flex-flow: row;
@@ -117,6 +117,7 @@ $formMargin: 8px 0;
 
   .left {
     width: 475px;
+    height: 1570px;
     margin-left:-25px;
     background-color: $cream;
   }
