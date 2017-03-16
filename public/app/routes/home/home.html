@@ -1,4 +1,4 @@
-<body>
+<body ng-controller="homeController">
 
 <div id="fluid_wrapper">
     <div id="overlay" class="glass"></div>
@@ -38,12 +38,15 @@
                 </div>
             </div>
 
+            <gold-outline ng-mouseover="worm()"></gold-outline>
+
             <div class="bottom-three-container">
                 <div class="home-bottom-three-wrapper">
                     <div class="bottom-three">
                         <img  id="work" src="http://www.wearetopsecret.com/images/view-work-cta.jpg">
                     </div>
                     <div class="bottom-three">
+
                         <img  id="capabilities" src="http://www.wearetopsecret.com/images/new-landing/Capabilities.jpg">
                     </div>
                     <div class="bottom-three">
@@ -89,10 +92,11 @@
 
     </div>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 <script src="http://www.wearetopsecret.com/js/fluid_effect.js"></script>
 <script>
     require(['main']);
 </script>
+
 
 </body>
