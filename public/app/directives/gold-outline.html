@@ -1,0 +1,53 @@
+<style>
+    .gold-outline-container{
+        overflow: hidden;
+        background: transparent;
+        z-index: 10;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+    #gold-top-right{
+        position:absolute;
+        top: 5%;
+        left: 50%;
+        height: 1px;
+        background-color: #88714d;
+    }
+    #gold-right{
+        position:absolute;
+        width: 1px;
+        background-color: #88714d;
+        right: 5%;
+        top: 5%;
+    }
+    #gold-bottom{
+        position: absolute;
+        height: 1px;
+        background-color: #88714d;
+        bottom: 10%;
+        right: 5%;
+    }
+    #gold-left {
+        position: absolute;
+        width: 1px;
+        background-color: #88714d;
+        bottom: 10%;
+        left: 5%;
+    }
+    #gold-top-left {
+        position: absolute;
+        height: 1px;
+        background-color: #88714d;
+        left: 5%;
+        top: 5%;
+    }
+</style>
+
+<div class="gold-outline-container {{cname}}" ng-mouseenter="worm()" ng-mouseleave="reverseWorm()">
+    <div id="gold-top-right"></div>
+    <div id="gold-right"></div>
+    <div id="gold-bottom"></div>
+    <div id="gold-left"></div>
+    <div id="gold-top-left"></div>
+</div>

@@ -175,19 +175,9 @@
   left: 0;
   transform: translateZ(0);
 }
-
-.case-studies-title-container{
-  z-index: 10;
-  position: relative;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
 #case-studies-title{
   position: absolute;
+  z-index: 10;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -136%);
@@ -262,6 +252,14 @@
   height: 40vh;
   width: 28vw;
   overflow: hidden;
+}
+.listen {
+  position: absolute;
+  height: 40vh;
+  width: 28vw;
+  background-color: white;
+  opacity: 0;
+  z-index: 10!important;
 }
 .bottom-three-title-wrapper{
   position: relative;

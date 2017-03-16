@@ -10,6 +10,7 @@ $formMargin: 8px 0;
 
 
 .connect-container {
+  position: relative;
   width: 100vw;
   margin: 0;
   padding: 0;
@@ -18,30 +19,33 @@ $formMargin: 8px 0;
   flex-flow: column;
   align-items: center;
   justify-content: center;
+}
+.fullscreen-bg {
   position: relative;
+  overflow: hidden;
 }
 
 .connect-banner {
-  position: relative;
+  position: absolute;;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
   display: flex;
-  // background-image: url('https://dummyimage.com/1280x800/000/fff&text=Connect');
-  // background-repeat: no-repeat;
-  // background-size: cover;
 }
 
 .title-container {
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
-  // margin: -110px;
+  margin: -262px 0 0 -393px;
 }
 
 .connect-block {
-  height: 200vh;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  height: 220vh;
   width: 100vw;
   display: flex;
   flex-flow: row;
@@ -107,8 +111,11 @@ $formMargin: 8px 0;
     color: $textColor;
     text-transform: uppercase;
   }
-  hr{
+
+  hr {
     width: 30px;
+    justify-content: right;
+    color: $gold;
   }
 
   .left {
