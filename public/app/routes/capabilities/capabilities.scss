@@ -1,13 +1,14 @@
 $gold:#88714D;
 $padding:5%;
 $margin:5%;
-$textColor:#D1D1D1;
+$textColor:#CECECE;
 $wide: 100vw;
 $high: 775px;
 .test{
   background-color: red !important;
   z-index: 500 !important;
 }
+
 .capabilities-container {
   width: 100vw;
   margin: 0;
@@ -21,7 +22,6 @@ $high: 775px;
 }
 
 .capabilities-banner {
-  border: 1px solid white;
   position: relative;
   top: 0;
   left: 0px;
@@ -47,11 +47,7 @@ $high: 775px;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
-
-  div{
-
-  }
+  background-color: yellow;
 
   .sub-row {
     width: 50%;
@@ -59,28 +55,28 @@ $high: 775px;
     flex-flow: row;
     justify-content: space-around;
   }
-  span {
 
-  }
+
   h1 {
-    font-family: 'Archivo Narrow', sans-serif;
+    font-family: 'built-titling';
     font-weight: 100;
     font-style: normal;
-    font-size: 200px;
+    font-size: 215px;
     color: $gold;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: $margin;
+    letter-spacing: 15px;
+    margin: 0;
   }
 
   p {
     font-family: "Crimson Text", serif;
-    font-weight: 300;
+    font-weight: 100;
     font-style: normal;
     font-size: 18px;
     line-height: 1.75em;
-    text-align: right;
-    padding: 0 15px;
+    letter-spacing: .25px;
+    text-align: center;
+    padding: 0 10px;
     color: $textColor;
   }
 
@@ -90,73 +86,211 @@ $high: 775px;
 
   hr {
     width: 30px;
-    justify-content: right;
-    color: $gold;
+    background-color: $gold;
+    height: 1px;
+    margin: 10px 0 15px 0;
+    border: none;
   }
-}
-.main{
-  width: 690px;
-  height: 600px;
-  position: absolute;
-  top: 10px;
-  z-index: 200;
-  border: 1px solid $gold;
+
+  .all-caps {
+    font-size: 17.5px;
+    text-transform: uppercase;
+    color: #707070;
+  }
 }
 .capabilities-body{
   margin: 50px;
   display: flex;
   justify-content: center;
 
-  .strategy {
-    border: 1px solid $gold;
-    width: 690px;
+
+  .main{
+    width: 700px;
     height: 600px;
+    position: absolute;
+    top: 10px;
+    margin: 0 0 0 -.7%;
+    z-index: 200;
+    background-color: red;
+    h2 {
+      font-family: 'built-titling';
+      font-weight: 400;
+      font-style: bold;
+      font-size: 80px;
+      color: #232424;
+      text-transform: uppercase;
+      letter-spacing: 25px;
+      margin: 0;
+      padding: 20px 10px;
+    }
+    h3 {
+      font-family: 'Crimson Text', serif;
+      color: $gold;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin: -85px 37px 70px 37px;
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    hr {
+      margin: auto;
+    }
+    p {
+      font-size: 17px;
+      padding: 0;
+      letter-spacing: 0.025px;
+      text-align: center;
+    }
+  } /*  end of MAIN styling  */
+
+
+  .strategy {
+    width: 600px;
+    height: 600px;
+    margin-left: 1%;
     position: absolute;
     top: $high;
     z-index: 170;
     background: transparent;
-    p{
-      span{
-        font-weight: 100;
-        font-size: 10px;
-        text-transform: uppercase;
-        font-style: italic;
-        text-align: right;
-      }
+    h1{
+      text-align: right;
+      margin-right: -4%;
+    }
+    hr {
+      margin-left: 570px;
+    }
+    p {
+      text-align: right;
+      font-size: 17px;
+      line-height: 32px;
+      margin: 0;
+      padding: 0;
+    }
+    .all-caps {
+      font-size: 17.5px;
+      text-transform: uppercase;
+      color: #707070;
+    }
+    .learn-our-process {
+      width: 240px;
+      text-align: right;
+    }
+    span{
+      font-weight: 100;
+      font-size: 10px;
+      text-transform: uppercase;
+      font-style: italic;
+      text-align: right;
+      line-height: 1.5;
     }
   }
+  /* end of STRATEGY styling */
+
   .advertising{
     border: 1px solid gold;
-    width: 690px;
+    width: 743px;
     height: 600px;
     position: absolute;
     top: $high * 2;
+    margin-left: -33px;
+    p {
+      text-align: left;
+      padding: 0;
 
+    }
+    span{
+      font-weight: 100;
+      font-size: 10px;
+      text-transform: uppercase;
+      font-style: italic;
+      text-align: left;
+      line-height: 1.5;
+    }
   }
+  /* end of ADVERTISING styling */
+
   .design{
     border: 1px solid gold;
-    width: 690px;
+    width: 600px;
     height: 600px;
     position: absolute;
+    margin-left: 16px;
     top: $high * 3;
+    h1 {
+      text-align: right;
+    }
+    hr {
+      margin-left: 570px;
+    }
+    p{
+      text-align: right;
+    }
+    span{
+      font-weight: 100;
+      font-size: 10px;
+      text-transform: uppercase;
+      font-style: italic;
+      text-align: right;
+      line-height: 1.5;
+    }
   }
+
+/* end of DESIGN styling */
+
   .interactive{
     border: 1px solid gold;
-    width: 690px;
+    width: 719px;
     height: 600px;
     position: absolute;
+    margin-left: -33px;
     top: $high * 4;
+    h1 {
+      text-align: left;
+    }
+    p {
+      text-align: left;
+      padding: 0;
+    }
+    span{
+      font-weight: 100;
+      font-size: 10px;
+      text-transform: uppercase;
+      font-style: italic;
+      text-align: left;
+      line-height: 1.5;
+    }
   }
+
+  /* end of INTERACTIVE styling */
+
   .studios{
     border: 1px solid gold;
-    width: 690px;
+    width: 725px;
     height: 600px;
     position: absolute;
+    margin-left: 33px;
     top: $high * 5;
+    p {
+      text-align: right;
+    }
+    span{
+      font-weight: 100;
+      font-size: 10px;
+      text-transform: uppercase;
+      font-style: italic;
+      text-align: right;
+      line-height: 1.5;
+    }
   }
 }
 
-/* background for parralax  */
+/* end of STUDIOS styling */
+
+
+/* background for parralax begins */
 .parallax-container {
   position: relative;
   width: 100vw;

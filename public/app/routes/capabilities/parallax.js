@@ -54,9 +54,9 @@ angular.module("topSecret")
   *   div reaches the top of the screen
   * scrollTop = start + height + 600 (height of div) is
   *   when the bottom of the screen reaches the top
-  * var endAnimation = startAnimation + height + 500;
-  *   500 because -50 from startAnimation and end with
-  *   50px remaining on screen
+  * var endAnimation = startAnimation + height + 450;
+  *   450 because -50 from startAnimation and end with
+  *   100px remaining on screen
   */
         else if (scrollTop > endAnimation){
           $(section).removeClass('test');
