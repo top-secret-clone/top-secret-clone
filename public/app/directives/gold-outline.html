@@ -1,7 +1,53 @@
-<div class="gold-outline-container" style="background-color: #303030; z-index: 10; position: absolute; height: 40vh; width: 28vw">
-    <div id="gold-top-right" style="margin-top: 10px; margin-left: 14vw; width: 0; height: 2px; background-color: #88714d"></div>
-    <div id="gold-right" style="width: 2px; height: 0; background-color: #88714d; margin-left: 507px; margin-top: -2px"></div>
-    <div id="gold-bottom" style="width: 0; height: 2px; background-color: #88714d; margin-top: -2px; margin-left: 12px"></div>
-    <div id="gold-left" style="width: 2px; height: 0; background-color: #88714d; margin-top: -365px; margin-left: 11px"></div>
-    <div id="gold-top-left" style="width: 0; height: 2px; background-color: #88714d; margin-left: 12px; margin-top: -365px"></div>
+<style>
+    .gold-outline-container{
+        overflow: hidden;
+        background: transparent;
+        z-index: 10;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+    #gold-top-right{
+        position:absolute;
+        top: 5%;
+        left: 50%;
+        height: 1px;
+        background-color: #88714d;
+    }
+    #gold-right{
+        position:absolute;
+        width: 1px;
+        background-color: #88714d;
+        right: 5%;
+        top: 5%;
+    }
+    #gold-bottom{
+        position: absolute;
+        height: 1px;
+        background-color: #88714d;
+        bottom: 10%;
+        right: 5%;
+    }
+    #gold-left {
+        position: absolute;
+        width: 1px;
+        background-color: #88714d;
+        bottom: 10%;
+        left: 5%;
+    }
+    #gold-top-left {
+        position: absolute;
+        height: 1px;
+        background-color: #88714d;
+        left: 5%;
+        top: 5%;
+    }
+</style>
+
+<div class="gold-outline-container {{cname}}" ng-mouseenter="worm()" ng-mouseleave="reverseWorm()">
+    <div id="gold-top-right"></div>
+    <div id="gold-right"></div>
+    <div id="gold-bottom"></div>
+    <div id="gold-left"></div>
+    <div id="gold-top-left"></div>
 </div>
