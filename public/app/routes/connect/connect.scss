@@ -8,6 +8,7 @@ $formWidth: 75%;
 $formPadding: 12px 20px;
 $formMargin: 8px 0;
 
+
 .connect-container {
   width: 100vw;
   margin: 0;
@@ -16,6 +17,8 @@ $formMargin: 8px 0;
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .connect-banner {
@@ -25,27 +28,33 @@ $formMargin: 8px 0;
   height: 100vh;
   width: 100vw;
   display: flex;
-  background-image: url('https://dummyimage.com/1280x800/000/fff&text=Connect');
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url('https://dummyimage.com/1280x800/000/fff&text=Connect');
+  // background-repeat: no-repeat;
+  // background-size: cover;
 }
 
+.title-container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  // margin: -110px;
+}
 
-.block {
-  height: 100vh;
+.connect-block {
+  height: 200vh;
   width: 100vw;
   display: flex;
   flex-flow: row;
   justify-content: space-around;;
-  align-items: flex-end;
+  align-items: flex-start;;
   background-image: url('./images/map.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  border: 1px solid $gold;
 
   div{
-    width: 50%;
+    width: 95%;
+    padding: 22px;
   }
 
   .sub-row {
@@ -64,27 +73,51 @@ $formMargin: 8px 0;
   color: $gold;
   margin: $margin;
   }
-
-  p {
-    margin: $margin;
+  h2 {
+    font-family: 'built-titling';
+    color: $gold;
+    font-size: 46px;
+    font-weight: 100;
+    letter-spacing: 7.75px;
+  }
+  h3 {
+    font-family: 'Crimson Text', serif;
     color: $textColor;
+    font-size: 32px;
+    font-weight: 100;
+    margin: 0;
+  }
+  p {
+    font-family: 'Crimson Text', serif;
+    color: $textColor;
+    font-size: 17px;
+    font-weight: 100;
+    margin: 0;
   }
 
   a {
     text-decoration: none;
+    font-family: 'built-titling';
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 2.5px;
+    color: $textColor;
+    text-transform: uppercase;
+  }
+  hr{
+    width: 30px;
   }
 
   .left {
-    width: 575px;
-    margin-left:100px;
-    border: 1px solid $gold;
+    width: 475px;
+    margin-left:-25px;
     background-color: $cream;
   }
   .right {
+    width: 475px;
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
-    border: 1px solid $gold;
   }
   input {
     width: $formWidth;
