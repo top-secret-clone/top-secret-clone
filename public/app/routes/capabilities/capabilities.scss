@@ -4,8 +4,10 @@ $margin:5%;
 $textColor:#CECECE;
 $wide: 100vw;
 $high: 775px;
+$offset: 550px;
+
 .test{
-  background-color: red !important;
+  border: 1px solid red !important;
   z-index: 500 !important;
 }
 
@@ -47,7 +49,7 @@ $high: 775px;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  background-color: yellow;
+  background-color: black;
 
   .sub-row {
     width: 50%;
@@ -111,7 +113,7 @@ $high: 775px;
     top: 10px;
     margin: 0 0 0 -.7%;
     z-index: 200;
-    background-color: red;
+    background-color: transparent;
     h2 {
       font-family: 'built-titling';
       font-weight: 400;
@@ -306,7 +308,7 @@ $high: 775px;
     position: absolute;
     left: 0px;
     top: 0px;
-    height: $wide * .75;
+    height: $wide * .9;
   }
 
 }
@@ -320,7 +322,7 @@ $high: 775px;
     position: absolute;
     right: 0px;
     top: 0px;
-    height: $wide * .75;
+    height: $wide * .9;
   }
 
 }
@@ -332,23 +334,43 @@ $high: 775px;
   z-index: 175;
 }
 
-.set-2 {
+.set-2-right {
   z-index: 150;
-  top: 565px;
+  top: $offset;
 }
-.set-3 {
+.set-2-left {
+  z-index: 145;
+  top: $offset;
+}
+.set-3-right {
   z-index: 120;
-  top: 1365px;
+  top: $offset * 2;
 }
-.set-4 {
+.set-3-left {
+  z-index: 115;
+  top: $offset * 2;
+}
+.set-4-right {
   z-index: 90;
-  top: 2184px;
+  top: $offset * 3;
 }
-.set-5 {
+.set-4-left {
+  z-index: 85;
+  top: $offset * 3;
+}
+.set-5-right {
   z-index: 60;
-  top: 3021px;
+  top: $offset * 4;
 }
-.set-6 {
+.set-5-left {
+  z-index: 55;
+  top: $offset * 4;
+}
+.set-6-right {
   z-index: 30;
-  top: 3897px;
+  top: $offset * 5;
+}
+.set-6-left {
+  z-index: 25;
+  top: $offset * 5;
 }
