@@ -6,15 +6,13 @@ angular.module("topSecret").directive('stickyNav', function() {
       $scope.showNav = false;
     },
     link: function(scope, element, att) {
-      var distance = $(".sticky-nav").offset().top;
-      console.log(distance);
+      var distance = $("sticky-nav").offset().top;
         $(window).scroll(function(){
           var scrollPosition = $(this).scrollTop();
-          console.log(scrollPosition)
           if(scrollPosition > distance){
-            $(".sticky-nav").addClass('fix');
+            $("sticky-nav").addClass('fix');
           } else {
-            $(".sticky-nav").removeClass('fix');
+            $("sticky-nav").removeClass('fix');
           }
         })
    }

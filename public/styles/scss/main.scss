@@ -29,8 +29,8 @@ $desktop: $medium;
 /* Typography */
 
 @font-face {
-font-family: 'built-titling';
-src: url('./built-titling.light.ttf'),
+	font-family: 'built-titling';
+	src: url('./built-titling.light.ttf');
 }
 
 /* Components */
@@ -131,37 +131,56 @@ a {
   flex-wrap: wrap;
 }
 
+.one-third-column,
+.two-thirds-column,
+.one-quarter-column,
+.one-half-column,
+.three-quarters-column, {
+	flex: 100%;
+	height: 250px;
+}
+
 .column {
-  flex-basis: 100%;
-}
-
-//NOTE For unevenly sized columns, use these
-
-.one-third-column {
-	flex-basis: calc(100% / 3);
-}
-
-.two-thirds-column {
-	flex-basis: calc(100% * (2/3));
-}
-
-.one-quarter-column {
-	flex-basis: calc(100% / 4);
-}
-
-.one-half-column {
-	flex-basis: calc(100% / 2);
-}
-
-.three-quarters-column {
-	flex-basis: calc(100% * (3/4));
+	flex: 100%;
+	//NOTE this may cause bugs, watch it.
+	height: 250px;
 }
 
 // Responsive Grid Media Query:
 @media screen and (min-width: 800px) {
-  .column {
-    flex: 1;
-  }
+
+	//NOTE For evenly sized columns use this:
+	.column {
+	  flex: 1;
+		height: auto;
+	}
+
+	//NOTE For unevenly sized columns, use these
+
+	.one-third-column {
+		flex-basis: calc(100% / 3);
+		height: auto;
+	}
+
+	.two-thirds-column {
+		flex-basis: calc(100% * (2/3));
+		height: auto;
+	}
+
+	.one-quarter-column {
+		flex-basis: calc(100% / 4);
+		height: auto;
+	}
+
+	.one-half-column {
+		flex-basis: calc(100% / 2);
+		height: auto;
+	}
+
+	.three-quarters-column {
+		flex-basis: calc(100% * (3/4));
+		height: auto;
+	}
 }
 
 // 8.) Components:
@@ -175,6 +194,7 @@ $stickyNavHeight: 40px;
 
 .sticky-nav {
 	background-color: white;
+	height: $stickyNavHeight;
 	ul {
 		display: flex;
 		align-items: center;
@@ -187,6 +207,7 @@ $stickyNavHeight: 40px;
   position: fixed;
 	background-color: white;
 	width: 100%;
+	height: $stickyNavHeight;
 }
 
 .jump-fix {
@@ -209,12 +230,31 @@ $stickyNavHeight: 40px;
 	position: relative;
 	top: 0;
 	left: 0;
-	height: 800px;
+	height: 761px;
 	width: 100%;
 	display: flex;
-	background-image: url(https://dummyimage.com/1280x800/000/fff&text=Work);
+	align-items: center;
+	justify-content: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	.fullscreen-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+	}
+	.title-container {
+
+	}
+	#work-title {
+		z-index: 100;
+		height: 350px;
+		width: 450px;
+		overflow: visible;
+	}
 }
 
 /*~~~~~~~~~~~~~~~ About ~~~~~~~~~~~~~~~*/
