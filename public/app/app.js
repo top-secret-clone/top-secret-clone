@@ -47,10 +47,10 @@ angular.module("topSecret", ["ui.router"])
         user: function(authService, $state) {
           return authService.getCurrentUser().then(function(response) {
             if (!response.data)
-              $state.go('login');
+              $state.go('404');
             return response.data;
           }).catch(function(err) {
-            $state.go('login');
+            $state.go('404');
           });
         }
       }

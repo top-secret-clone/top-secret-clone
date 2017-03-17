@@ -6,7 +6,7 @@ angular.module("topSecret").controller("404Controller", function($scope, authSer
         alert('User does not exist');
         $scope.user.password = '';
       } else {
-        $state.go('profile');
+        $state.go('admin');
       }
     }).catch(function(err) {
       alert('Unable to login');
