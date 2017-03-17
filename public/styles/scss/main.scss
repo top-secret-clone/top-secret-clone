@@ -1,0 +1,511 @@
+// Table of Contents:
+// ~~~~~~~~~~~~~~~~~~~
+// 1.) Variables
+// 2.) Mixins
+// 3.) Base Styles
+// 4.) Typography (links)
+// 5.) Scaffolding
+// 6.) Helpers
+// 7.) Grid
+// 8.) Components
+// 9.) Pages
+
+// 1.) Variables:
+// ~~~~~~~~~~~~~~~
+
+/* Containers */
+$x-small: 600px;
+$small: 800px;
+$medium: 1000px;
+$large: 1200px;
+$full: 100%;
+
+// Breakpoints
+$mobile: $x-small;
+$desktop: $medium;
+
+/* Colors */
+
+/* Typography */
+
+@font-face {
+	font-family: 'built-titling';
+	src: url('./built-titling.light.ttf');
+}
+
+/* Components */
+
+// 2.) Mixins:
+// ~~~~~~~~~~~~
+
+/* Breakpoints */
+
+// Small breakpoint
+@mixin small-breakpoint {
+	@media (min-width: #{$mobile}) {
+		@content;
+	}
+}
+
+// Large breakpoint
+@mixin large-breakpoint {
+	@media (min-width: #{$desktop}) {
+		@content;
+	}
+}
+
+// 3.) Base Styles:
+// ~~~~~~~~~~~~~~~~~
+
+//Reset Border Box:
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+// 4.) Typography:
+// ~~~~~~~~~~~~~~~~
+
+/* Font */
+
+// Headings
+
+// Body Font
+
+// Links:
+a {
+  cursor: pointer;
+}
+
+// 5.) Scaffolding:
+// ~~~~~~~~~~~~~~~~~
+
+// 6.) Helpers:
+// ~~~~~~~~~~~~~
+
+.responsive-img {
+	width: 100%;
+}
+
+.bordered {
+	border: solid 2px black;
+}
+
+.centered {
+	justify-content: center;
+}
+
+.text-centered {
+	text-align: center;
+}
+
+.background-img-fix {
+	background-position: center;
+  background-repeat: no-repeat;
+}
+
+.background-img-fix2 {
+	zoom: 45%;
+	background-position-x: -393px;
+}
+
+.fixed-height {
+	height: 275px;
+}
+
+.half-zoom {
+	zoom: 50%;
+}
+
+// 7.) Grid:
+// ~~~~~~~~~~
+
+//NOTE If you just want evenly sized columns, just keep adding columns in a row.
+
+.container {
+	max-width: $full;
+};
+.x-small-container {
+	max-width: $x-small;
+};
+.small-container {
+	max-width: $small;
+};
+.medium-container {
+	max-width: $medium;
+};
+.large-container {
+	max-width: $large;
+};
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.one-third-column,
+.two-thirds-column,
+.one-quarter-column,
+.one-half-column,
+.three-quarters-column, {
+	flex: 100%;
+	height: 250px;
+}
+
+.column {
+	flex: 100%;
+	//NOTE this may cause bugs, watch it.
+	height: 250px;
+}
+
+// Responsive Grid Media Query:
+@media screen and (min-width: 800px) {
+
+	//NOTE For evenly sized columns use this:
+	.column {
+	  flex: 1;
+		height: auto;
+	}
+
+	//NOTE For unevenly sized columns, use these
+
+	.one-third-column {
+		flex-basis: calc(100% / 3);
+		height: auto;
+	}
+
+	.two-thirds-column {
+		flex-basis: calc(100% * (2/3));
+		height: auto;
+	}
+
+	.one-quarter-column {
+		flex-basis: calc(100% / 4);
+		height: auto;
+	}
+
+	.one-half-column {
+		flex-basis: calc(100% / 2);
+		height: auto;
+	}
+
+	.three-quarters-column {
+		flex-basis: calc(100% * (3/4));
+		height: auto;
+	}
+}
+
+// 8.) Components:
+// ~~~~~~~~~~~~~~~~
+
+/* Buttons */
+
+/* Sticky-Nav */
+//
+$stickyNavHeight: 40px;
+
+.sticky-nav {
+	background-color: white;
+	height: $stickyNavHeight;
+	ul {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+}
+
+.fix {
+  top: 0px;
+  position: fixed;
+	background-color: white;
+	width: 100%;
+	height: $stickyNavHeight;
+}
+
+.jump-fix {
+	height: $stickyNavHeight;
+}
+
+// 9.) Pages:
+// ~~~~~~~~~~
+
+/*~~~~~~~~~~~~~~~ Home ~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~ Case Studies ~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~ Work ~~~~~~~~~~~~~~~*/
+
+//NOTE Make this a mix-in
+
+//Banner
+.work-banner {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 761px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.fullscreen-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+	}
+	.title-container {
+
+	}
+	#work-title {
+		z-index: 100;
+		height: 350px;
+		width: 450px;
+		overflow: visible;
+	}
+}
+
+/*~~~~~~~~~~~~~~~ About ~~~~~~~~~~~~~~~*/
+
+//Banner
+.about-banner {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 800px;
+	width: 100%;
+	display: flex;
+	background-image: url(https://dummyimage.com/1280x800/000/fff&text=About);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.what-we-do {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 80px 30px;
+	display: flex;
+	background-image: url(http://www.wearetopsecret.com/images/about/about_article_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	h1 {
+		font-family: 'Oswald', sans-serif;
+		color: #88714d;
+		font-size: 75px;
+		line-height: 0px;
+		font-weight: 100;
+		letter-spacing: 0.2em;
+		width: 900px;
+		height: 100px;
+	}
+
+	h2 {
+		font-family: 'Crimson Text', serif;
+		color: #e8e7e7;
+		font-size: 25px;
+		line-height: 34px;
+		font-weight: 100;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	p {
+		font-family: 'Crimson Text', serif;
+		color: #cecece;
+		font-size: 17px;
+		line-height: 35px;
+	}
+
+	a {
+		font-family: 'Oswald, sans-serif';
+		font-weight: 800;
+		color: #d7d7d7;
+		text-decoration: none;
+	}
+}
+
+.clients-served {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 800px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	// background-image: url(https://dummyimage.com/1280x800/a8a8a8/fff);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #191919; //BUG <-- This color is not exact.
+	h1 {
+		padding: 80px 0 60px 0;
+		font-family: 'built-titling';
+		font-weight: 100;
+		font-style: normal;
+		color: #88714d;
+		font-size: 40px;
+		letter-spacing: 13px;
+		line-height: 0px;
+	}
+	ul {
+		list-style-type: none;
+	}
+}
+
+.who-we-are {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	background-image: url(http://www.wearetopsecret.com/images/about/grain.jpg);
+	padding: 265px 10%;
+	h1 {
+		font-family: 'Oswald', sans-serif;
+		color: #88714d;
+		font-size: 101px;
+		line-height: 0px;
+		font-weight: 100;
+		letter-spacing: 11.17px;
+		width: 841px;
+		height: 140px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		top: -124px;
+		position: relative;
+	}
+	h2 {
+		font-family: 'Crimson Text', serif;
+		color: #e8e7e7;
+		font-size: 30px;
+		line-height: 36px;
+		font-weight: 100;
+		-webkit-font-smoothing: antialiased;
+		margin-top: -160px;
+		margin-bottom: 0px;
+	}
+	.bio-row {
+		margin-top: 55px;
+		height: 508px;
+	}
+	ul {
+		list-style-type: none;
+		font-family: 'Oswald', sans-serif;
+		font-weight: 300;
+		font-size: 35px;
+		text-transform: capitalize;
+		color: gray;
+		line-height: 67px;
+		margin-top: -12px;
+		margin-left: -33px;
+	}
+	.bio-default-pic {
+		background-image: url(http://www.wearetopsecret.com/images/about/partners/badge.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+	}
+}
+
+.the-shop {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 80px 30px;
+	display: flex;
+	background-image: url(http://www.wearetopsecret.com/images/about/shop-bg_02.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	h1 {
+		font-family: 'Oswald', sans-serif;
+		color: #88714d;
+		font-size: 75px;
+		line-height: 0px;
+		font-weight: 100;
+		letter-spacing: 0.2em;
+		width: 900px;
+		height: 100px;
+	}
+
+	h2 {
+		font-family: 'Crimson Text', serif;
+		color: #e8e7e7;
+		font-size: 25px;
+		line-height: 34px;
+		font-weight: 100;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	p {
+		font-family: 'Crimson Text', serif;
+		color: #cecece;
+		font-size: 17px;
+		line-height: 35px;
+	}
+}
+
+.slider-placeholder {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 800px;
+	width: 100%;
+	display: flex;
+	background-image: url(https://dummyimage.com/1280x800/d3d3d3/fff&text=Slider+Placeholder);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 265px 10%;
+}
+
+.manifesto {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 80px 30px;
+	display: flex;
+	background-image: url(http://www.wearetopsecret.com/images/about/mantra_bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	h1 {
+		font-family: 'Oswald', sans-serif;
+		color: #88714d;
+		font-size: 75px;
+		line-height: 0px;
+		font-weight: 100;
+		letter-spacing: 0.2em;
+		width: 900px;
+		height: 100px;
+	}
+
+	h2 {
+		font-family: 'Crimson Text', serif;
+		color: #e8e7e7;
+		font-size: 25px;
+		line-height: 34px;
+		font-weight: 100;
+		-webkit-font-smoothing: antialiased;
+	}
+
+
+}
+
+/*~~~~~~~~~~~~~~~ Capabilities ~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~ Connect ~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~ 404 ~~~~~~~~~~~~~~~*/
