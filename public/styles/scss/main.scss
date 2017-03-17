@@ -104,6 +104,24 @@ a {
 	text-align: center;
 }
 
+.background-img-fix {
+	background-position: center;
+  background-repeat: no-repeat;
+}
+
+.background-img-fix2 {
+	zoom: 45%;
+	background-position-x: -393px;
+}
+
+.fixed-height {
+	height: 275px;
+}
+
+.half-zoom {
+	zoom: 50%;
+}
+
 // 7.) Grid:
 // ~~~~~~~~~~
 

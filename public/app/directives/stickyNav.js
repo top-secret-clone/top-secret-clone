@@ -1,7 +1,7 @@
 angular.module("topSecret").directive('stickyNav', function() {
   return {
     restrict: 'EA',
-    templateUrl: './directives/stickyNavTmpl.html',
+    templateUrl: './app/directives/stickyNavTmpl.html',
     contoller: function($scope){
       $scope.showNav = false;
     },
