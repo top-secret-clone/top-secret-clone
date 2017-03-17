@@ -1,37 +1,139 @@
-body{
+body {
+  margin: 0 0 0 0;
+}
+
+//main content container--holds entire page
+.case-studies-main-container{
   position: absolute;
+  margin: 0 0 0 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+//Top div with video and header
+.case-studies-header{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 -7px 0; //for some insane reason the bottom margin will not line up flush with the adjoining div without a negative margin....DON'T TOUCH !important
+}
+.case-studies-video{
+  margin: 0 0 0 0;
+  position: relative;
+  height: auto;
+  width: 100%;
+  z-index: 2;
+}
+.case-studies-title-container{
+  position: absolute;
+  overflow: hidden;
+  height: 393px;
+  width: 64%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-image: url("http://www.wearetopsecret.com/images/spritesheet-case-studies.png");
+  background-size: inherit;
+  background-position: bottom;
+  background-position-x: -8252px;
+  background-position-y: -23%;
+}
+
+
+.case-studies-main-column{
+  margin: 0 0 0 0;
+  position: relative;
+  height: 48vh;
+  width: 100%;
+}
+
+//Styling for the background images of the main content on case studies
+.cs-image-container{
+  position: relative;
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-position: top;
+  zoom: 128%;
+  background-position-y: 14%;
 }
+//put the background images in each individual container
+#oregon{
+  background-image: url("http://www.wearetopsecret.com/images/case-studies/oregon-panel-bg.jpg");
+}
+#creed{
+  background-image: url("http://www.wearetopsecret.com/images/case-studies/ubisoft-panel-bg.jpg");
+}
+#rossi{
+  background-image: url("http://www.wearetopsecret.com/images/case-studies/rossi/rossignol-hero.jpg");
+  zoom: 100%;
+}
+#publik{
+ background-image: url("http://www.wearetopsecret.com/images/case-studies/publik-panel-bg.jpg"); 
+}
+#peli{
+  background-image: url("http://www.wearetopsecret.com/images/case-studies/peligroso-panel-bg.jpg");
+}
+
+//styling for all of the titles within the main content divs
+.cs-title{
+  position: absolute;
+  height: 486px;
+  width: 1655px;
+  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
+}
+//so, to get the heading and title to migrate to the center you have to wrap them in this inner div and center it =>
+//flex doesn't work
+.cs-title-inner{
+  position: absolute;
+  display: flex;
+  background-color: transparent;
+  /* top: 50%; */
+  /* left: 50%; */
+  width: 100%;
+  height: 100%;
+  justify-content: center; 
+  align-items: center;
+}
+//this is for the main titles
+.cs-title-main {
+  font-family: 'build-titling', sans-serif;
+  color: #88714d;
+  text-transform: uppercase;
+}
+
+//this is for the small heading above each title
+.cs-title-small{
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Lora', serif;
+}
+
+
+
+//the nav icon and the sound icon need to be fixed with high z index
 .case-studies-nav-container {
   position: fixed;
-  background-color: #89714D;
   top: 3vh;
   left: 3vh;
   height: 8vh;
   width: 8vh;
+  z-index: 12;
 }
 .case-studies-nav {
   position: absolute;
   height: 8vh;
   width: 8vh;
-  background-color: #89714D;
 }
 
-.case-studies-footer{
-  position: absolute;
-  width: 100vw;
-  height: 5vh;
-  margin-top:0;
-  background-color: #1f1f1f;
-  left: 0;
-}
-
-.case-studies-header{
-  height: 100vh;
-  width: 100vw;
-}
- #case-files{
-   height: 80vh;
+ .sound-icon-container{
+   z-index: 10;
  }
