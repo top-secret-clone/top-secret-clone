@@ -43,6 +43,8 @@ body {
 }
 
 
+
+//each of the main content divs has this class
 .case-studies-main-column{
   margin: 0 0 0 0;
   position: relative;
@@ -50,6 +52,14 @@ body {
   width: 100%;
 }
 
+//<div class="case-studies-main-column">
+//<gold-outline cname="'peligroso'"></gold-outline>
+//<div class="cs-image-container" id="peli"></div>
+//<div class="cs-title">
+//<div class="cs-heading-container"><p class="cs-title-small">integrated campaign</p></div>
+//<div class="cs-title-inner"><p class="cs-title-main">peligroso tequila</p>
+//</div>
+//</div>
 //Styling for the background images of the main content on case studies
 .cs-image-container{
   position: relative;
@@ -86,9 +96,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  //display: flex;
-  //align-items: center;
-  //justify-content: center;
 }
 //so, to get the heading and title to migrate to the center you have to wrap them in this inner div and center it =>
 //flex doesn't work
@@ -105,21 +112,51 @@ body {
 }
 //this is for the main titles
 .cs-title-main {
-  font-family: 'build-titling', sans-serif;
+  font-family: 'built-titling', sans-serif;
   color: #88714d;
   text-transform: uppercase;
+  font-size: 6em;
+  letter-spacing: 1rem;
+  transition-delay: 1s;
+  transition-duration: 1s;
 }
 
 //this is for the small heading above each title
+.cs-heading-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -229%);
+}
 .cs-title-small{
   color: white;
   text-transform: uppercase;
   font-family: 'Lora', serif;
 }
 
+//styling and background for the bottom case files div
+#case-files{
+  height: 75vh;
+  background-image: url("http://www.wearetopsecret.com/images/case-studies/case-files-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+//cool triangle in the background
+#cs-triangle{
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%);
+}
+//little text thingy
+#cs-redacted{
+  position: absolute;
+  left: 54%;
+  top: 42%;
+}
 
 
-//the nav icon and the sound icon need to be fixed with high z index
+//the nav icon and the sound icon need to be position:fixed with high z index
 .case-studies-nav-container {
   position: fixed;
   top: 3vh;
@@ -137,3 +174,7 @@ body {
  .sound-icon-container{
    z-index: 10;
  }
+
+.case-studies-main-column:hover  .cs-title-main{
+    color: #232323;
+}
