@@ -1,37 +1,73 @@
-body{
+body {
+  margin: 0 0 0 0;
+}
+
+.case-studies-main-container{
   position: absolute;
+  margin: 0 0 0 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+.cs-main-content-middle{
+  margin: 0 0 0 0;
+  position: absolute;
+  top: 98vh;
+  overflow-x: hidden;
+}
+.case-studies-main-column{
+  position: relative;
+height: 48vh;
+  width: 100%;
+}
+.case-study-image{
+  position: relative;
   height: 100%;
   width: 100%;
-  background-color: black;
 }
 .case-studies-nav-container {
   position: fixed;
-  background-color: #89714D;
   top: 3vh;
   left: 3vh;
   height: 8vh;
   width: 8vh;
+  z-index: 12;
 }
 .case-studies-nav {
   position: absolute;
   height: 8vh;
   width: 8vh;
-  background-color: #89714D;
 }
-
-.case-studies-footer{
-  position: absolute;
-  width: 100vw;
-  height: 5vh;
-  margin-top:0;
-  background-color: #1f1f1f;
-  left: 0;
-}
-
 .case-studies-header{
-  height: 100vh;
-  width: 100vw;
+  top: 0px!important;
+  left: 0px;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 0 0 0;
 }
- #case-files{
-   height: 80vh;
+.case-studies-video{
+  margin: 0 0 0 0;
+  position: relative;
+  height: auto;
+   width: 100%;
+  z-index: 2;
+}
+.case-studies-title-container{
+  position: absolute;
+  overflow: hidden;
+  height: 393px;
+  width: 64%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-image: url(http://www.wearetopsecret.com/images/spritesheet-case-studies.png);
+  background-size: inherit;
+  background-position: bottom;
+  background-position-x: -8252px;
+  background-position-y: -23%;
+}
+ .sound-icon-container{
+   z-index: 10;
  }
