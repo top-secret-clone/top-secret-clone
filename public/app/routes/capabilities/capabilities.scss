@@ -7,20 +7,22 @@ $high: 100vh;
 $offset: 550px;
 
 .test{
-  border: 1px solid red !important;
+
 }
 
 .capabilities-container {
   width: 100vw;
+  height: 5740px;
   margin: 0;
   padding: 0;
-  background-color: #c0c0c0;
+  background-color: black;
   display: flex;
   flex-flow: column;
   align-items: center;
   position: relative;
   color: white;
-  overflow: hidden;
+  overflow-x: hidden;
+
 }
 
 .capabilities-banner {
@@ -31,7 +33,6 @@ $offset: 550px;
   min-height: 775px;
   width: 100vw;
   z-index: 200;
-  // background-image: url(https://dummyimage.com/1280x800/000/fff&text=Capabilities);
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -40,7 +41,14 @@ $offset: 550px;
     z-index: 200;
   }
 }
-
+.capabilities-title-container {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  margin-top: -262px;
+  margin-left: -612px;
+  z-index: 201;
+}
 
 .capabilities-main {
   position: absolute;
@@ -302,7 +310,8 @@ $offset: 550px;
   position: relative;
   top: 775px;
   width: 100vw;
-  height: 4410px
+  height: 5135px;
+  overflow: hidden;
 }
 .slant-left {
   position: absolute;
