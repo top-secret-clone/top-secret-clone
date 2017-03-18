@@ -17,7 +17,7 @@ body {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  margin: 0 0 -7px 0; //for some insane reason the bottom margin will not line up flush with the adjoining div without a negative margin....DON'T TOUCH !important
+  margin: 0 0 -7px 0; //for some weird reason the bottom margin will not line up flush with the adjoining div without a negative margin....DON'T TOUCH !important
 }
 .case-studies-video{
   margin: 0 0 0 0;
@@ -41,7 +41,72 @@ body {
   background-position-x: -8252px;
   background-position-y: -23%;
 }
-
+//styling for the scroll instructions at the bottom of the main header
+.scroll-more-container {
+  position: absolute;
+  height: 31px;
+  width: 100px;
+  top: 94%;
+  left: 50%;
+  transform: translate(-50%, 24%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+#scroll-scroll{
+  font-family: 'built-titling';
+  text-transform: uppercase;
+  top: 95%;
+  left: 44%;
+  color: #a1a0a0;
+  z-index: 10;
+  position: absolute;
+  letter-spacing: 5px;
+  font-size: small;
+}
+#scroll-more{
+  font-family: 'built-titling';
+  text-transform: uppercase;
+  top: 95%;
+  left: 49%;
+  color: #a1a0a0;
+  z-index: 10;
+  position: absolute;
+  letter-spacing: 5px;
+  font-size: small;
+}
+.fa-angle-down{
+  color: #232323;
+  font-size: x-large;
+  margin-top: -13px;
+}
+//animation for the arrows
+@keyframes arrowpulse {
+  from{
+    color: transparent;
+  }
+  to{
+    color: #88714d;
+  }
+  from{
+    color: #88714d;
+  }
+  to{
+    color: transparent;
+  }
+}
+#scroll-down-arrow-top{
+  animation: arrowpulse 2s infinite;
+  animation-delay: .25s;
+}
+#scroll-down-arrow-middle{
+  animation: arrowpulse 2s infinite;
+  animation-delay: .30s;
+}
+#scroll-down-arrow-bottom{
+  animation: arrowpulse 2s infinite;
+  animation-delay: .35s;
+}
 
 
 //each of the main content divs has this class
@@ -52,15 +117,6 @@ body {
   width: 100%;
 }
 
-//<div class="case-studies-main-column">
-//<gold-outline cname="'peligroso'"></gold-outline>
-//<div class="cs-image-container" id="peli"></div>
-//<div class="cs-title">
-//<div class="cs-heading-container"><p class="cs-title-small">integrated campaign</p></div>
-//<div class="cs-title-inner"><p class="cs-title-main">peligroso tequila</p>
-//</div>
-//</div>
-//Styling for the background images of the main content on case studies
 .cs-image-container{
   position: relative;
   height: 100%;
