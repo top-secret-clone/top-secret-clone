@@ -76,23 +76,20 @@ body {
   font-size: small;
 }
 .fa-angle-down{
-  color: #232323;
+  color: #89714D;
   font-size: x-large;
   margin-top: -13px;
 }
 //animation for the arrows
 @keyframes arrowpulse {
-  from{
-    color: transparent;
+  0%{
+    opacity: 0;
   }
-  to{
+  25%{
     color: #88714d;
   }
-  from{
-    color: #88714d;
-  }
-  to{
-    color: transparent;
+  50%{
+    opacity: 0;
   }
 }
 #scroll-down-arrow-top{
