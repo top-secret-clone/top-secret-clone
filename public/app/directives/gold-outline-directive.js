@@ -32,21 +32,23 @@ angular.module('topSecret').directive('goldOutline', function(){
             $scope.worm = function () {
                 setTimeout(function () {
                     console.log('WHERE ARE YOU??????????')
-                    TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[1], 0.25, {width: topRight});
-                    TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[3], 0.25, {
-                        delay: 0.25,
+                    TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[1], 0.05, {
+                        width: topRight
+                    });
+                    TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[3], 0.05, {
+                        delay: 0.05,
                         height: parentHeight
                     });
-                    TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[5], 0.25, {
-                        delay: 0.5,
+                    TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[5], 0.05, {
+                        delay: 0.10,
                         width: rightWidth
                     });
-                    TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[7], 0.25, {
-                        delay: 0.75,
+                    TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[7], 0.05, {
+                        delay: 0.15,
                         height: parentHeight
                     });
-                    TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[9], 0.25, {
-                        delay: 1,
+                    TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[9], 0.50, {
+                        delay: 0.20,
                         width: topRight
                     });
                 }, 0)
@@ -55,11 +57,11 @@ angular.module('topSecret').directive('goldOutline', function(){
             $scope.reverseWorm = function(){
                 setTimeout( function(){
                 TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[9], 0.25, {width: 0});
-                TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[7], 0.25, {delay: 0.25, height: 0});
-                TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[5], 0.25, {delay: 0.5, width: 0});
-                TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[3], 0.25, {delay: 0.75, height: 0});
-                TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[1], 0.25, {delay: 1, width: 0});
-            }, 1250)
+                TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[7], 0.25, {height: 0});
+                TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[5], 0.25, {width: 0});
+                TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[3], 0.25, {height: 0});
+                TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[1], 0.25, {width: 0});
+            }, 1)
             }
         }
 

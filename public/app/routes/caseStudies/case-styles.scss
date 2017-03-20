@@ -11,13 +11,19 @@ body {
   overflow-x: hidden;
 }
 
+//styling for the nav svg
+#hamburger_menu{
+  height: 100%;
+  width: 100%;
+}
+
 //Top div with video and header
 .case-studies-header{
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 100%;
-  margin: 0 0 -7px 0; //for some weird reason the bottom margin will not line up flush with the adjoining div without a negative margin....DON'T TOUCH !important
+  margin: 0 0 -10px 0; //for some weird reason the bottom margin will not line up flush with the adjoining div without a negative margin....DON'T TOUCH !important
 }
 .case-studies-video{
   margin: 0 0 0 0;
@@ -30,16 +36,17 @@ body {
   position: absolute;
   overflow: hidden;
   height: 393px;
-  width: 64%;
+  width: 40%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  background-image: url("http://www.wearetopsecret.com/images/spritesheet-case-studies.png");
+  background-image: url(http://www.wearetopsecret.com/images/spritesheet-case-studies.png);
   background-size: inherit;
   background-position: bottom;
   background-position-x: -8252px;
   background-position-y: -23%;
+  zoom: 63%;
 }
 //styling for the scroll instructions at the bottom of the main header
 .scroll-more-container {
@@ -76,7 +83,7 @@ body {
   font-size: small;
 }
 .fa-angle-down{
-  color: #89714D;
+  //color: #89714D;
   font-size: x-large;
   margin-top: -13px;
 }
@@ -87,24 +94,26 @@ body {
   0%{
     opacity: 0;
   }
-  25%{
+  50% {
     color: #88714d;
+    opacity: 1;
   }
-  50%{
+  100%{
     opacity: 0;
   }
 }
+
 #scroll-down-arrow-top{
   animation: arrowpulse 2s infinite;
-  animation-delay: .25s;
+  //animation-delay: .s
 }
 #scroll-down-arrow-middle{
   animation: arrowpulse 2s infinite;
-  animation-delay: .30s;
+  animation-delay: .3s;
 }
 #scroll-down-arrow-bottom{
   animation: arrowpulse 2s infinite;
-  animation-delay: .35s;
+  animation-delay: .6s;
 }
 
 
@@ -121,7 +130,7 @@ body {
   height: 100%;
   width: 100%;
   background-position: top;
-  zoom: 128%;
+  zoom: 135%;
   background-position-y: 14%;
 }
 //put the background images in each individual container
@@ -172,8 +181,8 @@ body {
   text-transform: uppercase;
   font-size: 6em;
   letter-spacing: 1rem;
-  transition-delay: 1s;
-  transition-duration: 1s;
+  transition-delay: .2s;
+  transition-duration: .5s;
 }
 
 //this is for the small heading above each title
@@ -181,15 +190,112 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -229%);
+  transform: translate(-50%, -200%);
 }
 .cs-title-small{
+  font-size: large;
+  letter-spacing: 5px;
   color: white;
   text-transform: uppercase;
   font-family: 'Lora', serif;
   font-weight: 700;
-  transition-duration: 1s;
-  transition-delay: 2s;
+  transition-duration: .5s;
+  transition-delay: 1s;
+}
+//this is the styling for the heading that fades in on hover
+.cs-hover-heading{
+  opacity: 0;
+position: absolute;
+  margin-top: 50px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 10;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition-delay: .7s;
+  transition-duration: .5s;
+}
+.cs-hover-heading-top{
+width: 36%;
+  height: 1px;
+  background-color: #707070;
+  margin-bottom: 10px;
+}
+.cs-hover-heading-main{
+  text-transform: uppercase;
+  font-family: 'Lora', serif;
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+}
+.cs-hover-heading-bottom{
+  width: 36%;
+  height: 1px;
+  background-color: #707070;
+  margin-top: 10px;
+}
+.creed-top-hover{
+  width: 24%;
+}
+.rossi-top-hover{
+width: 30%;
+}
+.publik-top-hover{
+width: 25%;
+}
+.peli-top-hover{
+width: 35%;
+}
+
+
+//style for the view case study
+.view-case{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%);
+  height: 75px;
+  width: 198px;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+}
+.view-case-inner{
+  position: relative;
+}
+.view-case-p{
+color: white;
+  font-family: 'built-titling', sans-serif;
+  text-transform: uppercase;
+  font-size: x-large;
+  letter-spacing: 3px;
+}
+#view-case-strike{
+  position: absolute;
+  height: 1px;
+  width: 0;
+  background-color: #88714d;
+  top: 48%;
+  left: -10%;
+}
+.view-case-arrow{
+  background-image: url(http://www.wearetopsecret.com/images/arrow-tip-forward.png);
+  position: absolute;
+  height: 9px;
+  width: 9px;
+  background-repeat: no-repeat;
+  top: 42%;
+  left: 102%;
+}
+.view-case:hover {
+  cursor: pointer;
+}
+.view-case:hover #view-case-strike{
+  width: 148px;
 }
 
 //styling and background for the bottom case files div
@@ -238,4 +344,8 @@ body {
 }
 .case-studies-main-column:hover .cs-title-small{
   color: #88714d;
+}
+.case-studies-main-column:hover .cs-hover-heading{
+  opacity: 1;
+ margin-top: 0;
 }
