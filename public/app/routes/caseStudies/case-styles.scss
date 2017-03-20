@@ -11,13 +11,19 @@ body {
   overflow-x: hidden;
 }
 
+//styling for the nav svg
+#hamburger_menu{
+  height: 100%;
+  width: 100%;
+}
+
 //Top div with video and header
 .case-studies-header{
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 100%;
-  margin: 0 0 -7px 0; //for some insane reason the bottom margin will not line up flush with the adjoining div without a negative margin....DON'T TOUCH !important
+  margin: 0 0 -10px 0; //for some weird reason the bottom margin will not line up flush with the adjoining div without a negative margin....DON'T TOUCH !important
 }
 .case-studies-video{
   margin: 0 0 0 0;
@@ -30,19 +36,88 @@ body {
   position: absolute;
   overflow: hidden;
   height: 393px;
-  width: 64%;
+  width: 40%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  background-image: url("http://www.wearetopsecret.com/images/spritesheet-case-studies.png");
+  background-image: url(http://www.wearetopsecret.com/images/spritesheet-case-studies.png);
   background-size: inherit;
   background-position: bottom;
   background-position-x: -8252px;
   background-position-y: -23%;
+  zoom: 63%;
+}
+//styling for the scroll instructions at the bottom of the main header
+.scroll-more-container {
+  position: absolute;
+  height: 31px;
+  width: 100px;
+  top: 94%;
+  left: 50%;
+  transform: translate(-50%, 24%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+#scroll-scroll{
+  font-family: 'built-titling';
+  text-transform: uppercase;
+  top: 95%;
+  left: 44%;
+  color: #a1a0a0;
+  z-index: 10;
+  position: absolute;
+  letter-spacing: 5px;
+  font-size: small;
+}
+#scroll-more{
+  font-family: 'built-titling';
+  text-transform: uppercase;
+  top: 95%;
+  left: 49%;
+  color: #a1a0a0;
+  z-index: 10;
+  position: absolute;
+  letter-spacing: 5px;
+  font-size: small;
+}
+.fa-angle-down{
+  //color: #89714D;
+  font-size: x-large;
+  margin-top: -13px;
 }
 
 
+//animation for the arrows
+@keyframes arrowpulse {
+  0%{
+    opacity: 0;
+  }
+  50% {
+    color: #88714d;
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+#scroll-down-arrow-top{
+  animation: arrowpulse 2s infinite;
+  //animation-delay: .s
+}
+#scroll-down-arrow-middle{
+  animation: arrowpulse 2s infinite;
+  animation-delay: .3s;
+}
+#scroll-down-arrow-bottom{
+  animation: arrowpulse 2s infinite;
+  animation-delay: .6s;
+}
+
+
+//each of the main content divs has this class
 .case-studies-main-column{
   margin: 0 0 0 0;
   position: relative;
@@ -50,13 +125,12 @@ body {
   width: 100%;
 }
 
-//Styling for the background images of the main content on case studies
 .cs-image-container{
   position: relative;
   height: 100%;
   width: 100%;
   background-position: top;
-  zoom: 128%;
+  zoom: 135%;
   background-position-y: 14%;
 }
 //put the background images in each individual container
@@ -86,9 +160,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  //display: flex;
-  //align-items: center;
-  //justify-content: center;
 }
 //so, to get the heading and title to migrate to the center you have to wrap them in this inner div and center it =>
 //flex doesn't work
@@ -105,21 +176,151 @@ body {
 }
 //this is for the main titles
 .cs-title-main {
-  font-family: 'build-titling', sans-serif;
+  font-family: 'built-titling', sans-serif;
   color: #88714d;
   text-transform: uppercase;
+  font-size: 6em;
+  letter-spacing: 1rem;
+  transition-delay: .2s;
+  transition-duration: .5s;
 }
 
 //this is for the small heading above each title
+.cs-heading-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -200%);
+}
 .cs-title-small{
+  font-size: large;
+  letter-spacing: 5px;
   color: white;
   text-transform: uppercase;
   font-family: 'Lora', serif;
+  font-weight: 700;
+  transition-duration: .5s;
+  transition-delay: 1s;
+}
+//this is the styling for the heading that fades in on hover
+.cs-hover-heading{
+  opacity: 0;
+position: absolute;
+  margin-top: 50px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 10;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition-delay: .7s;
+  transition-duration: .5s;
+}
+.cs-hover-heading-top{
+width: 36%;
+  height: 1px;
+  background-color: #707070;
+  margin-bottom: 10px;
+}
+.cs-hover-heading-main{
+  text-transform: uppercase;
+  font-family: 'Lora', serif;
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+}
+.cs-hover-heading-bottom{
+  width: 36%;
+  height: 1px;
+  background-color: #707070;
+  margin-top: 10px;
+}
+.creed-top-hover{
+  width: 24%;
+}
+.rossi-top-hover{
+width: 30%;
+}
+.publik-top-hover{
+width: 25%;
+}
+.peli-top-hover{
+width: 35%;
 }
 
 
+//style for the view case study
+.view-case{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%);
+  height: 75px;
+  width: 198px;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+}
+.view-case-inner{
+  position: relative;
+}
+.view-case-p{
+color: white;
+  font-family: 'built-titling', sans-serif;
+  text-transform: uppercase;
+  font-size: x-large;
+  letter-spacing: 3px;
+}
+#view-case-strike{
+  position: absolute;
+  height: 1px;
+  width: 0;
+  background-color: #88714d;
+  top: 48%;
+  left: -10%;
+}
+.view-case-arrow{
+  background-image: url(http://www.wearetopsecret.com/images/arrow-tip-forward.png);
+  position: absolute;
+  height: 9px;
+  width: 9px;
+  background-repeat: no-repeat;
+  top: 42%;
+  left: 102%;
+}
+.view-case:hover {
+  cursor: pointer;
+}
+.view-case:hover #view-case-strike{
+  width: 148px;
+}
 
-//the nav icon and the sound icon need to be fixed with high z index
+//styling and background for the bottom case files div
+#case-files{
+  height: 75vh;
+  background-image: url("http://www.wearetopsecret.com/images/case-studies/case-files-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+//cool triangle in the background
+#cs-triangle{
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%);
+}
+//little text thingy
+#cs-redacted{
+  position: absolute;
+  left: 54%;
+  top: 42%;
+}
+
+
+//the nav icon and the sound icon need to be position:fixed with high z index
 .case-studies-nav-container {
   position: fixed;
   top: 3vh;
@@ -137,3 +338,14 @@ body {
  .sound-icon-container{
    z-index: 10;
  }
+
+.case-studies-main-column:hover  .cs-title-main{
+    color: #232323;
+}
+.case-studies-main-column:hover .cs-title-small{
+  color: #88714d;
+}
+.case-studies-main-column:hover .cs-hover-heading{
+  opacity: 1;
+ margin-top: 0;
+}
