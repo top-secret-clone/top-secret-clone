@@ -205,7 +205,18 @@ a {
 // ~~~~~~~~~~~~~~~~
 
 /* Buttons */
-
+button {
+  background-color: transparent;
+	outline: none;
+	border: none;
+  font-family: 'built-titling';
+	font-weight: 100;
+	font-size: 23px;
+	text-transform: uppercase;
+	color: white;
+	letter-spacing: 4px;
+	margin: 0;
+}
 /* Sticky-Nav */
 //
 $stickyNavHeight: 40px;
