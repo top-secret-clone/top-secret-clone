@@ -17,7 +17,7 @@ body {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  margin: 0 0 -7px 0; //for some insane reason the bottom margin will not line up flush with the adjoining div without a negative margin....DON'T TOUCH !important
+  margin: 0 0 -7px 0; //for some weird reason the bottom margin will not line up flush with the adjoining div without a negative margin....DON'T TOUCH !important
 }
 .case-studies-video{
   margin: 0 0 0 0;
@@ -41,8 +41,74 @@ body {
   background-position-x: -8252px;
   background-position-y: -23%;
 }
+//styling for the scroll instructions at the bottom of the main header
+.scroll-more-container {
+  position: absolute;
+  height: 31px;
+  width: 100px;
+  top: 94%;
+  left: 50%;
+  transform: translate(-50%, 24%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+#scroll-scroll{
+  font-family: 'built-titling';
+  text-transform: uppercase;
+  top: 95%;
+  left: 44%;
+  color: #a1a0a0;
+  z-index: 10;
+  position: absolute;
+  letter-spacing: 5px;
+  font-size: small;
+}
+#scroll-more{
+  font-family: 'built-titling';
+  text-transform: uppercase;
+  top: 95%;
+  left: 49%;
+  color: #a1a0a0;
+  z-index: 10;
+  position: absolute;
+  letter-spacing: 5px;
+  font-size: small;
+}
+.fa-angle-down{
+  color: #89714D;
+  font-size: x-large;
+  margin-top: -13px;
+}
 
 
+//animation for the arrows
+@keyframes arrowpulse {
+  0%{
+    opacity: 0;
+  }
+  25%{
+    color: #88714d;
+  }
+  50%{
+    opacity: 0;
+  }
+}
+#scroll-down-arrow-top{
+  animation: arrowpulse 2s infinite;
+  animation-delay: .25s;
+}
+#scroll-down-arrow-middle{
+  animation: arrowpulse 2s infinite;
+  animation-delay: .30s;
+}
+#scroll-down-arrow-bottom{
+  animation: arrowpulse 2s infinite;
+  animation-delay: .35s;
+}
+
+
+//each of the main content divs has this class
 .case-studies-main-column{
   margin: 0 0 0 0;
   position: relative;
@@ -50,7 +116,6 @@ body {
   width: 100%;
 }
 
-//Styling for the background images of the main content on case studies
 .cs-image-container{
   position: relative;
   height: 100%;
@@ -86,9 +151,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  //display: flex;
-  //align-items: center;
-  //justify-content: center;
 }
 //so, to get the heading and title to migrate to the center you have to wrap them in this inner div and center it =>
 //flex doesn't work
@@ -105,21 +167,54 @@ body {
 }
 //this is for the main titles
 .cs-title-main {
-  font-family: 'build-titling', sans-serif;
+  font-family: 'built-titling', sans-serif;
   color: #88714d;
   text-transform: uppercase;
+  font-size: 6em;
+  letter-spacing: 1rem;
+  transition-delay: 1s;
+  transition-duration: 1s;
 }
 
 //this is for the small heading above each title
+.cs-heading-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -229%);
+}
 .cs-title-small{
   color: white;
   text-transform: uppercase;
   font-family: 'Lora', serif;
+  font-weight: 700;
+  transition-duration: 1s;
+  transition-delay: 2s;
+}
+
+//styling and background for the bottom case files div
+#case-files{
+  height: 75vh;
+  background-image: url("http://www.wearetopsecret.com/images/case-studies/case-files-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+//cool triangle in the background
+#cs-triangle{
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%);
+}
+//little text thingy
+#cs-redacted{
+  position: absolute;
+  left: 54%;
+  top: 42%;
 }
 
 
-
-//the nav icon and the sound icon need to be fixed with high z index
+//the nav icon and the sound icon need to be position:fixed with high z index
 .case-studies-nav-container {
   position: fixed;
   top: 3vh;
@@ -137,3 +232,10 @@ body {
  .sound-icon-container{
    z-index: 10;
  }
+
+.case-studies-main-column:hover  .cs-title-main{
+    color: #232323;
+}
+.case-studies-main-column:hover .cs-title-small{
+  color: #88714d;
+}
