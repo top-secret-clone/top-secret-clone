@@ -80,6 +80,8 @@ body {
   font-size: x-large;
   margin-top: -13px;
 }
+
+
 //animation for the arrows
 @keyframes arrowpulse {
   0%{
@@ -185,6 +187,9 @@ body {
   color: white;
   text-transform: uppercase;
   font-family: 'Lora', serif;
+  font-weight: 700;
+  transition-duration: 1s;
+  transition-delay: 2s;
 }
 
 //styling and background for the bottom case files div
@@ -230,4 +235,7 @@ body {
 
 .case-studies-main-column:hover  .cs-title-main{
     color: #232323;
+}
+.case-studies-main-column:hover .cs-title-small{
+  color: #88714d;
 }
