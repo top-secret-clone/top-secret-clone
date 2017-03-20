@@ -8,28 +8,38 @@ angular.module("topSecret")
       parallaxScroll: '='
     },
     link: function (scope, elem, attrs) {
-      var win = $(window);
-      var start = parseInt(scope.start);
-      var height = win.height();
-      var top = -1 * height;
-      var section = `.${scope.foo}`;
+      const win = $(window);
+      const start = parseInt(scope.start);
+      const height = win.height();
+      // var top = -1 * height;
+      const section = `.${scope.foo}`;
+
+      const startPosition = height < 775 ? start - (775 - height): start;
+      $(section).css('top', startPosition);
+
+      console.log('win height: ', height);
+      console.log(section,' start: ', start);
 
       setTimeout(function() {
         $(window).scroll( () => {
           var scrollTop = pageYOffset;
-          var adjustedViewHeight = height < 775 ? 775 - height + 50 : 50;
-          var startAnimation = start + adjustedViewHeight;
-          var endAnimation = startAnimation + height + 450;
-          scope.parallaxScroll = (scrollTop - startAnimation) * -2;
-          console.log('parallaxScroll',scope.parallaxScroll);
-          // console.log(scrollTop, height, adjustedViewHeight, startAnimation, endAnimation, parallaxScroll);
+          // var adjustedViewHeight = height < 775 ? 775 - height : 0;
+          var startAnimation = start;
+          var endAnimation = startAnimation + 450;
+          var scrollCounter = scrollTop - startAnimation;
+          var entryOpacity = scrollCounter > 0 && scrollCounter <= 100 ? scrollCounter / 100 : 1;
+          var exitOpacity = scrollCounter > 450 && scrollCounter <=500 ? (500 - scrollCounter) / 100 : 0;
+          var parallaxAdjust = scrollCounter > 0 && scrollCounter < 550 ? ((scrollCounter / 1100) + 0.75) * -1 : -1;
+          scope.parallaxScroll = (scrollTop - startAnimation) * parallaxAdjust;
+          // console.log('parallaxScroll',scope.parallaxScroll);
+          console.log(section, '-> scroll: ',scrollTop, 'startAnimation: ', startAnimation, 'endAnimation: ', endAnimation, 'viewPort Count: ', scrollCounter, 'Parallax Adjust: ', parallaxAdjust);
 
           /* while item is on screen */
-          if (scrollTop > startAnimation && scrollTop < endAnimation) {
-            // console.log('In Viewport!', section, 'end animation: ', endAnimation);
+          if (scrollTop > startAnimation && scrollTop <= endAnimation) {
           var translate = 'translateY('+scope.parallaxScroll+'px)'
           $(section).addClass('test');
           $(section).css('transform', translate);
+          $(section).css('opacity', entryOpacity);
           }
 
 
@@ -44,7 +54,6 @@ angular.module("topSecret")
     */
           else if (scrollTop < startAnimation){
             $(section).removeClass('test');
-            // console.log(section, 'Start Animation: ',startAnimation)
           }
 
 
@@ -64,7 +73,7 @@ angular.module("topSecret")
     */
           else if (scrollTop > endAnimation){
             $(section).removeClass('test');
-            // console.log(section, 'End Animation: ', endAnimation)
+            $(section).css('opacity', exitOpacity);
           }
         });
       },0) /* end timeout function */

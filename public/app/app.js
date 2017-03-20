@@ -34,5 +34,26 @@ angular.module("topSecret", ["ui.router"])
     templateUrl: './app/routes/connect/connect.html',
     controller: 'connectController'
   })
+  .state('404', {
+    url: '/404',
+    templateUrl: './app/routes/404/404.html',
+    controller: '404Controller'
+  })
+  .state('admin', {
+    url: '/admin',
+    templateUrl: './app/routes/admin/admin.html',
+    controller: 'adminController',
+    resolve: {
+        user: function(authService, $state) {
+          return authService.getCurrentUser().then(function(response) {
+            if (!response.data)
+              $state.go('404');
+            return response.data;
+          }).catch(function(err) {
+            $state.go('404');
+          });
+        }
+      }
+  })
 
 });

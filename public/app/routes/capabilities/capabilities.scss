@@ -3,39 +3,52 @@ $padding:5%;
 $margin:5%;
 $textColor:#CECECE;
 $wide: 100vw;
-$high: 775px;
+$high: 100vh;
 $offset: 550px;
 
 .test{
-  border: 1px solid red !important;
-  z-index: 500 !important;
+
 }
 
 .capabilities-container {
   width: 100vw;
+  height: 5740px;
   margin: 0;
   padding: 0;
-  background-color: #c0c0c0;
+  background-color: black;
   display: flex;
   flex-flow: column;
   align-items: center;
   position: relative;
   color: white;
+  overflow-x: hidden;
+
 }
 
 .capabilities-banner {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0px;
   height: 100vh;
   min-height: 775px;
   width: 100vw;
   z-index: 200;
-  background-image: url(https://dummyimage.com/1280x800/000/fff&text=Capabilities);
   background-repeat: no-repeat;
   background-size: cover;
-}
 
+  video {
+    width: 100vw;
+    z-index: 200;
+  }
+}
+.capabilities-title-container {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  margin-top: -262px;
+  margin-left: -612px;
+  z-index: 201;
+}
 
 .capabilities-main {
   position: absolute;
@@ -104,23 +117,22 @@ $offset: 550px;
   margin: 50px;
   display: flex;
   justify-content: center;
-
+  overflow: hidden;
 
   .main{
-    width: 700px;
+    width: 785px;
     height: 600px;
     position: absolute;
-    top: 10px;
     margin: 0 0 0 -.7%;
-    z-index: 200;
+    z-index: 190;
     background-color: transparent;
     h2 {
       font-family: 'built-titling';
-      font-weight: 400;
-      font-style: bold;
+      font-weight: 300;
       font-size: 80px;
       color: #232424;
       text-transform: uppercase;
+      text-align: center;
       letter-spacing: 25px;
       margin: 0;
       padding: 20px 10px;
@@ -130,12 +142,13 @@ $offset: 550px;
       color: $gold;
       font-size: 20px;
       text-transform: uppercase;
-      letter-spacing: 3px;
-      margin: -85px 37px 70px 37px;
-      border-top: 2px solid black;
-      border-bottom: 2px solid black;
-      padding-top: 5px;
-      padding-bottom: 5px;
+      text-align: center;
+      letter-spacing: 2px;
+      margin: -89px 37px 70px 37px;
+      border-top: 2px solid #232424;
+      border-bottom: 3px solid #232424;
+      padding-top: 3px;
+      padding-bottom: 6px;
     }
     hr {
       margin: auto;
@@ -154,8 +167,8 @@ $offset: 550px;
     height: 600px;
     margin-left: 1%;
     position: absolute;
-    top: $high;
-    z-index: 170;
+    top: $high * 1.6;
+    z-index: 175;
     background: transparent;
     h1{
       text-align: right;
@@ -192,11 +205,11 @@ $offset: 550px;
   /* end of STRATEGY styling */
 
   .advertising{
-    border: 1px solid gold;
+    z-index: 155;
     width: 743px;
     height: 600px;
     position: absolute;
-    top: $high * 2;
+    top: $high * 2.6;
     margin-left: -33px;
     p {
       text-align: left;
@@ -215,12 +228,12 @@ $offset: 550px;
   /* end of ADVERTISING styling */
 
   .design{
-    border: 1px solid gold;
+    z-index: 135;
     width: 600px;
     height: 600px;
     position: absolute;
     margin-left: 16px;
-    top: $high * 3;
+    top: $high * 2.9;
     h1 {
       text-align: right;
     }
@@ -243,7 +256,7 @@ $offset: 550px;
 /* end of DESIGN styling */
 
   .interactive{
-    border: 1px solid gold;
+    z-index: 115;
     width: 719px;
     height: 600px;
     position: absolute;
@@ -269,12 +282,12 @@ $offset: 550px;
   /* end of INTERACTIVE styling */
 
   .studios{
-    border: 1px solid gold;
+    z-index: 85;
     width: 725px;
     height: 600px;
     position: absolute;
     margin-left: 33px;
-    top: $high * 5;
+    top: $high * 5.7;
     p {
       text-align: right;
     }
@@ -295,82 +308,120 @@ $offset: 550px;
 /* background for parralax begins */
 .parallax-container {
   position: relative;
+  top: 775px;
   width: 100vw;
-  height: 4410px
+  height: 5135px;
+  overflow: hidden;
 }
 .slant-left {
   position: absolute;
-  width:$wide * 1.1;
-  height: $wide * 1.1;
+  width:$wide;
+  height: $wide;
   left: 0;
   color: #fff;
   img {
     position: absolute;
     left: 0px;
     top: 0px;
-    height: $wide * .9;
   }
 
 }
 .slant-right {
   position: absolute;
-  width:$wide * 1.1;
-  height: $wide * 1.1;
+  width:$wide;
+  height: $wide;
   right: 0px;
-  color: #fff;
   img {
     position: absolute;
     right: 0px;
     top: 0px;
-    height: $wide * .9;
+
   }
 
 }
 
 .set-1-right {
   z-index: 180;
+  img {
+    width: $wide * .9;
+    // display: none;
+  }
 }
 .set-1-left {
-  z-index: 175;
+  z-index: 170;
+  img {
+    width: $wide * .9;
+    // display: none;
+  }
 }
 
 .set-2-right {
   z-index: 150;
-  top: $offset;
+  top: 620px;
+  img {
+    height: $wide * 1.2;
+  }
 }
 .set-2-left {
-  z-index: 145;
-  top: $offset;
+  z-index: 160;
+  top: 620px;
+  img {
+    height: $wide * 1.2;
+  }
 }
 .set-3-right {
-  z-index: 120;
-  top: $offset * 2;
+  z-index: 140;
+  top: 1425px;
+  img {
+    height: $wide * 1.2;
+  }
 }
 .set-3-left {
-  z-index: 115;
-  top: $offset * 2;
+  z-index: 130;
+  top: 1425px;
+  img {
+    height: $wide * 1.2;
+  }
 }
 .set-4-right {
-  z-index: 90;
-  top: $offset * 3;
+  z-index: 110;
+  top: 2240px;
+  img {
+    height: $wide * 1.2;
+  }
 }
 .set-4-left {
-  z-index: 85;
-  top: $offset * 3;
+  z-index: 120;
+  top: 2240px;
+  img {
+    height: $wide * 1.2;
+  }
 }
 .set-5-right {
-  z-index: 60;
-  top: $offset * 4;
+  z-index: 90;
+  top: 3080px;
+  img {
+    height: $wide * 1.2;
+  }
 }
 .set-5-left {
-  z-index: 55;
-  top: $offset * 4;
+  z-index: 80;
+  top: 3080px;
+  img {
+    height: $wide * 1.2;
+  }
 }
 .set-6-right {
-  z-index: 30;
-  top: $offset * 5;
+  z-index: 70;
+  top: 3955px;
+  img {
+    height: $wide * 1.2;
+  }
 }
 .set-6-left {
-  z-index: 25;
-  top: $offset * 5;
+  z-index: 60;
+  top: 3955px;
+  img {
+    height: $wide * 1.2;
+  }
 }
