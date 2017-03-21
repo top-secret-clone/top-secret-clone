@@ -16,16 +16,39 @@
             <div class="sprite-container">
                 <img id="title-sprite" src="http://www.wearetopsecret.com/images/spritesheet-sts-standard-res.png">
             </div>
+
+            <p id="view-reel"><strong>view reel</strong></p>
         </div>
 
 
 
             <div class="case-studies-container">
+
                 <div id="case-studies">
-                        <p id="case-studies-title">case studies</p>
+
+                    <gold-outline cname="'case'" style="z-index: 5"></gold-outline>
+
+                    <p id="case-studies-title">
+                        case studies
+                    </p>
+
                         <div id="case-studies-parallax-holder">
-                            <gold-outline cname="'case'" style="z-index: 10"></gold-outline>
                         </div>
+
+                    <div class="home-cs-hover-heading">
+                        <div class="home-cs-hover-heading-top home-case-top-hover"></div>
+                        <span class="home-cs-hover-heading-main">behind our best work</span>
+                        <div class="home-cs-hover-heading-bottom home-case-top-cover"></div>
+                    </div>
+
+
+                </div>
+                <div class="view-case" style="z-index: 10" ng-mouseenter="maintainOutline()">
+                    <div class="view-case-inner">
+                        <p class="view-case-p"><strong>view case studies</strong></p>
+                        <div id="home-strike"></div>
+                        <span class="view-case-arrow"></span>
+                    </div>
                 </div>
             </div>
 
@@ -55,14 +78,35 @@
                     <div class="bottom-three-title-wrapper">
                         <gold-outline cname="'work'"></gold-outline>
                         <p class="bottom-three-title">work</p>
+                        <div class="view-case">
+                            <div class="view-case-inner">
+                                <p class="view-case-p"><strong>view case study</strong></p>
+                                <div id="view-case-strike"></div>
+                                <span class="view-case-arrow"></span>
+                            </div>
+                        </div>
                     </div>
                     <div class="bottom-three-title-wrapper">
                         <gold-outline cname="'capabilities'"></gold-outline>
                         <p class="bottom-three-title">capabilities</p>
+                        <div class="view-case">
+                            <div class="view-case-inner">
+                                <p class="view-case-p"><strong>view case study</strong></p>
+                                <div id="view-case-strike"></div>
+                                <span class="view-case-arrow"></span>
+                            </div>
+                        </div>
                     </div>
                     <div class="bottom-three-title-wrapper">
                         <gold-outline cname="'connect'"></gold-outline>
                         <p class="bottom-three-title">connect</p>
+                        <div class="view-case">
+                            <div class="view-case-inner">
+                                <p class="view-case-p"><strong>view case study</strong></p>
+                                <div id="view-case-strike"></div>
+                                <span class="view-case-arrow"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -89,8 +133,8 @@
             </div>
 
 
-    </div>
 
+        </div>
     </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
