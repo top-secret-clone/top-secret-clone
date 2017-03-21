@@ -94,6 +94,7 @@ a {
 .goldenLine {
 		display: inline-block;
 		position: relative;
+		z-index: 200;
 }
 
 .goldenLine:hover:after {
