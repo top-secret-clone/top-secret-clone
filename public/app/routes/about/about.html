@@ -1,7 +1,18 @@
-<div class="aboutController">
+<div class="aboutController about">
 
-<section class="about-banner">
-</section>
+<div class="about-banner">
+  <div class="fullscreen-bg">
+    <video loop="loop" muted="muted" autoplay="autoplay" preload="auto" poster="http://www.wearetopsecret.com/images/about-hero.jpg" class="fullscreen-bg__video">
+      <source src="http://www.wearetopsecret.com/video/about.mp4" type="video/mp4">
+      <source src="http://www.wearetopsecret.com/video/about.webm" type="">
+    	<source src="http://www.wearetopsecret.com/video/about.ogv" type="video/ogg; codecs=theora,vorbis">
+    </video>
+  </div>
+
+    <div class="title-container">
+    	<img id="about-title" src="http://www.wearetopsecret.com/images/safari_title_about.png">
+    </div>
+</div>
 
 <!-- TODO MARCH 15 -->
 <!-- TODO Banner -->
@@ -12,9 +23,7 @@
 <section class="what-we-do">
   <div>
     <h1>WHAT WE DO</h1>
-    <br>
-    <h2>Super Top Secret makes things that</h2>
-    <h2>make a difference.</h2>
+    <h2><span>Super Top Secret makes things that</span><span> make a difference.</span></h2>
     <p>We’re a collective of creators, discoverers and doers. Armed to the teeth with the best writers, designers, strategists, developers, shooters, editors, and producers around, we specialize in forging big, beautiful, audacious solutions for our brand partners.</p>
     <br>
     <a href=#>VIEW OUR CAPABILITIES</a>
@@ -29,7 +38,7 @@
     <br>
     <div class="small-container">
       <div class="row">
-        <div class="one-quarter-column" ng-repeat="client in clientsServed">
+        <div class="cs-column" ng-repeat="client in clientsServed">
           <img class="responsive-img" src={{client.imageUrl}}></img>
         </div>
       </div>
@@ -69,8 +78,7 @@
   </div>
 </section>
 
-<section class="slider-placeholder">
-</section>
+<slider></slider>
 
 <section class="manifesto">
   <div class="medium-container">
