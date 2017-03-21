@@ -26,7 +26,7 @@ angular.module("topSecret")
         animationBegin: parseInt(scope.start),
         animationEnd: parseInt(scope.start) + 450
       }
-      console.log(elementTable);
+      // console.log(elementTable);
       // console.log(section,' start: ', start);
 
       setTimeout(function() {
