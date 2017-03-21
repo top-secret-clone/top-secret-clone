@@ -1,90 +1,97 @@
-<div class="aboutController about">
+<div class="about">
 
-<div class="about-banner">
-  <div class="fullscreen-bg">
-    <video loop="loop" muted="muted" autoplay="autoplay" preload="auto" poster="http://www.wearetopsecret.com/images/about-hero.jpg" class="fullscreen-bg__video">
+  <section class="about-banner">
+    <div class="banner-video-container">
+      <video class="banner-video" loop="loop" muted="muted" autoplay="autoplay" preload="auto" poster="http://www.wearetopsecret.com/images/about-hero.jpg">
       <source src="http://www.wearetopsecret.com/video/about.mp4" type="video/mp4">
       <source src="http://www.wearetopsecret.com/video/about.webm" type="">
     	<source src="http://www.wearetopsecret.com/video/about.ogv" type="video/ogg; codecs=theora,vorbis">
     </video>
-  </div>
-
-    <div class="title-container">
-    	<img id="about-title" src="http://www.wearetopsecret.com/images/safari_title_about.png">
     </div>
-</div>
+    <div class="banner-title-container">
+      <img class="banner-title-img" src="http://www.wearetopsecret.com/images/safari_title_about.png">
+    </div>
+  </section>
 
-<!-- TODO MARCH 15 -->
-<!-- TODO Banner -->
-<!-- TODO Change font -->
-<!-- TODO Polish -->
-<!-- TODO Mobile Responsive -->
-
-<section class="what-we-do">
-  <div>
+  <section class="what-we-do">
     <h1>WHAT WE DO</h1>
-    <h2><span>Super Top Secret makes things that</span><span> make a difference.</span></h2>
-    <p>We’re a collective of creators, discoverers and doers. Armed to the teeth with the best writers, designers, strategists, developers, shooters, editors, and producers around, we specialize in forging big, beautiful, audacious solutions for our brand partners.</p>
     <br>
-    <a href=#>VIEW OUR CAPABILITIES</a>
-  </div>
-</section>
+    <h2>Super Top Secret makes things<br> that make a difference.</h2>
+    <p>We’re a collective of creators, discoverers and doers. Armed to the teeth with the best writers,<br> designers, strategists, developers, shooters, editors, and producers around, we specialize in forging<br> big, beautiful, audacious solutions for our brand partners.</p>
+    <br>
+    <a>VIEW OUR CAPABILITIES</a>
+  </section>
 
-<section class="clients-served">
-  <div class="large-container">
-    <div class="row centered">
+  <section class="clients-served">
+    <div class="clients-served-title">
       <h1>CLIENTS SERVED</h1>
     </div>
     <br>
-    <div class="small-container">
+    <div class="clients-served-grid">
       <div class="row">
-        <div class="cs-column" ng-repeat="client in clientsServed">
+        <div class="clients-served-column" ng-repeat="client in clientsServed">
           <img class="responsive-img" src={{client.imageUrl}}></img>
         </div>
       </div>
     </div>
 
-  </div>
-</section>
+  </section>
 
-<section class="who-we-are">
-  <div class="small-container">
-    <div class="row">
-      <h1>WHO WE ARE</h1>
-      <br>
-      <h2>The partners at STS have all been around the proverbial block a time or two. When you put our history and collective expertise together you get a brain trust and unique skillset that’s impossible to quantify or replicate.</h2>
-    </div>
-    <div class="bio-row">
-      <div class="one-quarter-column">
-        <ul>
-          <li>Jared Strain</li>
-          <li>Rheda Fouad</li>
-          <li>Josh Batchelor</li>
-          <li>Dave Trevino</li>
-      </div>
-      <div class="three-quarters-column bio-default-pic">
-
-      </div>
-  </div>
-  </div>
-</section>
-
-<section class="the-shop">
-  <div class="small-container">
-    <h1>THE SHOP</h1>
+  <section class="who-we-are">
+    <h1>WHO WE ARE</h1>
     <br>
-    <h2>If you've ever been nipples deep in fresh Utah pow you get why we're here.</h2>
-    <p>We could’ve set up shop anywhere. We ended up in the shadows of the SLC mountains because it’s a kickass place to live and, frankly, we all have a powder problem. We like being off the beaten agency path and are hell bent on proving you can do world-class work from anywhere, especially if you love where you lay your head. We’ve done our damndest to build a one of a kind shop and stack it to the rafters with handpicked, hyper-talented malcontents from across the country who share our passion for hard work and hard play.</p>
-  </div>
-</section>
+    <h2>
+      The partners at STS have all been around the proverbial block a time or two <br>
+      When you put our history and collective expertise together you get a <br>
+      brain trust and unique skillset that's impossible to quantify or replicate.
+    </h2>
+    <br>
+    <div class="row">
+      <ul>
+        <li><a href="#">JARED STRAIN</a></li>
+        <li><a href="#">RHEDA FOUAD</a></li>
+        <li><a href="#">JOSH BATHELOR</a></li>
+        <li><a href="#">DAVE TREVINO</a></li>
+      </ul>
+      <div class="bio">
+        <h1>JARED STRAIN</h1>
+        <p>Partner /Design Director</p>
+        <hr>
+        <h2>Biography</h2>
+        <br>
+        <p>
+          A designer by trade, Jared’s a seasoned vet whose misguided youth of skateboarding and hair metal inspired him to pursue a creative career. With over a decade in the design game, Jared’s worn out Wacoms for blue chip brands like Coke, Microsoft, Nike, MTV, Rossignol, and K2. While Jared loves getting busy on the big stage, his true passion lies in conjuring brands out of thin air—amassing a formidable collection of design awards for the identities he’s built.
+        </p>
+      </div>
+      <div class="bio-pic">
+        <img src="http://www.wearetopsecret.com/images/about/partners/badge.jpg" alt="">
+      </div>
+    </div>
 
-<slider></slider>
+  </section>
 
-<section class="manifesto">
-  <div class="medium-container">
+  <section class="the-shop">
+      <h1>THE SHOP</h1>
+    <br>
+    <h2>
+      If you've ever been nipples deep in fresh<br>
+      Utah pow you get why we're here.
+    </h2>
+    <p>
+      We could’ve set up shop anywhere. We ended up in the shadows of the SLC mountains because it’s a<br> kickass place to live and, frankly, we all have a powder problem. We like being off the beaten agency<br> path and are hell bent on proving you can do world-class work from anywhere, especially if you love<br> where you lay your head. We’ve done our damndest to build a one of a kind shop and stack it to the<br> rafters with handpicked, hyper-talented malcontents from across the country who share our passion<br> for hard work and hard play.
+    </p>
+  </section>
+
+  <section class="slider">
+    <slider></slider>
+  </section>
+
+  <section class="manifesto">
     <h1>STS MANIFESTO</h1>
-    <h2>We got stuff you don't even know about. We're an enigma, wrapped in a riddle, deep-fried in a vat of mind-boggler. We're so lean you can see those weird muscles you never knew existed. Our favorite clouds are greenish black Cumulonimbus. If we could get a hold of some cobra blood we would drink it. We wish we were born to Viking parents in the days of yore. We fall somewhere between war lords and Lords of Dance. We eat beef jerky sandwiches. Our drug of choice is caffeine. We all have done things for money we're ashamed of. We're fearless. We talk about burritos in reverent, hushed tones. We believe Gandhi should've picked up a stick and kicked some British ass. We like caterpillars that keep it real and don't turn into butterflies. Our favorite holiday is Columbus Day. Our standards are so high we're not impressed by the Grand Canyon or NASA. We believe global warming is better than cold war. We loathe copious amounts of stitching on pant pockets. We always root for the Washington Generals. We don't believe in half ass, mediocrity or failure. We know sarcasm is the lowest form of humor but we still think it's funny. We would win both showcases on the Showcase Showdown. We don't believe ice dancing should be considered a sport, let alone an Olympic one. We would pay good money to see a bear fight a shark. We don't believe in straws, umbrellas or scarves. We won't watch a movie that doesn't have at least one explosion. 75% of us drive German automobiles, 25% of us don't. We have a gumball machine full of adderall and Excedrin Migraine. We're still bitter about having to learn the Dewey Decimal system. We think the worst and coolest form of advertising is a giant purple gorilla. We are Super Top Secret.</h2>
-  </div>
-</section>
+    <br>
+    <p>
+      We got stuff you don't even know about. We're an enigma, wrapped in a riddle, deep-fried in a vat of mind-boggler. We're so lean you can see those weird muscles you never knew existed. Our favorite clouds are greenish black Cumulonimbus. If we could get a hold of some cobra blood we would drink it. We wish we were born to Viking parents in the days of yore. We fall somewhere between war lords and Lords of Dance. We eat beef jerky sandwiches. Our drug of choice is caffeine. We all have done things for money we're ashamed of. We're fearless. We talk about burritos in reverent, hushed tones. We believe Gandhi should've picked up a stick and kicked some British ass. We like caterpillars that keep it real and don't turn into butterflies. Our favorite holiday is Columbus Day. Our standards are so high we're not impressed by the Grand Canyon or NASA. We believe global warming is better than cold war. We loathe copious amounts of stitching on pant pockets. We always root for the Washington Generals. We don't believe in half ass, mediocrity or failure. We know sarcasm is the lowest form of humor but we still think it's funny. We would win both showcases on the Showcase Showdown. We don't believe ice dancing should be considered a sport, let alone an Olympic one. We would pay good money to see a bear fight a shark. We don't believe in straws, umbrellas or scarves. We won't watch a movie that doesn't have at least one explosion. 75% of us drive German automobiles, 25% of us don't. We have a gumball machine full of adderall and Excedrin Migraine. We're still bitter about having to learn the Dewey Decimal system. We think the worst and coolest form of advertising is a giant purple gorilla. We are Super Top Secret.
+    </p>
+  </section>
 
 </div>

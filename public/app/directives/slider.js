@@ -53,7 +53,7 @@ angular.module("topSecret").directive('slider', function() {
           }, 4000);                                 // Milliseconds timer will wait
         }
 
-        $.each($slides, function(index) {
+        $.each($slides, function(index){
           // Create a button element for the button
           var $button = $('<button type="button" class="slide-btn">&bull;</button>');
           if (index === currentIndex) {             // If index is the current item
