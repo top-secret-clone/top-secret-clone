@@ -81,7 +81,61 @@ html {
 a {
   cursor: pointer;
 }
+.goldenLinkLine {
+	width: 100%;
+	border-top: 1px solid #88714D;
+	position: relative;
+	top: 50%;
+	height: 0;
+	transition: 1.0s;
+}
+/* Strikethrough */
 
+.goldenLine {
+		display: inline-block;
+		position: relative;
+}
+
+.goldenLine:hover:after {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 2px;
+		margin-top: -.7em;
+		background: #88714D;
+		transform-origin: center left;
+		animation: goldenLine 1s 0.5s cubic-bezier(.55, 0, .1, 1) 1;
+		transition: transform 0.5s cubic-bezier(.55, 0, .1, 1);
+		animation-fill-mode: forwards;
+}
+
+/* Little hover effect */
+// .goldenLine:before {
+// 	transform:scaleX(0);
+// }
+
+.goldenLine:after {
+		transform: scaleX(0);
+		transform-origin: center right;
+}
+
+/* Keyframes for initial animation */
+
+@keyframes goldenLine {
+		from {
+				transform: scaleX(0);
+		}
+		to {
+				transform: scaleX(.95);
+		}
+}
+.triangle {
+	color: #88714D;
+	font-size: 0.65em;
+	line-height: .95em;
+	vertical-align: middle;
+}
 // 5.) Scaffolding:
 // ~~~~~~~~~~~~~~~~~
 
@@ -288,17 +342,43 @@ $stickyNavHeight: 40px;
 
 /*~~~~~~~~~~~~~~~ About ~~~~~~~~~~~~~~~*/
 
+.about {
+	h1 {
+		font-family: built-titling;
+	}
+}
+
 //Banner
+
 .about-banner {
 	position: relative;
 	top: 0;
 	left: 0;
-	height: 800px;
+	height: 761px;
 	width: 100%;
 	display: flex;
-	background-image: url(https://dummyimage.com/1280x800/000/fff&text=About);
+	align-items: center;
+	justify-content: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	.fullscreen-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+	}
+	.title-container {
+
+	}
+	#about-title {
+		z-index: 100;
+		height: 350px;
+		width: 450px;
+		overflow: visible;
+	}
 }
 
 .what-we-do {
@@ -313,12 +393,11 @@ $stickyNavHeight: 40px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	h1 {
-		font-family: 'Oswald', sans-serif;
 		color: #88714d;
-		font-size: 75px;
+		font-size: 90px;
 		line-height: 0px;
 		font-weight: 100;
-		letter-spacing: 0.2em;
+		letter-spacing: 0.25em;
 		width: 900px;
 		height: 100px;
 	}
@@ -340,10 +419,12 @@ $stickyNavHeight: 40px;
 	}
 
 	a {
-		font-family: 'Oswald, sans-serif';
-		font-weight: 800;
-		color: #d7d7d7;
-		text-decoration: none;
+		font-family: built-titling;
+    font-weight: 800;
+    color: #d7d7d7;
+    text-decoration: none;
+    font-size: 1.4em;
+    letter-spacing: 0.1em;
 	}
 }
 
@@ -361,16 +442,52 @@ $stickyNavHeight: 40px;
 	background-color: #191919; //BUG <-- This color is not exact.
 	h1 {
 		padding: 80px 0 60px 0;
-		font-family: 'built-titling';
 		font-weight: 100;
 		font-style: normal;
 		color: #88714d;
-		font-size: 40px;
-		letter-spacing: 13px;
+		font-size: 50px;
+		letter-spacing: 14px;
 		line-height: 0px;
+		margin-bottom: 0;
 	}
 	ul {
 		list-style-type: none;
+	}
+}
+
+.cs-column{
+	// flex-basis: calc(100% / 4);
+	height: auto;
+}
+
+// clients-served small media query:
+@media screen
+	and (max-width: 799px){
+	.clients-served {
+		.cs-column {
+			flex-basis: 100%;
+		}
+	}
+}
+
+// clients-served medium media query:
+@media screen
+	and (min-width: 800px)
+	and (max-width: 999px){
+	.clients-served {
+		.cs-column {
+			flex-basis: 50%;
+		}
+	}
+}
+
+// clients-served large media query:
+@media screen
+	and (min-width: 1000px){
+	.clients-served {
+		.cs-column {
+			flex-basis: 25%;
+		}
 	}
 }
 
@@ -384,7 +501,6 @@ $stickyNavHeight: 40px;
 	background-image: url(http://www.wearetopsecret.com/images/about/grain.jpg);
 	padding: 265px 10%;
 	h1 {
-		font-family: 'Oswald', sans-serif;
 		color: #88714d;
 		font-size: 101px;
 		line-height: 0px;
@@ -413,7 +529,6 @@ $stickyNavHeight: 40px;
 	}
 	ul {
 		list-style-type: none;
-		font-family: 'Oswald', sans-serif;
 		font-weight: 300;
 		font-size: 35px;
 		text-transform: capitalize;
@@ -441,7 +556,6 @@ $stickyNavHeight: 40px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	h1 {
-		font-family: 'Oswald', sans-serif;
 		color: #88714d;
 		font-size: 75px;
 		line-height: 0px;
@@ -481,6 +595,52 @@ $stickyNavHeight: 40px;
 	padding: 265px 10%;
 }
 
+// Slider Directive:
+
+slider {
+	.slider {
+		max-width: 100%;
+  	margin: 0px auto 30px auto;
+	}
+	.slide-viewer {
+    position: relative; /* needed for IE7 */
+    overflow: hidden;
+    height: 800px;
+	}
+	.slide-group {
+    width: 100%;
+    height: 100%;
+    position: relative;
+	}
+	.slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+	}
+	.slide:first-child {
+    display: block;
+	}
+	.slide-buttons {
+  text-align: center;
+  background-color: black;
+	}
+	.slide-btn {
+	  border: none;
+	  background: none;
+	  color: grey;
+	  font-size: 200%;
+	  line-height: 0.5em;
+		font-size: 90%;
+  	text-align: left;
+  	text-transform: uppercase;
+	}
+	.slide-btn.active, .slide-btn:hover {
+	  color: white;
+	  cursor: pointer;
+	}
+}
+
 .manifesto {
 	position: relative;
 	top: 0;
@@ -493,7 +653,6 @@ $stickyNavHeight: 40px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	h1 {
-		font-family: 'Oswald', sans-serif;
 		color: #88714d;
 		font-size: 75px;
 		line-height: 0px;
