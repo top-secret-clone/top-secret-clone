@@ -9,22 +9,31 @@ angular.module("topSecret")
     },
     link: function (scope, elem, attrs) {
       const win = $(window);
+      const height = win.height(); /* calculate actual window height */
+      const adjustedViewHeight = height < 775 ? 775 - height : 0;
       const start = parseInt(scope.start);
-      const height = win.height();
-      // var top = -1 * height;
-      const section = `.${scope.foo}`;
-
       const startPosition = height < 775 ? start - (775 - height): start;
+      const section = `.${scope.foo}`;
       $(section).css('top', startPosition);
 
-      console.log('win height: ', height);
-      console.log(section,' start: ', start);
+
+
+      const elementTable = {
+        element: scope.foo,
+        window: height,
+        adjust: 775 - height,
+        start: parseInt(scope.start),
+        animationBegin: parseInt(scope.start),
+        animationEnd: parseInt(scope.start) + 450
+      }
+      console.log(elementTable);
+      // console.log(section,' start: ', start);
 
       setTimeout(function() {
         $(window).scroll( () => {
           var scrollTop = pageYOffset;
           // var adjustedViewHeight = height < 775 ? 775 - height : 0;
-          var startAnimation = start;
+          var startAnimation = start + adjustedViewHeight;
           var endAnimation = startAnimation + 450;
           var scrollCounter = scrollTop - startAnimation;
           var entryOpacity = scrollCounter > 0 && scrollCounter <= 100 ? scrollCounter / 100 : 1;
