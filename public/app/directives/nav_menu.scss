@@ -1,0 +1,38 @@
+.home-nav-container {
+  position: fixed;
+  top: 3vh;
+  left: 3vh;
+}
+.home-nav {
+  position: absolute;
+}
+
+#hamburger_menu #box_tight #hamburger_menu #box rect {
+ fill: #89714D
+}
+#hamburger_menu {
+  height: 100%;
+  width: 100%;
+  cursor: pointer
+}
+#hamburger_menu {
+ width: 67px;
+ cursor: pointer
+}
+#hamburger_menu #box_tight #hamburger_menu #box rect {
+ fill: #89714D
+}
+.gold_fill {
+  fill: #89714D
+}
+
+.gray_fill {
+  fill: #B7B7B8
+}
+
+
+@media (max-width: 667px) {
+   #hamburger_menu {
+    width:57px;
+  }
+}

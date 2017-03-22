@@ -1,7 +1,18 @@
 $gold:#88714D;
 $textColor:#777;
 
+footer-dir {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  // position: absolute;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+}
 footer {
+  // position: relative;
   height: 55px;
   width: 100vw;
   padding: 17px 60px 10px 17px;
@@ -27,6 +38,9 @@ footer {
     }
   }
   a{
+    font-family: 'Crimson Text', serif !important;
+    font-size: 15px !important;
+    text-transform: lowercase !important;
     color: $textColor;
     transition: 1s;
   }
@@ -47,5 +61,8 @@ footer {
     a:hover {
       color: white;
     }
+  }
+  .bottom-footer-width {
+    // width: 20px !important;
   }
 }
