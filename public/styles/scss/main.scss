@@ -562,46 +562,46 @@ $stickyNavHeight: 40px;
 // Slider
 slider {
 	.slider {
-		max-width: 100%;
-  	margin: 0px auto 30px auto;
-	}
-	.slide-viewer {
+  max-width: 100%;
+  margin: 0px auto 30px auto;}
+
+.slide-viewer {
     position: relative; /* needed for IE7 */
     overflow: hidden;
-    height: 800px;
-	}
-	.slide-group {
+    height: 800px;}
+
+.slide-group {
     width: 100%;
     height: 100%;
-    position: relative;
-	}
-	.slide {
+    position: relative;}
+
+.slide {
     width: 100%;
     height: 100%;
     display: none;
     position: absolute;
-	}
-	.slide:first-child {
-    display: block;
-	}
-	.slide-buttons {
+}
+
+.slide:first-child {
+    display: block;}
+
+
+/********** BUTTONS **********/
+.slide-buttons {
   text-align: center;
   background-color: black;
-	}
-	.slide-btn {
-	  border: none;
-	  background: none;
-	  color: grey;
-	  font-size: 200%;
-	  line-height: 0.5em;
-		font-size: 90%;
-  	text-align: left;
-  	text-transform: uppercase;
-	}
-	.slide-btn.active, .slide-btn:hover {
-	  color: white;
-	  cursor: pointer;
-	}
+}
+
+.slide-btn {
+  border: none;
+  background: none;
+  color: grey;
+  font-size: 200%;
+  line-height: 0.5em;}
+
+.slide-btn.active, .slide-btn:hover {
+  color: white;
+  cursor: pointer;}
 }
 
 // Manifesto
