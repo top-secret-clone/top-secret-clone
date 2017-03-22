@@ -17,7 +17,9 @@
                 <img id="title-sprite" src="http://www.wearetopsecret.com/images/spritesheet-sts-standard-res.png">
             </div>
 
+            <!--this is the view reel with the elements for the strike thru on hover-->
             <p id="view-reel"><strong>view reel</strong></p>
+            <div id="view-strike-thru"></div>
         </div>
 
 
@@ -41,27 +43,29 @@
                         <div class="home-cs-hover-heading-bottom home-case-top-cover"></div>
                     </div>
 
+                    <p id="home-view-case-studies"><strong>view case studies</strong></p>
+                    <div id="home-view-strike-thru"></div>
 
                 </div>
-                <div class="view-case" style="z-index: 10" ng-mouseenter="maintainOutline()">
-                    <div class="view-case-inner">
-                        <p class="view-case-p"><strong>view case studies</strong></p>
-                        <div id="home-strike"></div>
-                        <span class="view-case-arrow"></span>
-                    </div>
-                </div>
+
             </div>
 
             <div class="about-sts-container">
                 <div class="about-sts">
-                    <p id="about-sts-title">about sts</p>
-                    <img id="triangle" src="http://www.wearetopsecret.com/images/new-landing/about-eye.png">
+                    <img class="about-hover" id="triangle" src="http://www.wearetopsecret.com/images/new-landing/about-eye.png">
+                    <p class="about-hover" id="about-sts-title">about sts</p>
                     <img id="redacted" src="http://www.wearetopsecret.com/images/case-studies/case-files-redacted.png">
+                    <div class="fade-heading-top"><p>calculated.</p><p>methodical.</p></div>
+                    <div class="fade-heading-bottom"><p>deadly accurate.</p></div>
+                    <div class="about-us">
+                        <p id="about-us-text">who we are</p>
+                        <div id="who-we-are-strike"></div>
+                    </div>
                 </div>
             </div>
 
 
-            <div class="bottom-three-container">
+            <div class="bottom-three-container cs-hover-hack">
                 <div class="home-bottom-three-wrapper">
                     <div class="bottom-three">
                         <img  id="work" src="http://www.wearetopsecret.com/images/view-work-cta.jpg">
@@ -75,35 +79,60 @@
                     </div>
                 </div>
                 <div class="bottom-three-titles">
-                    <div class="bottom-three-title-wrapper">
+                    <div class="bottom-three-title-wrapper" id="work-hover-hack">
+
                         <gold-outline cname="'work'"></gold-outline>
-                        <p class="bottom-three-title">work</p>
+                        <p class="bottom-three-title" id="work-three-title">work</p>
                         <div class="view-case">
+
+                            <div class="bthree-fade-heading" id="work-fade-heading">
+                                <div class="bthree-fade-div" id="work-fade-div-top"></div>
+                                <span class="bthree-fade-heading-main">step into the vault</span>
+                                <div class="bthree-fade-div" id="work-fade-div-bottom"></div>
+                            </div>
+
+                            <!--this is the little title/nav thing that gets struck thru on hover-->
                             <div class="view-case-inner">
-                                <p class="view-case-p"><strong>view case study</strong></p>
-                                <div id="view-case-strike"></div>
+                                <p class="view-case-p"><strong>view the goods</strong></p>
+                                <div id="view-thegoods-strike"></div>
                                 <span class="view-case-arrow"></span>
                             </div>
+
                         </div>
                     </div>
-                    <div class="bottom-three-title-wrapper">
+                    <div class="bottom-three-title-wrapper" id="capabilities-hover-hack">
                         <gold-outline cname="'capabilities'"></gold-outline>
-                        <p class="bottom-three-title">capabilities</p>
+                        <p class="bottom-three-title" id="capa-three-title">capabilities</p>
                         <div class="view-case">
+
+                            <div class="bthree-fade-heading" id="capa-fade-heading">
+                                <div class="bthree-fade-div" id="capa-fade-div-top"></div>
+                                <span class="bthree-fade-heading-main">tools of the trade</span>
+                                <div class="bthree-fade-div" id="capa-fade-div-bottom"></div>
+                            </div>
+
                             <div class="view-case-inner">
-                                <p class="view-case-p"><strong>view case study</strong></p>
-                                <div id="view-case-strike"></div>
+                                <p class="view-case-p"><strong>meet the crew</strong></p>
+                                <div id="view-offerings-strike"></div>
                                 <span class="view-case-arrow"></span>
                             </div>
                         </div>
                     </div>
-                    <div class="bottom-three-title-wrapper">
+
+                    <div class="bottom-three-title-wrapper" id="connect-hover-hack">
                         <gold-outline cname="'connect'"></gold-outline>
-                        <p class="bottom-three-title">connect</p>
+                        <p class="bottom-three-title" id="con-three-title">connect</p>
                         <div class="view-case">
+
+                            <div class="bthree-fade-heading" id="con-fade-heading">
+                                <div class="bthree-fade-div" id="con-fade-div-top"></div>
+                                <span class="bthree-fade-heading-main">behind our best work</span>
+                                <div class="bthree-fade-div" id="con-fade-div-bottom"></div>
+                            </div>
+
                             <div class="view-case-inner">
-                                <p class="view-case-p"><strong>view case study</strong></p>
-                                <div id="view-case-strike"></div>
+                                <p class="view-case-p"><strong>view office</strong></p>
+                                <div id="view-office-strike"></div>
                                 <span class="view-case-arrow"></span>
                             </div>
                         </div>
