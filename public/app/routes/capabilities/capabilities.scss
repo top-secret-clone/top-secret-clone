@@ -6,6 +6,9 @@ $wide: 100vw;
 $high: 100vh;
 $offset: 550px;
 
+.position-relative {
+  position: relative;
+}
 .test{
 
 }
@@ -35,12 +38,12 @@ $offset: 550px;
   z-index: 200;
   background-repeat: no-repeat;
   background-size: cover;
-
   video {
     width: 100vw;
     z-index: 200;
   }
 }
+
 .capabilities-title-container {
   position: absolute;
   top: 50vh;
@@ -63,14 +66,16 @@ $offset: 550px;
   justify-content: center;
   align-items: center;
   background-color: black;
-
   .sub-row {
     width: 50%;
     display: flex;
     flex-flow: row;
     justify-content: space-around;
   }
-
+  a {
+    text-decoration: none;
+    color: $textColor;
+  }
 
   h1 {
     font-family: 'built-titling';
@@ -95,18 +100,32 @@ $offset: 550px;
     color: $textColor;
   }
 
-  // a {
-  //   text-decoration: none;
-  // }
-
   hr {
     width: 30px;
     background-color: $gold;
-    height: 1px;
+    height: 2px;
     margin: 10px 0 15px 0;
     border: none;
   }
-
+  span {
+      position: relative;
+      font-weight: 100;
+      font-size: 10px;
+      text-transform: uppercase;
+      line-height: 1.5;
+      top: 0;
+  }
+  .deliverable {
+    font-style: italic;
+  }
+  section {
+    font-weight: 100;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: right;
+    line-height: 1.5;
+  }
   .all-caps {
     font-size: 17.5px;
     text-transform: uppercase;
@@ -193,13 +212,19 @@ $offset: 550px;
       width: 240px;
       text-align: right;
     }
-    span{
-      font-weight: 100;
-      font-size: 10px;
-      text-transform: uppercase;
-      text-align: right;
-      line-height: 1.5;
+    .goldenLine {
+      span{
+        text-align: right;
+        right: -20px;
+        top: 10px;
+      }
     }
+    .goldenLine:hover:after {
+      margin-top: -0.95em;
+      margin-left: -8px;
+      width: 105px;
+    }
+
   }
   /* end of STRATEGY styling */
 
@@ -219,9 +244,20 @@ $offset: 550px;
       font-weight: 100;
       font-size: 10px;
       text-transform: uppercase;
-      font-style: italic;
       text-align: left;
       line-height: 1.5;
+    }
+    .goldenLine {
+      span{
+        text-align: right;
+        right: -20px;
+        top: 10px;
+      }
+    }
+    .goldenLine:hover:after {
+      margin-top: -0.95em;
+      margin-left: -8px;
+      width: 105px;
     }
   }
   /* end of ADVERTISING styling */
@@ -250,6 +286,18 @@ $offset: 550px;
       text-align: right;
       line-height: 1.5;
     }
+    .goldenLine {
+      span{
+        text-align: right;
+        right: -20px;
+        top: 10px;
+      }
+    }
+    .goldenLine:hover:after {
+      margin-top: -0.95em;
+      margin-left: -8px;
+      width: 105px;
+    }
   }
 
 /* end of DESIGN styling */
@@ -276,6 +324,18 @@ $offset: 550px;
       text-align: left;
       line-height: 1.5;
     }
+    .goldenLine {
+      span{
+        text-align: right;
+        right: -20px;
+        top: 10px;
+      }
+    }
+    .goldenLine:hover:after {
+      margin-top: -0.95em;
+      margin-left: -8px;
+      width: 105px;
+    }
   }
 
   /* end of INTERACTIVE styling */
@@ -297,6 +357,18 @@ $offset: 550px;
       font-style: italic;
       text-align: right;
       line-height: 1.5;
+    }
+    .goldenLine {
+      span{
+        text-align: right;
+        right: -20px;
+        top: 10px;
+      }
+    }
+    .goldenLine:hover:after {
+      margin-top: -0.95em;
+      margin-left: -8px;
+      width: 105px;
     }
   }
 }
