@@ -6,6 +6,9 @@ $wide: 100vw;
 $high: 100vh;
 $offset: 550px;
 
+.position-relative {
+  position: relative;
+}
 .test{
  /* test class to get the parallax function working */
 }
@@ -35,12 +38,12 @@ $offset: 550px;
   z-index: 200;
   background-repeat: no-repeat;
   background-size: cover;
-
   video {
     width: 100vw;
     z-index: 200;
   }
 }
+
 .capabilities-title-container {
   position: absolute;
   top: 50vh;
@@ -64,9 +67,16 @@ $offset: 550px;
   align-items: center;
   background-color: black;
 
-
-
-
+  .sub-row {
+    width: 50%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+  }
+  a {
+    text-decoration: none;
+    color: $textColor;
+  }
   h1 {
     font-family: 'built-titling';
     font-weight: 100;
@@ -88,16 +98,31 @@ $offset: 550px;
     padding: 0 10px;
     color: $textColor;
   }
-  font-weight: 100;
-  font-size: 10px;
-  text-transform: uppercase;
-  line-height: 1.5;
   hr {
     width: 30px;
     background-color: $gold;
-    height: 1px;
+    height: 2px;
     margin: 10px 0 15px 0;
     border: none;
+  }
+  span {
+      position: relative;
+      font-weight: 100;
+      font-size: 10px;
+      text-transform: uppercase;
+      line-height: 1.5;
+      top: 0;
+  }
+  .deliverable {
+    font-style: italic;
+  }
+  section {
+    font-weight: 100;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: right;
+    line-height: 1.5;
   }
   .all-caps {
     font-size: 17.5px;
@@ -147,13 +172,14 @@ $offset: 550px;
     }
   }
 }
-.capabilities-body{
+
+.capabilities-body {
   margin: 50px;
   display: flex;
   justify-content: center;
   overflow: hidden;
 
-  .main{
+  .main {
     width: 785px;
     height: 600px;
     position: absolute;
@@ -230,6 +256,13 @@ $offset: 550px;
       width: 250px;
       text-align: right;
     }
+    .goldenLine {
+      span {
+        text-align: right;
+        right: -10px;
+        top: 0px;
+      }
+    }
     .learn-our-process::after {
       content: "";
       border-bottom: 1px dashed #CECECE;
@@ -254,17 +287,24 @@ $offset: 550px;
       }
     }
 
-    span{
+    span {
       // font-weight: 100;
       // font-size: 10px;
       // text-transform: uppercase;
       text-align: right;
       // line-height: 1.5;
+
     }
+    .goldenLine:hover:after {
+      margin-top: -0.95em;
+      margin-left: -8px;
+      width: 105px;
+    }
+
   }
   /* end of STRATEGY styling */
 
-  .advertising{
+  .advertising {
     z-index: 155;
     width: 743px;
     height: 600px;
@@ -275,11 +315,7 @@ $offset: 550px;
       text-align: left;
     }
     span{
-      // font-weight: 100;
-      // font-size: 10px;
-      // text-transform: uppercase;
       text-align: left;
-      // line-height: 1.5;
     }
     .case-study {
       text-align: right;
@@ -290,10 +326,22 @@ $offset: 550px;
     .launch {
       text-align: right;
     }
+    .goldenLine {
+      span{
+        text-align: right;
+        right: -10px;
+        top: 0px;
+      }
+    }
+    .goldenLine:hover:after {
+      margin-top: -0.95em;
+      margin-left: -8px;
+      width: 105px;
+    }
   }
   /* end of ADVERTISING styling */
 
-  .design{
+  .design {
     z-index: 135;
     width: 600px;
     height: 600px;
@@ -316,11 +364,23 @@ $offset: 550px;
       text-align: right;
       // line-height: 1.5;
     }
+    .goldenLine {
+      span{
+        text-align: right;
+        right: -20px;
+        top: 10px;
+      }
+    }
+    .goldenLine:hover:after {
+      margin-top: -0.95em;
+      margin-left: -8px;
+      width: 105px;
+    }
   }
 
-/* end of DESIGN styling */
+  /* end of DESIGN styling */
 
-  .interactive{
+  .interactive {
     z-index: 115;
     width: 719px;
     height: 600px;
@@ -350,11 +410,23 @@ $offset: 550px;
     .launch {
       text-align: right;
     }
+    .goldenLine {
+      span{
+        text-align: right;
+        right: -20px;
+        top: 10px;
+      }
+    }
+    .goldenLine:hover:after {
+      margin-top: -0.95em;
+      margin-left: -8px;
+      width: 105px;
+    }
   }
 
   /* end of INTERACTIVE styling */
 
-  .studios{
+  .studios {
     z-index: 85;
     width: 725px;
     height: 600px;
@@ -371,6 +443,18 @@ $offset: 550px;
       text-align: right;
       // line-height: 1.5;
     }
+    .goldenLine {
+      span{
+        text-align: right;
+        right: -20px;
+        top: 10px;
+      }
+    }
+    .goldenLine:hover:after {
+      margin-top: -0.95em;
+      margin-left: -8px;
+      width: 105px;
+    }
   }
 }
 
@@ -385,6 +469,7 @@ $offset: 550px;
   height: 5135px;
   overflow: hidden;
 }
+
 .slant-left {
   position: absolute;
   width:$wide;
@@ -396,7 +481,6 @@ $offset: 550px;
     left: 0px;
     top: 0px;
   }
-
 }
 .slant-right {
   position: absolute;
@@ -407,9 +491,7 @@ $offset: 550px;
     position: absolute;
     right: 0px;
     top: 0px;
-
   }
-
 }
 
 .set-1-right {
