@@ -446,14 +446,14 @@ $stickyNavHeight: 40px;
 	.clients-served-grid {
 		display: flex;
 		justify-content: center;
-		margin-left: 10%;
-		margin-right: 10%;
+		margin-left: 8%;
+		margin-right: 8%;
 		margin-bottom: 10%;
 		.clients-served-column{
 			height: auto;
 			margin-bottom: 5%;
 			img {
-				height: 69px;
+				height: 80px;
 				width: 194px;
 				margin: 15.5px 93.5px;
 			}
@@ -560,49 +560,68 @@ $stickyNavHeight: 40px;
 }
 
 // Slider
-slider {
-	.slider {
-  max-width: 100%;
-  margin: 0px auto 30px auto;}
 
-.slide-viewer {
-    position: relative; /* needed for IE7 */
-    overflow: hidden;
-    height: 800px;}
-
-.slide-group {
-    width: 100%;
-    height: 100%;
-    position: relative;}
-
-.slide {
-    width: 100%;
-    height: 100%;
-    display: none;
-    position: absolute;
+.slider-controls {
+	display: flex;
+	justify-content: space-between;
+	.slider-buttons {
+		display: inline-flex;
+		.slick-dots {
+			display: inline-flex;
+		}
+	}
 }
 
-.slide:first-child {
-    display: block;}
 
 
-/********** BUTTONS **********/
-.slide-buttons {
-  text-align: center;
-  background-color: black;
-}
 
-.slide-btn {
-  border: none;
-  background: none;
-  color: grey;
-  font-size: 200%;
-  line-height: 0.5em;}
 
-.slide-btn.active, .slide-btn:hover {
-  color: white;
-  cursor: pointer;}
-}
+
+
+
+// slider {
+// 	.slider {
+//   max-width: 100%;
+//   margin: 0px auto 30px auto;}
+//
+// .slide-viewer {
+//     position: relative; /* needed for IE7 */
+//     overflow: hidden;
+//     height: 800px;}
+//
+// .slide-group {
+//     width: 100%;
+//     height: 100%;
+//     position: relative;}
+//
+// .slide {
+//     width: 100%;
+//     height: 100%;
+//     display: none;
+//     position: absolute;
+// }
+//
+// .slide:first-child {
+//     display: block;}
+//
+//
+// /********** BUTTONS **********/
+// .slide-buttons {
+//   text-align: center;
+//   background-color: black;
+// }
+//
+// .slide-btn {
+//   border: none;
+//   background: none;
+//   color: grey;
+//   font-size: 200%;
+//   line-height: 0.5em;}
+//
+// .slide-btn.active, .slide-btn:hover {
+//   color: white;
+//   cursor: pointer;}
+// }
 
 // Manifesto
 .manifesto {
