@@ -1,7 +1,8 @@
 .home-nav-container {
   position: fixed;
-  top: 3vh;
-  left: 3vh;
+  top: 5vh;
+  left: 5vh;
+  width: 67px;
 }
 .home-nav {
   position: absolute;
@@ -38,6 +39,10 @@
    #hamburger_menu {
     width:57px;
   }
+}
+
+.open-button {
+  cursor: pointer;
 }
 /* The Overlay (background) */
 .overlay {
@@ -79,11 +84,13 @@
 }
 
 /* Position the close button (top right corner) */
-.overlay .closebtn {
+.overlay {
+  .closebtn {
     position: absolute;
     top: 20px;
     right: 45px;
     font-size: 60px;
+  }
 }
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */

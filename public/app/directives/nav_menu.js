@@ -3,6 +3,16 @@ angular.module('topSecret')
   return {
     restrict: 'E',
     templateUrl: './app/directives/nav_menu.html',
+    link: function(scope, elem, attrs) {
+      scope.closeNav = function() {
+        console.log('closeNav activated', scope);
+
+      }
+      scope.openNav = function() {
+        console.log('openNav activated', scope);
+        $('#myNav').css('width', '100vw');
+      }
+    },
     controller: function($scope) {
       $scope.menuItems = [
         {
