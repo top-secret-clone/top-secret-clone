@@ -4,7 +4,7 @@ angular.module('topSecret')
     restrict: 'E',
     templateUrl: './app/directives/nav_menu.html',
     link: function(scope, elem, attrs) {
-      let menuDisplay = false;
+      scope.menuDisplay = false;
       // const rgbaActive = 'rgba(0,0,0,0.9)';
       // const rgbaInactive = 'rgba(0,0,0,0)';
       const
@@ -15,17 +15,17 @@ angular.module('topSecret')
           'background-color': 'rgba(0,0,0,0)'
         },
         contentActive = {
-          top: '25%'
+          top: '10%'
         },
         contentInactive = {
           top: '100%'
         };
       scope.navMenu = function() {
-        console.log('navMenu toggled', menuDisplay);
-        menuDisplay = !menuDisplay;
-        menuDisplay ? scope.css = overlayActive :
+        console.log('navMenu toggled', scope.menuDisplay);
+        scope.menuDisplay = !scope.menuDisplay;
+        scope.menuDisplay ? scope.css = overlayActive :
           scope.css = overlayInactive;
-        menuDisplay ? scope.cssContent = contentActive :
+        scope.menuDisplay ? scope.cssContent = contentActive :
           scope.cssContent = contentInactive;
         // menuDisplay ? $('#myNav').css('width', '100vw') :
         // $('#myNav').css('width', '0vw');

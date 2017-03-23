@@ -1,8 +1,8 @@
-<!-- The overlay -->
-<div id="myNav" class="overlay" ng-style='css'>
+<!-- The overlay menu -->
+<div id="myNav" class="overlay" ng-style='css' ng-show='menuDisplay'>
 
   <!-- Overlay content -->
-  <div class="overlay-content" ng-style='cssContent'>
+  <div class="overlay-content" ng-style='cssContent' ng-show='menuDisplay'>
     <ul>
       <li ng-repeat='item in menuItems'>
         <a ui-sref={{item.route}} class='goldenLine'>
@@ -16,6 +16,7 @@
   </div>
 
 </div>
+
 
 <div class="home-nav-container" ng-click='navMenu()'>
   <div class="home-nav">
