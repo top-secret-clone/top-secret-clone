@@ -4,7 +4,7 @@
   <!-- Overlay content -->
   <div class="overlay-content" ng-style='cssContent' ng-show='menuDisplay'>
     <ul>
-      <li ng-repeat='item in menuItems'>
+      <li ng-repeat='item in menuItems' ng-click='navMenu()'>
         <a ui-sref={{item.route}} class='goldenLine'>
           <span class='no'>NO</span>
           <span class='menu-number'>{{item.index}}</span>

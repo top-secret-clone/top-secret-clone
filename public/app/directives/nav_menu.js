@@ -18,7 +18,7 @@ angular.module('topSecret')
           top: '10%'
         },
         contentInactive = {
-          top: '100%'
+          top: '110%'
         };
       scope.navMenu = function() {
         console.log('navMenu toggled', scope.menuDisplay);
