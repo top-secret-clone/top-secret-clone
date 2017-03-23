@@ -23,15 +23,15 @@ angular.module('topSecret').directive('goldOutline', function(){
                 minusHeight = document.getElementsByClassName($scope.cname)[0].parentElement.parentElement.clientHeight * .15;
                 minusWidth = (document.getElementsByClassName($scope.cname)[0].parentElement.parentElement.clientWidth * .05);
                 minusWidth2 = (document.getElementsByClassName($scope.cname)[0].parentElement.parentElement.clientWidth * .10);
-                rightWidth = document.getElementsByClassName($scope.cname)[0].parentElement.parentElement.clientWidth - minusWidth2 + 'px';
-                topRight =(document.getElementsByClassName($scope.cname)[0].parentElement.parentElement.clientWidth / 2) - minusWidth + 'px';
-                parentHeight = (document.getElementsByClassName($scope.cname)[0].parentElement.parentElement.clientHeight - minusHeight) + 'px';
+                rightWidth = document.getElementsByClassName($scope.cname)[0].parentElement.parentElement.clientWidth - 10 + 'px';
+                topRight =(document.getElementsByClassName($scope.cname)[0].parentElement.parentElement.clientWidth / 2) - 5 + 'px';
+                parentHeight = (document.getElementsByClassName($scope.cname)[0].parentElement.parentElement.clientHeight - 10) + 'px';
                 parentWidth = document.getElementsByClassName($scope.cname)[0].parentElement.parentElement.clientWidth + 'px';
             }, 0);
 
             $scope.worm = function () {
                 setTimeout(function () {
-                    console.log('WHERE ARE YOU??????????')
+                    console.log('WHERE ARE YOU??????????');
                     TweenMax.to(document.getElementsByClassName($scope.cname)[0].childNodes[1], 0.05, {
                         width: topRight
                     });

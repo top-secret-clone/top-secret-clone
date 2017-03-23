@@ -6,8 +6,11 @@ $wide: 100vw;
 $high: 100vh;
 $offset: 550px;
 
+.position-relative {
+  position: relative;
+}
 .test{
-
+ /* test class to get the parallax function working */
 }
 
 .capabilities-container {
@@ -35,12 +38,12 @@ $offset: 550px;
   z-index: 200;
   background-repeat: no-repeat;
   background-size: cover;
-
   video {
     width: 100vw;
     z-index: 200;
   }
 }
+
 .capabilities-title-container {
   position: absolute;
   top: 50vh;
@@ -70,8 +73,10 @@ $offset: 550px;
     flex-flow: row;
     justify-content: space-around;
   }
-
-
+  a {
+    text-decoration: none;
+    color: $textColor;
+  }
   h1 {
     font-family: 'built-titling';
     font-weight: 100;
@@ -82,7 +87,6 @@ $offset: 550px;
     letter-spacing: 15px;
     margin: 0;
   }
-
   p {
     font-family: "Crimson Text", serif;
     font-weight: 100;
@@ -94,32 +98,88 @@ $offset: 550px;
     padding: 0 10px;
     color: $textColor;
   }
-
-  // a {
-  //   text-decoration: none;
-  // }
-
   hr {
     width: 30px;
     background-color: $gold;
-    height: 1px;
+    height: 2px;
     margin: 10px 0 15px 0;
     border: none;
   }
-
+  span {
+      position: relative;
+      font-weight: 100;
+      font-size: 10px;
+      text-transform: uppercase;
+      line-height: 1.5;
+      top: 0;
+  }
+  .deliverable {
+    font-style: italic;
+  }
+  section {
+    font-weight: 100;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: right;
+    line-height: 1.5;
+  }
   .all-caps {
     font-size: 17.5px;
     text-transform: uppercase;
     color: #707070;
   }
+  .sub-row {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    position: relative;
+    div {
+      position: relative;
+    }
+  }
+  .case-study {
+    font-family: 'built-titling';
+    font-size: 21px;
+    letter-spacing: 4.25px;
+    color: $textColor;
+    width: 290px;
+    text-align: right;
+    padding-right: 50px;
+  }
+  .case-study::after {
+    content: "";
+    border-bottom: 1px dashed #CECECE;
+    width: 99px;
+    height: 1px;
+    position: absolute;
+    right: 36px;
+    bottom: 64px;
+  }
+  .launch {
+    flex: 1;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: 'built-titling';
+    color: $textColor;
+    letter-spacing: 5px;
+    margin-top: 16px;
+    a {
+      text-decoration: none;
+      color: $textColor;
+    }
+  }
 }
-.capabilities-body{
+
+.capabilities-body {
   margin: 50px;
   display: flex;
   justify-content: center;
   overflow: hidden;
 
-  .main{
+  .main {
     width: 785px;
     height: 600px;
     position: absolute;
@@ -190,21 +250,56 @@ $offset: 550px;
       color: #707070;
     }
     .learn-our-process {
-      width: 240px;
+      font-family: 'built-titling';
+      font-size: 20px;
+      letter-spacing: 4.75px;
+      width: 250px;
       text-align: right;
     }
-    span{
-      font-weight: 100;
-      font-size: 10px;
+    .goldenLine {
+      span {
+        text-align: right;
+        right: -10px;
+        top: 0px;
+      }
+    }
+    .learn-our-process::after {
+      content: "";
+      border-bottom: 1px dashed #CECECE;
+      width: 99px;
+      height: 1px;
+      position: absolute;
+      left: 170px;
+      bottom: 64px;
+    }
+    .contact-us {
+      width: 317px;
+      text-align: right;
       text-transform: uppercase;
-      font-style: italic;
-      text-align: right;
-      line-height: 1.5;
+      font-size: 18px;
+      font-family: 'built-titling';
+      color: #cecece;
+      letter-spacing: 5px;
+      margin-top: 16px;
+      a {
+        text-decoration: none;
+        color: $textColor;
+      }
     }
+
+    span {
+      text-align: right;
+    }
+    .goldenLine:hover:after {
+      margin-top: -0.95em;
+      margin-left: -8px;
+      width: 127px;
+    }
+
   }
   /* end of STRATEGY styling */
 
-  .advertising{
+  .advertising {
     z-index: 155;
     width: 743px;
     height: 600px;
@@ -213,21 +308,35 @@ $offset: 550px;
     margin-left: -33px;
     p {
       text-align: left;
-      padding: 0;
-
     }
     span{
-      font-weight: 100;
-      font-size: 10px;
-      text-transform: uppercase;
-      font-style: italic;
       text-align: left;
-      line-height: 1.5;
+    }
+    .case-study {
+      text-align: right;
+    }
+    .two {
+      margin-top: 53px;
+    }
+    .launch {
+      text-align: right;
+    }
+    .goldenLine {
+      span{
+        text-align: right;
+        right: -10px;
+        top: 0px;
+      }
+    }
+    .goldenLine:hover:after {
+      margin-top: -0.9em;
+      margin-left: -8px;
+      width: 100px;
     }
   }
   /* end of ADVERTISING styling */
 
-  .design{
+  .design {
     z-index: 135;
     width: 600px;
     height: 600px;
@@ -244,18 +353,25 @@ $offset: 550px;
       text-align: right;
     }
     span{
-      font-weight: 100;
-      font-size: 10px;
-      text-transform: uppercase;
-      font-style: italic;
       text-align: right;
-      line-height: 1.5;
+    }
+    .goldenLine {
+      span{
+        text-align: right;
+        right: -20px;
+        top: 0px;
+      }
+    }
+    .goldenLine:hover:after {
+      margin-top: -0.9em;
+      margin-left: -8px;
+      width: 105px;
     }
   }
 
-/* end of DESIGN styling */
+  /* end of DESIGN styling */
 
-  .interactive{
+  .interactive {
     z-index: 115;
     width: 719px;
     height: 600px;
@@ -267,21 +383,41 @@ $offset: 550px;
     }
     p {
       text-align: left;
-      padding: 0;
     }
     span{
-      font-weight: 100;
-      font-size: 10px;
-      text-transform: uppercase;
-      font-style: italic;
+      // font-weight: 100;
+      // font-size: 10px;
+      // text-transform: uppercase;
       text-align: left;
-      line-height: 1.5;
+      // line-height: 1.5;
+    }
+    .case-study {
+      text-align: right;
+      padding-left: 0;
+    }
+    .two {
+      margin-top: 53px;
+    }
+    .launch {
+      text-align: right;
+    }
+    .goldenLine {
+      span{
+        text-align: right;
+        right: -20px;
+        top: 0px;
+      }
+    }
+    .goldenLine:hover:after {
+      margin-top: -0.9em;
+      margin-left: -8px;
+      width: 105px;
     }
   }
 
   /* end of INTERACTIVE styling */
 
-  .studios{
+  .studios {
     z-index: 85;
     width: 725px;
     height: 600px;
@@ -292,12 +428,19 @@ $offset: 550px;
       text-align: right;
     }
     span{
-      font-weight: 100;
-      font-size: 10px;
-      text-transform: uppercase;
-      font-style: italic;
       text-align: right;
-      line-height: 1.5;
+    }
+    .goldenLine {
+      span{
+        text-align: right;
+        right: -20px;
+        top: 0px;
+      }
+    }
+    .goldenLine:hover:after {
+      margin-top: -0.9em;
+      margin-left: -8px;
+      width: 105px;
     }
   }
 }
@@ -313,6 +456,7 @@ $offset: 550px;
   height: 5135px;
   overflow: hidden;
 }
+
 .slant-left {
   position: absolute;
   width:$wide;
@@ -324,7 +468,6 @@ $offset: 550px;
     left: 0px;
     top: 0px;
   }
-
 }
 .slant-right {
   position: absolute;
@@ -335,9 +478,7 @@ $offset: 550px;
     position: absolute;
     right: 0px;
     top: 0px;
-
   }
-
 }
 
 .set-1-right {

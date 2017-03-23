@@ -26,7 +26,7 @@ $formMargin: 8px 0;
 }
 
 .connect-banner {
-  position: absolute;;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100vh;
@@ -40,7 +40,9 @@ $formMargin: 8px 0;
   left: 50%;
   margin: -262px 0 0 -393px;
 }
-
+.position-relative {
+  position: relative;
+}
 .connect-block {
   position: absolute;
   top: 100vh;
@@ -49,16 +51,16 @@ $formMargin: 8px 0;
   width: 100vw;
   display: flex;
   flex-flow: row;
-  justify-content: space-around;;
-  align-items: flex-start;;
+  justify-content: space-around;
+  align-items: flex-start;
   background-image: url('./images/map.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 
   div{
-    width: 95%;
-    padding: 22px;
+    // width: 95%;
+    // padding: 22px;
   }
 
   .sub-row {
@@ -66,9 +68,6 @@ $formMargin: 8px 0;
     display: flex;
     flex-flow: row;
     justify-content: space-around;
-  }
-  span {
-
   }
   .icon {
     color: $iconColor;
@@ -83,6 +82,7 @@ $formMargin: 8px 0;
     font-size: 46px;
     font-weight: 100;
     letter-spacing: 7.75px;
+    margin: 20px 0 0 0;
   }
   h3 {
     font-family: 'Crimson Text', serif;
@@ -114,7 +114,7 @@ $formMargin: 8px 0;
 
   hr {
     width: 30px;
-    justify-content: right;
+    margin: 22px 0;
     color: $gold;
   }
 
@@ -123,6 +123,76 @@ $formMargin: 8px 0;
     height: 1570px;
     margin-left:-25px;
     background-color: $cream;
+    div{
+      width: 95%;
+      padding: 22px;
+    }
+    .super {
+      .goldenLine:hover:after {
+        margin-top: -0.7em;
+        margin-left: -8px;
+        width: 127px;
+      }
+      span{
+        position: absolute;
+        right: -20px;
+        top: 3px;
+        font-weight: 100;
+        font-size: 10px;
+        text-transform: uppercase;
+        text-align: right;
+        line-height: 1.5;
+      }
+    }
+    .careers {
+      .goldenLine:hover:after {
+        margin-top: -1em;
+        margin-left: -8px;
+        width: 93px;
+      }
+      span{
+        position: absolute;
+        right: -20px;
+        top: 10.5px;
+        font-weight: 100;
+        font-size: 10px;
+        text-transform: uppercase;
+        text-align: right;
+        line-height: 1.5;
+      }
+    }
+    .positions {
+      a {
+      color: $textColor;
+      font-family: 'Crimson Text', serif;
+      font-size: 14px;
+      letter-spacing: 1.6px;
+      transition: 0.2s;
+    }
+      a:hover {
+        color: $gold;
+      }
+    }
+    .socialMedia {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+      div {
+        padding: 0;
+        text-align: left;
+      }
+    }
+    .icon {
+      width: 30px;
+      a {
+        color: $textColor;
+        transition: 0.2s;
+      }
+      a:hover {
+        color: $gold;
+      }
+    }
   }
   .right {
     width: 475px;
@@ -142,10 +212,4 @@ $formMargin: 8px 0;
     padding: $formPadding;
     margin: $formMargin
   }
-  // button {
-  //   width: 100px;
-  //   height: 25px;
-  //   border-radius: 5px;
-  //   background-color: green;
-  // }
-}
+} /* end of connect-block section */
