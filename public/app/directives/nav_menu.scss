@@ -30,13 +30,13 @@ $fontText: "'Crimson Text', serif";
   fill: #B7B7B8
 }
 
-#hamburger_menu #box_tight #hamburger_menu #box rect {
- fill: #89714D
-}
-
-#hamburger_menu #box_tight #hamburger_menu #box rect {
- fill: #89714D
-}
+// #hamburger_menu #box_tight #hamburger_menu #box rect {
+//  fill: #89714D
+// }
+//
+// #hamburger_menu #box_tight #hamburger_menu #box rect {
+//  fill: #89714D
+// }
 
 
 
@@ -163,4 +163,46 @@ span {
         top: 15px;
         right: 35px;
     }
+}
+
+/* musik bars styling */
+
+.musik-kontroller {
+  position: fixed;
+  bottom: 2vw;
+  right: 2vw;
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  z-index: 203;
+}
+.musik-kontroller-bar1 {
+  padding: 0 1px;
+  background-color: $gold;
+  border: 0.5px solid $gold;
+  width: 0px;
+  position: absolute;
+  bottom: 0;
+  left: 1px;
+  transition: 0.1s;
+}
+.musik-kontroller-bar2 {
+  padding: 0 1px;
+  background-color: $gold;
+  border: 0.5px solid $gold;
+  width: 0px;
+  position: absolute;
+  bottom: 0;
+  left: 6px;
+  transition: 0.1s;
+}
+.musik-kontroller-bar3 {
+  padding: 0 1px;
+  background-color: $gold;
+  border: 0.5px solid $gold;
+  width: 0px;
+  position: absolute;
+  bottom: 0;
+  right: 1px;
+  transition: 0.1s;
 }
