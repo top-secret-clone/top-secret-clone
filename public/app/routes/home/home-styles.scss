@@ -1,9 +1,8 @@
 .home-main-container {
   position: absolute;
-  height: 100%;
+  height: 250%;
   width: 100%;
-  overflow-x: hidden;
-  background-color: black;
+    margin: 0;
 }
 .home-main-wrapper{
   position: relative;
@@ -19,14 +18,14 @@
 }
 #overlay{
   z-index: -10;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: fixed;
   pointer-events: none;
 }
 #fluid_container{
   z-index: -11;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: fixed;
   opacity: 1;
@@ -96,7 +95,7 @@
   position: absolute;
   left: 0;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 .sprite-container{
   position: relative;
@@ -176,7 +175,7 @@
   position: relative;
   top: 100vh;
   height: 43vh;
-  width: 100vw;
+  width: 100%;
   margin-left: 0;
 }
 
@@ -187,21 +186,21 @@
   margin-left: 15vw;
   perspective: 1px;
   overflow: hidden;
-}
-#case-studies-parallax-holder{
-  height: 110%;
-  width: 100%;
-  background-image: url(http://www.wearetopsecret.com/images/case-studies-home-page.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: block;
   background-size: cover;
+}
+
+
+#parallax-holder-thingy{
   position: absolute;
-  top: -20px;
-  /* right: 0; */
-  /* bottom: 0; */
-  left: 0px;
-  transform: translateZ(-1);
+  bottom: auto;
+  right: auto;
+  top: -200px;
+  left: -76px;
+  min-height: 684.2px;
+  min-width: 1137.8px;
+  width: 1430px;
+  height: auto;
 }
 #case-studies-title{
   position: absolute;
@@ -217,10 +216,7 @@
   transition-duration: .5s;
 }
 
-.home-main-container{
-  position: absolute;
-  margin: 0 0 0 0;
-}
+
 
 .home-cs-hover-heading{
   opacity: 0;
@@ -309,7 +305,7 @@
 .about-sts-container{
   position: relative;
   top: 100vh;
-  width: 100vw;
+  width: 100%;
   margin: 0 0 0 0;
   height: 50vh;
 }
@@ -426,7 +422,7 @@
   position: relative;
   top: 80vh;
   height: 50vh;
-  width: 100vw;
+  width: 100%;
   margin: 0 0 0 0;
   display: flex;
   align-content: center;
@@ -593,14 +589,11 @@
 }
 
 
-
-
-
 //home footer
 .home-footer-container{
   position: relative;
   top: 76vh;
-  width: 100vw;
+  width: 100%;
   margin-top: 10vh;
   height: 6vh;
   background-color: #1c1c1c;
