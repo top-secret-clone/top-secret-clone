@@ -1,11 +1,8 @@
 <!-- The overlay -->
-<div id="myNav" class="overlay">
-
-  <!-- Button to close the overlay navigation -->
-  <a href="javascript:void(0)" class="closebtn" ng-click="closeNav()">&times;</a>
+<div id="myNav" class="overlay" ng-style='css'>
 
   <!-- Overlay content -->
-  <div class="overlay-content">
+  <div class="overlay-content" ng-style='cssContent'>
     <ul>
       <li ng-repeat='item in menuItems'>
         <span class='no'>NO</span>
@@ -17,9 +14,7 @@
 
 </div>
 
-<!-- Use any element to open/show the overlay navigation menu -->
-
-<div class="home-nav-container" ng-click='openNav()'>
+<div class="home-nav-container" ng-click='navMenu()'>
   <div class="home-nav">
     <svg
       version="1.1"

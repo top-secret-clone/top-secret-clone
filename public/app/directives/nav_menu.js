@@ -4,13 +4,34 @@ angular.module('topSecret')
     restrict: 'E',
     templateUrl: './app/directives/nav_menu.html',
     link: function(scope, elem, attrs) {
-      scope.closeNav = function() {
-        console.log('closeNav activated', scope);
-
-      }
-      scope.openNav = function() {
-        console.log('openNav activated', scope);
-        $('#myNav').css('width', '100vw');
+      let menuDisplay = false;
+      // const rgbaActive = 'rgba(0,0,0,0.9)';
+      // const rgbaInactive = 'rgba(0,0,0,0)';
+      const
+        overlayActive = {
+          'background-color': 'rgba(0,0,0,0.9)',
+          opacity: 0.9
+        },
+        overlayInactive = {
+          'background-color': 'rgba(0,0,0,0)'
+        },
+        contentActive = {
+          top: '25%'
+        },
+        contentInactive = {
+          top: '100%'
+        };
+      scope.navMenu = function() {
+        console.log('navMenu toggled', menuDisplay);
+        menuDisplay = !menuDisplay;
+        menuDisplay ? scope.css = overlayActive :
+          scope.css = overlayInactive;
+        menuDisplay ? scope.cssContent = contentActive :
+          scope.cssContent = contentInactive;
+        // menuDisplay ? $('#myNav').css('width', '100vw') :
+        // $('#myNav').css('width', '0vw');
+        // menuDisplay ? $('#myNav').css('background-color', rgbaActive) :
+        // $('#myNav').css('background-color', rgbaInactive);
       }
     },
     controller: function($scope) {
