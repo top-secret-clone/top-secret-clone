@@ -1,5 +1,6 @@
 angular.module('topSecret')
 .service('aboutService', function($http){
+  
   this.clientsServed = [
     {'imageUrl':'http://www.wearetopsecret.com/images/about/logos/Ubisoft.png'},
     {'imageUrl':'http://www.wearetopsecret.com/images/about/logos/Oregon.png'},
