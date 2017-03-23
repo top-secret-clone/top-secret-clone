@@ -25,16 +25,22 @@ footer {
   color: $textColor;
   div {
 
-    span {
-      transform: translateY(-16px);
+    .tele-icon {
+      transform: translate(-4px,-5px);
       padding: 0 17px;
     }
     i {
       padding: 0 10px;
     }
-    .black {
+    .tele-background {
+      position: relative;
+      left: -12px;
+      top: 4px;
+      font-size: 1.5em;
+    }
+    .tele-phone {
       color: black;
-      transform: translate(2px, 0px);
+      transform: translate(-8px, -28px);
     }
   }
   a{
