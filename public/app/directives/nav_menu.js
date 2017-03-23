@@ -9,8 +9,7 @@ angular.module('topSecret')
       // const rgbaInactive = 'rgba(0,0,0,0)';
       const
         overlayActive = {
-          'background-color': 'rgba(0,0,0,0.9)',
-          opacity: 0.9
+          'background-color': 'rgba(0,0,0,0.9)'
         },
         overlayInactive = {
           'background-color': 'rgba(0,0,0,0)'

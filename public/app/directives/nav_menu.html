@@ -5,9 +5,12 @@
   <div class="overlay-content" ng-style='cssContent'>
     <ul>
       <li ng-repeat='item in menuItems'>
-        <span class='no'>NO</span>
-        <span class='menu-number'>{{item.index}}</span>
-        <a ui-sref={{item.route}}><span class='menu-item'>{{item.name}}</span></a>
+        <a ui-sref={{item.route}} class='goldenLine'>
+          <span class='no'>NO</span>
+          <span class='menu-number'>{{item.index}}</span>
+          <span class='menu-item'>{{item.name}}</span>
+          <span class='menu-triangle'>&#9654;</span>
+        </a>
       </li>
     </ul>
   </div>
