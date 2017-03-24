@@ -1,3 +1,5 @@
+/* capabilities.scss styles */
+
 $gold:#88714D;
 $padding:5%;
 $margin:5%;
@@ -116,7 +118,7 @@ $offset: 550px;
   .deliverable {
     font-style: italic;
   }
-  section {
+  .capabilites-footer {
     font-weight: 100;
     font-size: 10px;
     text-transform: uppercase;
@@ -576,9 +578,9 @@ $offset: 550px;
     height: $wide * 1.2;
   }
 }
-section {
-  position: absolute;
-  bottom: 0;
-  height: 55px;
-  z-index: 200;
-}
+// section {
+//   position: absolute;
+//   bottom: 0;
+//   height: 55px;
+//   z-index: 200;
+// }
