@@ -218,8 +218,11 @@ a {
 .column {
 	flex: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	//NOTE this may cause bugs, watch it.
 	// height: 250px;
+=======
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
 =======
 >>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
 }
@@ -451,8 +454,13 @@ $stickyNavHeight: 40px;
 		display: flex;
 		justify-content: center;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		margin-left: 10%;
 		margin-right: 10%;
+=======
+		margin-left: 8%;
+		margin-right: 8%;
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
 =======
 		margin-left: 8%;
 		margin-right: 8%;
@@ -463,7 +471,11 @@ $stickyNavHeight: 40px;
 			margin-bottom: 5%;
 			img {
 <<<<<<< HEAD
+<<<<<<< HEAD
 				height: 69px;
+=======
+				height: 80px;
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
 =======
 				height: 80px;
 >>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
@@ -572,6 +584,7 @@ $stickyNavHeight: 40px;
 	padding: 265px 190.5px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // Slider
 slider {
@@ -636,6 +649,25 @@ slider {
 
 
 
+=======
+
+// Slider
+
+.slider-controls {
+	display: flex;
+	justify-content: space-between;
+	.slider-buttons {
+		display: inline-flex;
+		.slick-dots {
+			display: inline-flex;
+		}
+	}
+}
+
+
+
+
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
 
 
 
@@ -684,6 +716,9 @@ slider {
 //   cursor: pointer;}
 // }
 
+<<<<<<< HEAD
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
+=======
 >>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
 // Manifesto
 .manifesto {
@@ -700,6 +735,12 @@ slider {
 		font-size: 2em;
 		line-height: 2em;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	}
+	.about-footer {
+		margin-left: -196px;
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
 =======
 	}
 	.about-footer {

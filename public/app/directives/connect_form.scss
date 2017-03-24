@@ -1,0 +1,30 @@
+/* connect-form.scss styling */
+$gold:#88714D;
+
+section {
+  position: relative;
+}
+.small {
+  width: 90px;
+  height: 35px;
+}
+.form-button {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0px;
+}
+.form-triangle{
+  position: absolute;
+  right: 0;
+  top: 14px;
+  color: $gold;
+  font-weight: 100;
+  font-size: 9px;
+  text-transform: uppercase;
+  text-align: right;
+  line-height: 1.5;
+}
+.goldenLine:hover:after {
+		margin-top: 1.105em;
+    width: 90px;
+}
