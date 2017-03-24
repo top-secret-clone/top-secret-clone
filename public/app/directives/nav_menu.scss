@@ -54,7 +54,6 @@ $fontText: "'Crimson Text', serif";
 
 /* The Overlay (background) */
 .overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */
     height: 100%;
     width: 100%;
     position: fixed; /* Stay in place */
@@ -112,12 +111,12 @@ span {
 /* Position the content inside the overlay */
 .overlay-content {
     position: relative;
-    top: 100%; /* 100% from the top */
-    width: 100%; /* 100% width */
+    top: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
-    text-align: center; /* Centered text/links */
-    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    text-align: center;
+    margin-top: 30px;
     transition: 0.5s;
     ul {
       width: 414px;
@@ -142,19 +141,12 @@ span {
 
 /* The navigation links inside the overlay */
 .overlay a {
-    // padding: 8px;
     text-decoration: none;
     font-size: 36px;
     color: #818181;
     display: block; /* Display block instead of inline */
-    transition: 0.3s; /* Transition effects on hover (color) */
+    transition: 0.3s;
     position: relative;
-
-    // .goldenLine:hover:after {
-    //   margin-top: -0.7em;
-    //   margin-left: 0px;
-    //   width: 127px;
-    // }
 }
 
 
@@ -180,33 +172,33 @@ span {
   height: 16px;
   z-index: 203;
 }
-.musik-kontroller-bar1 {
+.musik-kontroller-bar {
   padding: 0 1px;
-  background-color: $gold;
-  border: 0.5px solid $gold;
+  background-color: $textColor;
+  border: 0.5px solid $textColor;
   width: 0px;
+  transition: 0.15s;
+}
+.musik-bar1 {
   position: absolute;
   bottom: 0;
   left: 1px;
-  transition: 0.15s;
 }
-.musik-kontroller-bar2 {
-  padding: 0 1px;
-  background-color: $gold;
-  border: 0.5px solid $gold;
-  width: 0px;
+.musik-bar2 {
   position: absolute;
   bottom: 0;
   left: 6px;
-  transition: 0.15s;
 }
-.musik-kontroller-bar3 {
-  padding: 0 1px;
-  background-color: $gold;
-  border: 0.5px solid $gold;
-  width: 0px;
+.musik-bar3 {
   position: absolute;
   bottom: 0;
   right: 1px;
-  transition: 0.15s;
 }
+.gold-bars {
+  background-color: $gold;
+  border: 0.5px solid $gold;
+}
+.silver-bars {
+    background-color: $textColor;
+    border: 0.5px solid $textColor;
+  }

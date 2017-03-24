@@ -26,16 +26,6 @@ angular.module('topSecret')
           scope.cssContent = contentInactive;
       } /* end of navMenu toggle function */
 
-      // setInterval(function() {
-      //   console.log('Timeout function...')
-      //   var bar1 = Math.random() * 10 + 1;
-      //   var bar2 = Math.random() * 10 + 1;
-      //   var bar3 = Math.random() * 10 + 1;
-      //   scope.animateBar1 = {height: `${bar1}px`};
-      //   console.log(`${bar1}px`);
-      //   scope.animateBar2 = {height: `${bar2}px`};
-      //   scope.animateBar3 = {height: `${bar3}px`};
-      // },1000);
     },
     controller: function($scope,$interval) {
       var audioOn = true;
@@ -63,6 +53,23 @@ angular.module('topSecret')
           $scope.animateBar3 = {height: `2px`};
         }
       },150);
+      var barColor = false;
+      $scope.turnGold = function() {
+        barColor = true;
+        var bar3color = document.querySelectorAll('.musik-kontroller-bar');
+        bar3color.forEach( bar => {
+          $(bar).addClass('gold-bars');
+          $(bar).removeClass('silver-bars');
+        });
+      }
+      $scope.turnSilver = function() {
+        barColor = false;
+        var bar3color = Array.from(document.querySelectorAll('.musik-kontroller-bar'));
+        bar3color.forEach( bar => {
+          $(bar).addClass('silver-bars');
+          $(bar).removeClass('gold-bars');
+        });
+      }
 
       $scope.menuItems = [
         {
