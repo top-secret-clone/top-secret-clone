@@ -55,33 +55,39 @@ body {
   height: 31px;
   width: 100px;
   top: 94%;
-  left: 50%;
+  left: 960px;
   transform: translate(-50%, 24%);
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+#down-arrows-container{
+  position: absolute;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 #scroll-scroll{
   font-family: 'built-titling';
   text-transform: uppercase;
-  top: 95%;
-  left: 44%;
   color: #a1a0a0;
   z-index: 10;
   position: absolute;
   letter-spacing: 5px;
   font-size: small;
+  left: -61%;
+  top: 13%;
 }
 #scroll-more{
   font-family: 'built-titling';
   text-transform: uppercase;
-  top: 95%;
-  left: 49%;
   color: #a1a0a0;
   z-index: 10;
   position: absolute;
   letter-spacing: 5px;
   font-size: small;
+  top: 14%;
+  right: 33%;
 }
 .fa-angle-down{
   //color: #89714D;
@@ -122,7 +128,7 @@ body {
 .case-studies-main-column{
   margin: 0 0 0 0;
   position: relative;
-  height: 48vh + 55;
+  height: 48vh;
   width: 100%;
 }
 
@@ -132,7 +138,7 @@ body {
   width: 100%;
   background-position: top;
   zoom: 135%;
-  background-position-y: 14%;
+  background-position-y: 200%;
 }
 //put the background images in each individual container
 #oregon{
@@ -140,13 +146,15 @@ body {
 }
 #creed{
   background-image: url("http://www.wearetopsecret.com/images/case-studies/ubisoft-panel-bg.jpg");
+  background-position-y: 180%;
 }
 #rossi{
   background-image: url("http://www.wearetopsecret.com/images/case-studies/rossi/rossignol-hero.jpg");
-  zoom: 100%;
+  background-position-y: 120%;
 }
 #publik{
  background-image: url("http://www.wearetopsecret.com/images/case-studies/publik-panel-bg.jpg");
+  background-position-y: 150%;
 }
 #peli{
   background-image: url("http://www.wearetopsecret.com/images/case-studies/peligroso-panel-bg.jpg");
