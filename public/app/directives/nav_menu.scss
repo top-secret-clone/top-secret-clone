@@ -32,6 +32,13 @@ $fontText: "'Crimson Text', serif";
 .gray_fill {
   fill: #B7B7B8
 }
+.navDisplayOff {
+  opacity: 0;
+  transition: 0.5s;
+}
+.navDisplayOn {
+  opacity: 0;
+}
 
 // #hamburger_menu #box_tight #hamburger_menu #box rect {
 //  fill: #89714D

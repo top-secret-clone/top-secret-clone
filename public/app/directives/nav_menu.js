@@ -6,27 +6,41 @@ angular.module('topSecret')
     link: function(scope, elem, attrs) {
       scope.menuDisplay = false;
       const
-        overlayActive = {
-          'background-color': 'rgba(0,0,0,0.9)'
-        },
-        overlayInactive = {
-          'background-color': 'rgba(0,0,0,0)'
-        },
-        contentActive = {
-          top: '10%'
-        },
-        contentInactive = {
-          top: '110%'
-        };
-      scope.navMenu = function() {
+        overlayActive = { 'background-color': 'rgba(0,0,0,0.9)' },
+        overlayInactive = { 'background-color': 'rgba(0,0,0,0)' },
+        contentActive = { top: '10%' },
+        contentInactive = { top: '110%' };
+      const
+        box = document.getElementById('box'),
+        crossout = document.getElementById('crossout'),
+        hamburgerMenu = document.getElementById('hamburger'),
+        boxCross = document.getElementById('box_tight');
+
+      scope.navMenu = function() { /* toggle menu display */
         scope.menuDisplay = !scope.menuDisplay;
-        scope.menuDisplay ? scope.css = overlayActive :
+
+        if (scope.menuDisplay === true) {
+          console.log('Display on-->', crossout);
+          scope.css = overlayActive;
+          scope.cssContent = contentActive;
+          $(boxCross).addClass('navDisplayOn'); /* addClass is not working */
+          $(crossout).addClass('navDisplayOn');
+        }
+        else {
+          console.log('<--Display off',boxCross);
           scope.css = overlayInactive;
-        scope.menuDisplay ? scope.cssContent = contentActive :
           scope.cssContent = contentInactive;
+          $(boxCross).removeClass('navDisplayOn');
+          $(crossout).removeClass('navDisplayOn');
+        }
+        // scope.menuDisplay ? scope.css = overlayActive :
+        //   scope.css = overlayInactive;
+        // scope.menuDisplay ? scope.cssContent = contentActive :
+        //   scope.cssContent = contentInactive;
       } /* end of navMenu toggle function */
 
-    },
+    }, /* end of LINK function */
+
     controller: function($scope,$interval) {
       var audioOn = true;
       var audioTrack = new Audio('./assets/homepage_track.mp3');
@@ -53,7 +67,7 @@ angular.module('topSecret')
           $scope.animateBar3 = {height: `2px`};
         }
       },150);
-      var barColor = false;
+
       $scope.turnGold = function() {
         barColor = true;
         var bar3color = document.querySelectorAll('.musik-kontroller-bar');
@@ -70,7 +84,7 @@ angular.module('topSecret')
           $(bar).removeClass('gold-bars');
         });
       }
-
+      $scope.menuDisplay ? $(crossout).addClass('navDisplayOn') : $(crossout).removeClass('navDisplayOn'); /* add/removeClass not working */
       $scope.menuItems = [
         {
           index: 1,
