@@ -15,25 +15,14 @@
     </ul>
   </div> <!-- end of nav menu items / overlay-content class -->
   <!-- Music animation and contrller -->
-  <div class='musik-kontroller'>
-    <div class='musik-kontroller-bar1' ng-style='animateBar1'>
 
-    </div>
-    <div class='musik-kontroller-bar2' ng-style='animateBar2'>
-
-
-    </div>
-    <div class='musik-kontroller-bar3' ng-style='animateBar3'>
-
-    </div>
-  </div>
 
 </div> <!-- end of musik-kontroller class -->
 
 
-<div class="home-nav-container" ng-click='navMenu()'>
+<div class="home-nav-container">
 
-  <div class="home-nav">
+  <div class="home-nav" ng-click='navMenu()'>
     <svg
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -219,5 +208,18 @@
 
     </svg> <!-- end of svg image -->
   </div> <!-- end of home nav class -->
+
+  <div class='musik-kontroller' ng-click='audioToggle()'>
+    <div class='musik-kontroller-bar1' ng-style='animateBar1'>
+
+    </div>
+    <div class='musik-kontroller-bar2' ng-style='animateBar2'>
+
+
+    </div>
+    <div class='musik-kontroller-bar3' ng-style='animateBar3'>
+
+    </div>
+  </div>
 
 </div>

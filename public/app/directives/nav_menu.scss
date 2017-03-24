@@ -13,6 +13,7 @@ $fontText: "'Crimson Text', serif";
 }
 .home-nav {
   position: absolute;
+  cursor: pointer;
 }
 .gold_fill {
   fill: #89714D
@@ -168,6 +169,7 @@ span {
 /* musik bars styling */
 
 .musik-kontroller {
+  cursor: pointer;
   position: fixed;
   bottom: 2vw;
   right: 2vw;

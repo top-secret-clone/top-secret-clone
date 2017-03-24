@@ -40,15 +40,28 @@ angular.module('topSecret')
       // },1000);
     },
     controller: function($scope,$interval) {
-      $interval(function() {
-        console.log('Timeout function...')
-        var bar1 = Math.random() * 10 + 4;
-        var bar2 = Math.random() * 10 + 4;
-        var bar3 = Math.random() * 10 + 4;
-        $scope.animateBar1 = {height: `${bar1}px`};
-        $scope.animateBar2 = {height: `${bar2}px`};
-        $scope.animateBar3 = {height: `${bar3}px`};
-      },150);
+      var audioOn = true;
+      $scope.audioToggle = function() {
+        audioOn = !audioOn;
+        console.log('Audio: ',audioOn)
+      }
+
+          $interval(function() {
+            console.log('Timeout function...')
+            var bar1 = Math.random() * 10 + 4;
+            var bar2 = Math.random() * 10 + 4;
+            var bar3 = Math.random() * 10 + 4;
+            if (audioOn) {
+              $scope.animateBar1 = {height: `${bar1}px`};
+              $scope.animateBar2 = {height: `${bar2}px`};
+              $scope.animateBar3 = {height: `${bar3}px`};
+            }
+            else {
+              $scope.animateBar1 = {height: `2px`};
+              $scope.animateBar2 = {height: `2px`};
+              $scope.animateBar3 = {height: `2px`};
+            }
+          },150);
 
       $scope.menuItems = [
         {
