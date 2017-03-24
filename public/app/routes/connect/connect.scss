@@ -26,7 +26,7 @@ $formMargin: 8px 0;
 }
 
 .connect-banner {
-  position: absolute;;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100vh;
@@ -59,8 +59,8 @@ $formMargin: 8px 0;
   background-size: cover;
 
   div{
-    width: 95%;
-    padding: 22px;
+    // width: 95%;
+    // padding: 22px;
   }
 
   .sub-row {
@@ -121,8 +121,15 @@ $formMargin: 8px 0;
   .left {
     width: 475px;
     height: 1570px;
-    margin-left:-25px;
+    margin-left: 60px;
     background-color: $cream;
+<<<<<<< HEAD
+=======
+    div{
+      width: 95%;
+      padding: 22px;
+    }
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
     .super {
       .goldenLine:hover:after {
         margin-top: -0.7em;
@@ -208,10 +215,4 @@ $formMargin: 8px 0;
     padding: $formPadding;
     margin: $formMargin
   }
-  // button {
-  //   width: 100px;
-  //   height: 25px;
-  //   border-radius: 5px;
-  //   background-color: green;
-  // }
-}
+} /* end of connect-block section */

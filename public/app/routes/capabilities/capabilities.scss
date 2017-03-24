@@ -288,6 +288,7 @@ $offset: 550px;
     }
 
     span {
+<<<<<<< HEAD
       // font-weight: 100;
       // font-size: 10px;
       // text-transform: uppercase;
@@ -300,6 +301,15 @@ $offset: 550px;
       margin-left: -8px;
       width: 105px;
     }
+=======
+      text-align: right;
+    }
+    .goldenLine:hover:after {
+      margin-top: -0.95em;
+      margin-left: -8px;
+      width: 127px;
+    }
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
 
   }
   /* end of STRATEGY styling */
@@ -334,9 +344,15 @@ $offset: 550px;
       }
     }
     .goldenLine:hover:after {
+<<<<<<< HEAD
       margin-top: -0.95em;
       margin-left: -8px;
       width: 105px;
+=======
+      margin-top: -0.9em;
+      margin-left: -8px;
+      width: 100px;
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
     }
   }
   /* end of ADVERTISING styling */
@@ -358,16 +374,21 @@ $offset: 550px;
       text-align: right;
     }
     span{
+<<<<<<< HEAD
       // font-weight: 100;
       // font-size: 10px;
       // text-transform: uppercase;
       text-align: right;
       // line-height: 1.5;
+=======
+      text-align: right;
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
     }
     .goldenLine {
       span{
         text-align: right;
         right: -20px;
+<<<<<<< HEAD
         top: 10px;
       }
     }
@@ -375,6 +396,15 @@ $offset: 550px;
       margin-top: -0.95em;
       margin-left: -8px;
       width: 105px;
+=======
+        top: 0px;
+      }
+    }
+    .goldenLine:hover:after {
+      margin-top: -0.9em;
+      margin-left: -8px;
+      width: 95px;
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
     }
   }
 
@@ -414,11 +444,19 @@ $offset: 550px;
       span{
         text-align: right;
         right: -20px;
+<<<<<<< HEAD
         top: 10px;
       }
     }
     .goldenLine:hover:after {
       margin-top: -0.95em;
+=======
+        top: 0px;
+      }
+    }
+    .goldenLine:hover:after {
+      margin-top: -0.9em;
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
       margin-left: -8px;
       width: 105px;
     }
@@ -437,21 +475,33 @@ $offset: 550px;
       text-align: right;
     }
     span{
+<<<<<<< HEAD
       // font-weight: 100;
       // font-size: 10px;
       // text-transform: uppercase;
       text-align: right;
       // line-height: 1.5;
+=======
+      text-align: right;
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
     }
     .goldenLine {
       span{
         text-align: right;
         right: -20px;
+<<<<<<< HEAD
         top: 10px;
       }
     }
     .goldenLine:hover:after {
       margin-top: -0.95em;
+=======
+        top: 0px;
+      }
+    }
+    .goldenLine:hover:after {
+      margin-top: -0.9em;
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
       margin-left: -8px;
       width: 105px;
     }
@@ -578,4 +628,10 @@ $offset: 550px;
   img {
     height: $wide * 1.2;
   }
+}
+section {
+  position: absolute;
+  bottom: 0;
+  height: 55px;
+  z-index: 200;
 }

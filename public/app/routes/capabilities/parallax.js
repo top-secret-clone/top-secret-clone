@@ -41,7 +41,7 @@ angular.module("topSecret")
           var parallaxAdjust = scrollCounter > 0 && scrollCounter < 550 ? ((scrollCounter / 1100) + 0.75) * -1 : -1;
           scope.parallaxScroll = (scrollTop - startAnimation) * parallaxAdjust;
           // console.log('parallaxScroll',scope.parallaxScroll);
-          console.log(section, '-> scroll: ',scrollTop, 'startAnimation: ', startAnimation, 'endAnimation: ', endAnimation, 'viewPort Count: ', scrollCounter, 'Parallax Adjust: ', parallaxAdjust);
+          // console.log(section, '-> scroll: ',scrollTop, 'startAnimation: ', startAnimation, 'endAnimation: ', endAnimation, 'viewPort Count: ', scrollCounter, 'Parallax Adjust: ', parallaxAdjust);
 
           /* while item is on screen */
           if (scrollTop > startAnimation && scrollTop <= endAnimation) {

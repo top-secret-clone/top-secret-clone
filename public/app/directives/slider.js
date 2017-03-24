@@ -3,6 +3,7 @@ angular.module("topSecret").directive('slider', function() {
     restrict: 'E',
     templateUrl: './app/directives/sliderTmpl.html',
     link: function(scope, element, att) {
+<<<<<<< HEAD
       $('.slider').each(function() {              // For every slider
         var $this   = $(this);                    // Current slider
         var $group  = $this.find('.slide-group'); // Get the slide-group (container)
@@ -68,7 +69,19 @@ angular.module("topSecret").directive('slider', function() {
         advance();                                   // Script is set up, advance() to move it
 
 
+=======
+      $('.variable-width').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        centerMode: true,
+        variableWidth: true,
+        adaptiveHeight: true,
+        appendArrows: $('.slider-arrows'),
+        appendDots: $('.slider-buttons')
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
       });
     }
-  };
+  }
 });
