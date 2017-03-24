@@ -1,0 +1,30 @@
+<section class="who-we-are">
+  <h1>WHO WE ARE</h1>
+  <br>
+  <h2>
+    The partners at STS have all been around the proverbial block a time or two <br>
+    When you put our history and collective expertise together you get a <br>
+    brain trust and unique skillset that's impossible to quantify or replicate.
+  </h2>
+  <br>
+  <div class="row">
+    <ul>
+      <li ng-repeat="bio in bios"><a ng-click="getBio(bio.name)">{{bio.name}}</a></li>
+    </ul>
+    <div class="bio">
+      <h1>{{name}}</h1>
+      <p>{{title}}</p>
+      <hr>
+      <h2>Biography</h2>
+      <br>
+      <p>
+        {{bio}}
+      </p>
+    </div>
+    <div class="bio-pic">
+      <!-- <img src="http://www.wearetopsecret.com/images/about/partners/badge.jpg" alt=""> -->
+      <img src="{{imageUrl || 'http://www.wearetopsecret.com/images/about/partners/badge.jpg'}}" alt="">
+    </div>
+  </div>
+
+</section>
