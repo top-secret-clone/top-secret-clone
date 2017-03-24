@@ -21,19 +21,48 @@ angular.module('topSecret')
           top: '110%'
         };
       scope.navMenu = function() {
-        console.log('navMenu toggled', scope.menuDisplay);
         scope.menuDisplay = !scope.menuDisplay;
         scope.menuDisplay ? scope.css = overlayActive :
           scope.css = overlayInactive;
         scope.menuDisplay ? scope.cssContent = contentActive :
           scope.cssContent = contentInactive;
-        // menuDisplay ? $('#myNav').css('width', '100vw') :
-        // $('#myNav').css('width', '0vw');
-        // menuDisplay ? $('#myNav').css('background-color', rgbaActive) :
-        // $('#myNav').css('background-color', rgbaInactive);
-      }
+      } /* end of navMenu toggle function */
+
+      // setInterval(function() {
+      //   console.log('Timeout function...')
+      //   var bar1 = Math.random() * 10 + 1;
+      //   var bar2 = Math.random() * 10 + 1;
+      //   var bar3 = Math.random() * 10 + 1;
+      //   scope.animateBar1 = {height: `${bar1}px`};
+      //   console.log(`${bar1}px`);
+      //   scope.animateBar2 = {height: `${bar2}px`};
+      //   scope.animateBar3 = {height: `${bar3}px`};
+      // },1000);
     },
-    controller: function($scope) {
+    controller: function($scope,$interval) {
+      var audioOn = true;
+      $scope.audioToggle = function() {
+        audioOn = !audioOn;
+        console.log('Audio: ',audioOn)
+      }
+
+          $interval(function() {
+            console.log('Timeout function...')
+            var bar1 = Math.random() * 10 + 4;
+            var bar2 = Math.random() * 10 + 4;
+            var bar3 = Math.random() * 10 + 4;
+            if (audioOn) {
+              $scope.animateBar1 = {height: `${bar1}px`};
+              $scope.animateBar2 = {height: `${bar2}px`};
+              $scope.animateBar3 = {height: `${bar3}px`};
+            }
+            else {
+              $scope.animateBar1 = {height: `2px`};
+              $scope.animateBar2 = {height: `2px`};
+              $scope.animateBar3 = {height: `2px`};
+            }
+          },150);
+
       $scope.menuItems = [
         {
           index: 1,
