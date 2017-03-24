@@ -217,14 +217,6 @@ a {
 
 .column {
 	flex: 100%;
-<<<<<<< HEAD
-<<<<<<< HEAD
-	//NOTE this may cause bugs, watch it.
-	// height: 250px;
-=======
->>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
-=======
->>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
 }
 
 // Responsive Grid Media Query:
@@ -453,32 +445,14 @@ $stickyNavHeight: 40px;
 	.clients-served-grid {
 		display: flex;
 		justify-content: center;
-<<<<<<< HEAD
-<<<<<<< HEAD
-		margin-left: 10%;
-		margin-right: 10%;
-=======
 		margin-left: 8%;
 		margin-right: 8%;
->>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
-=======
-		margin-left: 8%;
-		margin-right: 8%;
->>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
 		margin-bottom: 10%;
 		.clients-served-column{
 			height: auto;
 			margin-bottom: 5%;
 			img {
-<<<<<<< HEAD
-<<<<<<< HEAD
-				height: 69px;
-=======
-				height: 80px;
->>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
-=======
-				height: 80px;
->>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
+	height: 69px;
 				width: 194px;
 				margin: 15.5px 93.5px;
 			}
@@ -583,8 +557,6 @@ $stickyNavHeight: 40px;
 	width:100%;
 	padding: 265px 190.5px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 // Slider
 slider {
@@ -621,7 +593,6 @@ slider {
 	  color: grey;
 	  font-size: 200%;
 	  line-height: 0.5em;
-		font-size: 90%;
   	text-align: left;
   	text-transform: uppercase;
 	}
@@ -631,8 +602,6 @@ slider {
 	}
 }
 
-=======
-
 // Slider
 
 .slider-controls {
@@ -646,28 +615,6 @@ slider {
 	}
 }
 
-
-
-
-=======
-
-// Slider
-
-.slider-controls {
-	display: flex;
-	justify-content: space-between;
-	.slider-buttons {
-		display: inline-flex;
-		.slick-dots {
-			display: inline-flex;
-		}
-	}
-}
-
-
-
-
->>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
 
 
 
@@ -716,10 +663,7 @@ slider {
 //   cursor: pointer;}
 // }
 
-<<<<<<< HEAD
->>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
-=======
->>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
+
 // Manifesto
 .manifesto {
 	position: relative;
@@ -734,18 +678,14 @@ slider {
 	p {
 		font-size: 2em;
 		line-height: 2em;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 	}
 	.about-footer {
 		margin-left: -196px;
->>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
-=======
+
 	}
 	.about-footer {
 		margin-left: -196px;
->>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
 	}
 }
 
