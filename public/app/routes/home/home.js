@@ -9,14 +9,24 @@ angular.module("topSecret")
    $window.onscroll = function(){
 
        let paraAmount = window.pageYOffset;
-       // console.log(paraAmount);
 
-       let paraStart = paraAmount * 0.20 - 200;
+       let paraStartCase = paraAmount * 0.20 - 200;
 
-       homeCasePara.style.top = paraStart + 'px';
+       homeCasePara.style.top = paraStartCase + 'px';
+
+       let paraStartWork = paraAmount - 1550 - 133;
+
+       homeWorkPara.style.top = paraStartWork + 'px';
+       homeCapPara.style.top = paraStartWork + 'px';
+       homeConPara.style.top = paraStartWork + 'px';
+
 
    };
 
+   $window.onclick = function(){
+     let para = window.pageYOffset;
+     console.log(para);
+   };
 
     //you HAVE to have the fluid initializer in a timeout,
     //otherwise the gold-outline directive doesn't work
