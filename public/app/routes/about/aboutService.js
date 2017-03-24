@@ -44,5 +44,6 @@ angular.module('topSecret')
       'Dave is an accomplished director of photography and editor who, for the last two decades, has been behind the lens creating compelling and stellar content for the likes of NBC Sports, Red Bull, Burton Snowboards, Mountain Dew, and Skullcandy to name a few. Dave has an impeccable eye, a relentless work ethic and does whatever it takes to get the shot; all while making it look so easy.',
       'imageUrl': 'http://www.wearetopsecret.com/images/about/partners/dave.jpg'
     }
+    }
   ]
 })
