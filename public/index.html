@@ -4,43 +4,52 @@
   <head>
     <!-- Title -->
     <title>Top Secret Clone</title>
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="16x16" href="http://www.wearetopsecret.com/images/icons/favicon-16x16.png">
-    <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
+
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Normalize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+
     <!-- Fonts -->
-
-    <!-- <link rel = "" href=""></link> -->
-
     <link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Lora" rel="stylesheet">
 
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
     <!-- Stylesheets -->
+      <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+      <!-- Bundle -->
     <link rel="stylesheet" href="./bundle.css">
 
   </head>
 
   <body ng-controller="mainController">
 
-  <ui-view></ui-view>
+    <ui-view></ui-view>
+    <menu-dir></menu-dir>
 
-  <!-- Scripts -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
-  <script src="./bundle.js"></script>
-  <script src="http://www.wearetopsecret.com/js/fluid_effect.js"></script>
-  <script>
-      require(['main']);
-  </script>
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./bundle.js"></script>
+    <script type="text/javascript" src="http://www.wearetopsecret.com/js/fluid_effect.js"></script>
+    <script>
+        require(['main']);
+    </script>
   </body>
 
 </html>

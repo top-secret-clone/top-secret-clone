@@ -80,8 +80,65 @@ html {
 // Links:
 a {
   cursor: pointer;
+	text-decoration: none;
 }
 
+.goldenLinkLine {
+	width: 100%;
+	border-top: 1px solid #88714D;
+	position: relative;
+	top: 50%;
+	height: 0;
+	transition: 1.0s;
+}
+/* Strikethrough */
+
+.goldenLine {
+		display: inline-block;
+		position: relative;
+		z-index: 200;
+}
+
+.goldenLine:hover:after {
+		content: '';
+		position: absolute;
+		display: block;
+		// width: 100%;
+		height: 2px;
+		// margin-top: -.7em;
+		background: #88714D;
+		transform-origin: center left;
+		animation: goldenLine 0.4s cubic-bezier(0, 0, .1, 1) 1;
+		transition: transform 0.5s cubic-bezier(0, 0, .1, 1);
+		animation-fill-mode: forwards;
+}
+
+/* Little hover effect */
+// .goldenLine:before {
+// 	transform:scaleX(0);
+// }
+
+.goldenLine:after {
+		transform: scaleX(0);
+		transform-origin: center right;
+}
+
+/* Keyframes for initial animation */
+
+@keyframes goldenLine {
+		from {
+				transform: scaleX(0);
+		}
+		to {
+				transform: scaleX(.95);
+		}
+}
+.triangle {
+	color: #88714D;
+	font-size: 0.65em;
+	line-height: .95em;
+	vertical-align: middle;
+}
 // 5.) Scaffolding:
 // ~~~~~~~~~~~~~~~~~
 
@@ -155,13 +212,19 @@ a {
 .one-half-column,
 .three-quarters-column, {
 	flex: 100%;
-	height: 250px;
+	// height: 250px;
 }
 
 .column {
 	flex: 100%;
+<<<<<<< HEAD
+<<<<<<< HEAD
 	//NOTE this may cause bugs, watch it.
-	height: 250px;
+	// height: 250px;
+=======
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
+=======
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
 }
 
 // Responsive Grid Media Query:
@@ -205,7 +268,18 @@ a {
 // ~~~~~~~~~~~~~~~~
 
 /* Buttons */
-
+button {
+  background-color: transparent;
+	outline: none;
+	border: none;
+  font-family: 'built-titling';
+	font-weight: 100;
+	font-size: 23px;
+	text-transform: uppercase;
+	color: white;
+	letter-spacing: 4px;
+	margin: 0;
+}
 /* Sticky-Nav */
 //
 $stickyNavHeight: 40px;
@@ -277,231 +351,402 @@ $stickyNavHeight: 40px;
 
 /*~~~~~~~~~~~~~~~ About ~~~~~~~~~~~~~~~*/
 
-//Banner
+// General Page Rules
+
+.about {
+	background-color: black;
+
+	h1 {
+		font-family: 'built-titling';
+		color: #88714D;
+		font-size: 90px;
+		line-height: 0px;
+		font-weight: 100;
+		letter-spacing: 0.25em;
+	}
+	h2 {
+		font-family: 'Crimson Text', serif;
+		color: #e8e7e7;
+		font-size: 25px;
+		line-height: 34px;
+		font-weight: 100;
+		-webkit-font-smoothing: antialiased;
+	}
+	p {
+		font-family: 'Crimson Text', serif;
+		color: #cecece;
+		font-size: 17px;
+		line-height: 35px;
+	}
+	a {
+		font-family: 'built-titling';
+		font-weight: 800;
+		color: #d7d7d7;
+		text-decoration: none;
+		font-size: 1.4em;
+    letter-spacing: 0.1em;
+	}
+}
+
+// Banner
 .about-banner {
 	position: relative;
 	top: 0;
 	left: 0;
-	height: 800px;
-	width: 100%;
-	display: flex;
-	background-image: url(https://dummyimage.com/1280x800/000/fff&text=About);
-	background-repeat: no-repeat;
-	background-size: cover;
+	height: 100%;
+	width:100%;
+	.banner-video-container{
+		height: 100%;
+		width: 100%;
+		.banner-video{
+			height: 100%;
+			width: 100%;
+		}
+	}
+	.banner-title-img{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 100;
+		height: 350px;
+		width: 450px;
+		overflow: visible;
+	}
 }
 
+// What We Do
 .what-we-do {
 	position: relative;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	padding: 80px 30px;
-	display: flex;
-	background-image: url(http://www.wearetopsecret.com/images/about/about_article_bg.png);
+	background: center center no-repeat url(http://www.wearetopsecret.com/images/about/about_article_bg.png);
 	background-repeat: no-repeat;
 	background-size: cover;
-	h1 {
-		font-family: 'Oswald', sans-serif;
-		color: #88714d;
-		font-size: 75px;
-		line-height: 0px;
-		font-weight: 100;
-		letter-spacing: 0.2em;
-		width: 900px;
-		height: 100px;
-	}
-
-	h2 {
-		font-family: 'Crimson Text', serif;
-		color: #e8e7e7;
-		font-size: 25px;
-		line-height: 34px;
-		font-weight: 100;
-		-webkit-font-smoothing: antialiased;
-	}
-
-	p {
-		font-family: 'Crimson Text', serif;
-		color: #cecece;
-		font-size: 17px;
-		line-height: 35px;
-	}
-
-	a {
-		font-family: 'Oswald, sans-serif';
-		font-weight: 800;
-		color: #d7d7d7;
-		text-decoration: none;
-	}
+	top: 0;
+	left: 0;
+	height: 100%;
+	width:100%;
+	padding: 265px 190.5px;
 }
 
+// Clients Served
 .clients-served {
 	position: relative;
+	background: #000 url(http://www.wearetopsecret.com/images/glass-body.jpg);
+  background-repeat: repeat;
 	top: 0;
 	left: 0;
-	height: 800px;
-	width: 100%;
+	height: 100%;
+	width:100%;
 	display: flex;
-	justify-content: center;
-	// background-image: url(https://dummyimage.com/1280x800/a8a8a8/fff);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-color: #191919; //BUG <-- This color is not exact.
-	h1 {
-		padding: 80px 0 60px 0;
-		font-family: 'built-titling';
-		font-weight: 100;
-		font-style: normal;
-		color: #88714d;
-		font-size: 40px;
-		letter-spacing: 13px;
-		line-height: 0px;
+	flex-direction: column;
+	.clients-served-title {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		h1 {
+			padding: 80px 0 60px 0;
+			font-size: 50px;
+			letter-spacing: 14px;
+			line-height: 0px;
+		}
 	}
-	ul {
-		list-style-type: none;
+	.clients-served-grid {
+		display: flex;
+		justify-content: center;
+<<<<<<< HEAD
+<<<<<<< HEAD
+		margin-left: 10%;
+		margin-right: 10%;
+=======
+		margin-left: 8%;
+		margin-right: 8%;
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
+=======
+		margin-left: 8%;
+		margin-right: 8%;
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
+		margin-bottom: 10%;
+		.clients-served-column{
+			height: auto;
+			margin-bottom: 5%;
+			img {
+<<<<<<< HEAD
+<<<<<<< HEAD
+				height: 69px;
+=======
+				height: 80px;
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
+=======
+				height: 80px;
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
+				width: 194px;
+				margin: 15.5px 93.5px;
+			}
+		}
 	}
 }
 
+// clients-served small media query:
+@media screen
+	and (max-width: 799px){
+	.clients-served {
+		.row {
+			width: 100%;
+		}
+		.clients-served-column {
+			flex-basis: 100%;
+		}
+	}
+}
+
+// clients-served medium media query:
+@media screen
+	and (min-width: 800px)
+	and (max-width: 999px){
+	.clients-served {
+		.row {
+			width: 100%;
+		}
+		.clients-served-column {
+			flex-basis: 50%;
+		}
+	}
+}
+
+// clients-served large media query:
+@media screen
+	and (min-width: 1000px){
+	.clients-served {
+		.clients-served-column {
+			flex-basis: 25%;
+		}
+	}
+}
+
+// Who We Are
 .who-we-are {
 	position: relative;
+	background: #000 url(http://www.wearetopsecret.com/images/about/grain.jpg);
+	background-repeat: repeat;
 	top: 0;
 	left: 0;
 	height: 100%;
-	width: 100%;
-	display: flex;
-	background-image: url(http://www.wearetopsecret.com/images/about/grain.jpg);
-	padding: 265px 10%;
-	h1 {
-		font-family: 'Oswald', sans-serif;
-		color: #88714d;
-		font-size: 101px;
-		line-height: 0px;
-		font-weight: 100;
-		letter-spacing: 11.17px;
-		width: 841px;
-		height: 140px;
-		margin-top: 0px;
-		margin-bottom: 0px;
-		top: -124px;
-		position: relative;
-	}
-	h2 {
-		font-family: 'Crimson Text', serif;
-		color: #e8e7e7;
-		font-size: 30px;
-		line-height: 36px;
-		font-weight: 100;
-		-webkit-font-smoothing: antialiased;
-		margin-top: -160px;
-		margin-bottom: 0px;
-	}
-	.bio-row {
-		margin-top: 55px;
-		height: 508px;
-	}
+	width:100%;
+	padding: 265px 190.5px;
 	ul {
+		padding-left: 0;
 		list-style-type: none;
-		font-family: 'Oswald', sans-serif;
-		font-weight: 300;
-		font-size: 35px;
-		text-transform: capitalize;
-		color: gray;
-		line-height: 67px;
-		margin-top: -12px;
-		margin-left: -33px;
+		width: 25%;
+		flex-basis: 25%;
+		li a {
+			font-family: 'Built-titling';
+			color: grey;
+			text-decoration: none;
+			font-size: 2em;
+			letter-spacing: 5px;
+			line-height: 67px;
+		}
 	}
-	.bio-default-pic {
-		background-image: url(http://www.wearetopsecret.com/images/about/partners/badge.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
+	.bio {
+		margin-top: 1.5%;
+		width: 25%;
+		height: 100%;
+		h1 {
+			font-size: 2em;
+		}
+		h2 {
+			font-family: 'Built-titling';
+			font-size: 2em;
+			color: #88714D;
+		}
+	}
+	.bio-pic {
+		width: 50%;
+		height: 100%;
+		img {
+			height: 100%;
+			width: 100%;
+			right: 0;
+		}
 	}
 }
 
+// The Shop
 .the-shop {
 	position: relative;
+	background: center center no-repeat url(http://www.wearetopsecret.com/images/about/shop-bg_02.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
 	top: 0;
 	left: 0;
-	width: 100%;
 	height: 100%;
-	padding: 80px 30px;
-	display: flex;
-	background-image: url(http://www.wearetopsecret.com/images/about/shop-bg_02.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	h1 {
-		font-family: 'Oswald', sans-serif;
-		color: #88714d;
-		font-size: 75px;
-		line-height: 0px;
-		font-weight: 100;
-		letter-spacing: 0.2em;
-		width: 900px;
-		height: 100px;
-	}
+	width:100%;
+	padding: 265px 190.5px;
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-	h2 {
-		font-family: 'Crimson Text', serif;
-		color: #e8e7e7;
-		font-size: 25px;
-		line-height: 34px;
-		font-weight: 100;
-		-webkit-font-smoothing: antialiased;
+// Slider
+slider {
+	.slider {
+		max-width: 100%;
+  	margin: 0px auto 30px auto;
 	}
-
-	p {
-		font-family: 'Crimson Text', serif;
-		color: #cecece;
-		font-size: 17px;
-		line-height: 35px;
+	.slide-viewer {
+    position: relative; /* needed for IE7 */
+    overflow: hidden;
+    height: 800px;
+	}
+	.slide-group {
+    width: 100%;
+    height: 100%;
+    position: relative;
+	}
+	.slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+	}
+	.slide:first-child {
+    display: block;
+	}
+	.slide-buttons {
+  text-align: center;
+  background-color: black;
+	}
+	.slide-btn {
+	  border: none;
+	  background: none;
+	  color: grey;
+	  font-size: 200%;
+	  line-height: 0.5em;
+		font-size: 90%;
+  	text-align: left;
+  	text-transform: uppercase;
+	}
+	.slide-btn.active, .slide-btn:hover {
+	  color: white;
+	  cursor: pointer;
 	}
 }
 
-.slider-placeholder {
-	position: relative;
-	top: 0;
-	left: 0;
-	height: 800px;
-	width: 100%;
+=======
+
+// Slider
+
+.slider-controls {
 	display: flex;
-	background-image: url(https://dummyimage.com/1280x800/d3d3d3/fff&text=Slider+Placeholder);
-	background-repeat: no-repeat;
-	background-size: cover;
-	padding: 265px 10%;
+	justify-content: space-between;
+	.slider-buttons {
+		display: inline-flex;
+		.slick-dots {
+			display: inline-flex;
+		}
+	}
 }
 
+
+
+
+=======
+
+// Slider
+
+.slider-controls {
+	display: flex;
+	justify-content: space-between;
+	.slider-buttons {
+		display: inline-flex;
+		.slick-dots {
+			display: inline-flex;
+		}
+	}
+}
+
+
+
+
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
+
+
+
+
+// slider {
+// 	.slider {
+//   max-width: 100%;
+//   margin: 0px auto 30px auto;}
+//
+// .slide-viewer {
+//     position: relative; /* needed for IE7 */
+//     overflow: hidden;
+//     height: 800px;}
+//
+// .slide-group {
+//     width: 100%;
+//     height: 100%;
+//     position: relative;}
+//
+// .slide {
+//     width: 100%;
+//     height: 100%;
+//     display: none;
+//     position: absolute;
+// }
+//
+// .slide:first-child {
+//     display: block;}
+//
+//
+// /********** BUTTONS **********/
+// .slide-buttons {
+//   text-align: center;
+//   background-color: black;
+// }
+//
+// .slide-btn {
+//   border: none;
+//   background: none;
+//   color: grey;
+//   font-size: 200%;
+//   line-height: 0.5em;}
+//
+// .slide-btn.active, .slide-btn:hover {
+//   color: white;
+//   cursor: pointer;}
+// }
+
+<<<<<<< HEAD
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
+=======
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
+// Manifesto
 .manifesto {
 	position: relative;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	padding: 80px 30px;
-	display: flex;
-	background-image: url(http://www.wearetopsecret.com/images/about/mantra_bg.jpg);
+	background: center center no-repeat url(http://www.wearetopsecret.com/images/about/mantra_bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	h1 {
-		font-family: 'Oswald', sans-serif;
-		color: #88714d;
-		font-size: 75px;
-		line-height: 0px;
-		font-weight: 100;
-		letter-spacing: 0.2em;
-		width: 900px;
-		height: 100px;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width:100%;
+	padding: 265px 190.5px;
+	p {
+		font-size: 2em;
+		line-height: 2em;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 	}
-
-	h2 {
-		font-family: 'Crimson Text', serif;
-		color: #e8e7e7;
-		font-size: 25px;
-		line-height: 34px;
-		font-weight: 100;
-		-webkit-font-smoothing: antialiased;
+	.about-footer {
+		margin-left: -196px;
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
+=======
 	}
-
-
+	.about-footer {
+		margin-left: -196px;
+>>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
+	}
 }
 
 /*~~~~~~~~~~~~~~~ Capabilities ~~~~~~~~~~~~~~~*/

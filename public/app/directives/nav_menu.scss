@@ -1,0 +1,210 @@
+$gold:#88714D;
+$textColor:#777;
+$fontTitle: 'built-titling';
+$fontText: "'Crimson Text', serif";
+
+  /* top nav button, always displayed */
+.home-nav-container {
+  position: fixed;
+  top: 5vh;
+  left: 5vh;
+  width: 67px;
+  z-index: 202;
+}
+.home-nav {
+  position: absolute;
+  cursor: pointer;
+}
+.gold_fill {
+  fill: #89714D
+}
+#hamburger_menu {
+  height: 100%;
+  width: 100%;
+  cursor: pointer
+}
+#hamburger_menu {
+ width: 67px;
+ cursor: pointer
+}
+.gray_fill {
+  fill: #B7B7B8
+}
+
+// #hamburger_menu #box_tight #hamburger_menu #box rect {
+//  fill: #89714D
+// }
+//
+// #hamburger_menu #box_tight #hamburger_menu #box rect {
+//  fill: #89714D
+// }
+
+
+
+
+
+@media (max-width: 667px) {
+   #hamburger_menu {
+    width:57px;
+  }
+}
+        /* Overlay modal styling */
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 201; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0,0); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    // transition: background-color 0.5s, display 0.1s;
+    transition: 0.35s;
+
+}
+span {
+  right: initial;
+  top: initial;
+  text-align: initial;
+}
+  .no {
+    font-family: $fontTitle;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    color: $textColor;
+    text-decoration: underline;
+    position: absolute;
+    top: 8px;
+    left: 0px;
+  }
+  .menu-number {
+    font-family: $fontText;
+    font-size: 33px;
+    color: $gold;
+    position: absolute;
+    left: 16px;
+  }
+  .menu-item {
+    position: absolute;
+    left: 40px;
+    width: 362px;
+    color: $textColor;
+    font-family: $fontTitle;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 0.4em;
+    text-align: center;
+  }
+  .menu-triangle {
+    color: $gold;
+    position: absolute;
+    top: 1.05em;
+    right: 0px;
+    font-size: 0.35em;
+  }
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 100%; /* 100% from the top */
+    width: 100%; /* 100% width */
+    display: flex;
+    justify-content: center;
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    transition: 0.5s;
+    ul {
+      width: 414px;
+      height: 527px;
+      padding: 0;
+      margin: 0;
+      position: relative;
+      top: 50%;
+      li {
+        list-style-type: none;
+        width: 100%;
+        height: 85px;
+
+        .goldenLine:hover:after {
+          margin-top: 0.5em;
+          margin-left: 1em;
+          width: 390px;
+        }
+      }
+    }
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    // padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+    position: relative;
+
+    // .goldenLine:hover:after {
+    //   margin-top: -0.7em;
+    //   margin-left: 0px;
+    //   width: 127px;
+    // }
+}
+
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+/* musik bars styling */
+
+.musik-kontroller {
+  cursor: pointer;
+  position: fixed;
+  bottom: 2vw;
+  right: 2vw;
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  z-index: 203;
+}
+.musik-kontroller-bar1 {
+  padding: 0 1px;
+  background-color: $gold;
+  border: 0.5px solid $gold;
+  width: 0px;
+  position: absolute;
+  bottom: 0;
+  left: 1px;
+  transition: 0.1s;
+}
+.musik-kontroller-bar2 {
+  padding: 0 1px;
+  background-color: $gold;
+  border: 0.5px solid $gold;
+  width: 0px;
+  position: absolute;
+  bottom: 0;
+  left: 6px;
+  transition: 0.1s;
+}
+.musik-kontroller-bar3 {
+  padding: 0 1px;
+  background-color: $gold;
+  border: 0.5px solid $gold;
+  width: 0px;
+  position: absolute;
+  bottom: 0;
+  right: 1px;
+  transition: 0.1s;
+}

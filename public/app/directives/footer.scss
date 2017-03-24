@@ -1,0 +1,74 @@
+$gold:#88714D;
+$textColor:#777;
+
+footer-dir {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  // position: absolute;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+}
+footer {
+  // position: relative;
+  height: 55px;
+  width: 100vw;
+  padding: 17px 60px 10px 17px;
+  background-color: black;
+  background-image: url('./images/footer-bg.jpg');
+  display: flex;
+  flex-flow: row;
+  font-family: 'Crimson Text', serif;
+  font-size: 15px;
+  color: $textColor;
+  div {
+
+    .tele-icon {
+      transform: translate(-4px,-5px);
+      padding: 0 17px;
+    }
+    i {
+      padding: 0 10px;
+    }
+    .tele-background {
+      position: relative;
+      left: -12px;
+      top: 4px;
+      font-size: 1.5em;
+    }
+    .tele-phone {
+      color: black;
+      transform: translate(-8px, -28px);
+    }
+  }
+  a{
+    font-family: 'Crimson Text', serif !important;
+    font-size: 15px !important;
+    text-transform: lowercase !important;
+    color: $textColor;
+    transition: 1s;
+  }
+  a:hover {
+    color: $gold;
+  }
+  .social-media-footer {
+    flex-grow: 2;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+  }
+  .contact-email {
+    a {
+      color: $textColor;
+      transition: 0.25s;
+    }
+    a:hover {
+      color: white;
+    }
+  }
+  .bottom-footer-width {
+    // width: 20px !important;
+  }
+}

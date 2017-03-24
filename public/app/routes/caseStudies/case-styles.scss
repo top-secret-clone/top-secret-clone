@@ -1,3 +1,5 @@
+/*  Case-styles.scss styling */
+
 body {
   margin: 0 0 0 0;
 }
@@ -11,10 +13,10 @@ body {
 }
 
 //styling for the nav svg
-#hamburger_menu{
-  height: 100%;
-  width: 100%;
-}
+// #hamburger_menu{
+//   height: 100%;
+//   width: 100%;
+// }
 
 //Top div with video and header
 .case-studies-header{
@@ -120,7 +122,7 @@ body {
 .case-studies-main-column{
   margin: 0 0 0 0;
   position: relative;
-  height: 48vh;
+  height: 48vh + 55;
   width: 100%;
 }
 
@@ -144,7 +146,7 @@ body {
   zoom: 100%;
 }
 #publik{
- background-image: url("http://www.wearetopsecret.com/images/case-studies/publik-panel-bg.jpg"); 
+ background-image: url("http://www.wearetopsecret.com/images/case-studies/publik-panel-bg.jpg");
 }
 #peli{
   background-image: url("http://www.wearetopsecret.com/images/case-studies/peligroso-panel-bg.jpg");
@@ -170,7 +172,7 @@ body {
   /* left: 50%; */
   width: 100%;
   height: 100%;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
 }
 //this is for the main titles
