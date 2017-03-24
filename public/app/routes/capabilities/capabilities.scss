@@ -9,7 +9,7 @@ $offset: 550px;
 .position-relative {
   position: relative;
 }
-.test{
+.test {
  /* test class to get the parallax function working */
 }
 
@@ -353,14 +353,14 @@ $offset: 550px;
     hr {
       margin-left: 570px;
     }
-    p{
+    p {
       text-align: right;
     }
-    span{
+    span {
       text-align: right;
     }
     .goldenLine {
-      span{
+      span {
         text-align: right;
         right: -20px;
         top: 10px;
@@ -372,7 +372,6 @@ $offset: 550px;
       width: 105px;
       top: 0px;
       }
-    }
     .goldenLine:hover:after {
       margin-top: -0.9em;
       margin-left: -8px;
@@ -396,11 +395,7 @@ $offset: 550px;
       text-align: left;
     }
     span{
-      // font-weight: 100;
-      // font-size: 10px;
-      // text-transform: uppercase;
       text-align: left;
-      // line-height: 1.5;
     }
     .case-study {
       text-align: right;
@@ -413,7 +408,7 @@ $offset: 550px;
       text-align: right;
     }
     .goldenLine {
-      span{
+      span {
         text-align: right;
         right: -20px;
         top: 10px;
@@ -422,7 +417,6 @@ $offset: 550px;
     .goldenLine:hover:after {
       margin-top: -0.95em;
         top: 0px;
-      }
     }
     .goldenLine:hover:after {
       margin-top: -0.9em;
@@ -443,11 +437,11 @@ $offset: 550px;
     p {
       text-align: right;
     }
-    span{
+    span {
       text-align: right;
     }
     .goldenLine {
-      span{
+      span {
         text-align: right;
         right: -20px;
         top: 0px;
