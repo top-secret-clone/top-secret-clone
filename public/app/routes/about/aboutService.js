@@ -1,6 +1,6 @@
 angular.module('topSecret')
 .service('aboutService', function($http){
-  
+
   this.clientsServed = [
     {'imageUrl':'http://www.wearetopsecret.com/images/about/logos/Ubisoft.png'},
     {'imageUrl':'http://www.wearetopsecret.com/images/about/logos/Oregon.png'},
@@ -14,12 +14,6 @@ angular.module('topSecret')
     {'imageUrl':'http://www.wearetopsecret.com/images/about/logos/jdawgs.png'},
     {'imageUrl':'http://www.wearetopsecret.com/images/about/logos/publik.png'},
     {'imageUrl':'http://www.wearetopsecret.com/images/about/logos/PowderMountain.png'}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
-  ]
 
   this.bios = [
     {
@@ -49,10 +43,6 @@ angular.module('topSecret')
       'bio':
       'Dave is an accomplished director of photography and editor who, for the last two decades, has been behind the lens creating compelling and stellar content for the likes of NBC Sports, Red Bull, Burton Snowboards, Mountain Dew, and Skullcandy to name a few. Dave has an impeccable eye, a relentless work ethic and does whatever it takes to get the shot; all while making it look so easy.',
       'imageUrl': 'http://www.wearetopsecret.com/images/about/partners/dave.jpg'
-    },
-<<<<<<< HEAD
->>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
-=======
->>>>>>> 4a9f56425553cbfec00e88d4a502db26d44ff27d
+    }
   ]
 })
