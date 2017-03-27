@@ -32,25 +32,16 @@ $fontText: "'Crimson Text', serif";
 .gray_fill {
   fill: #B7B7B8
 }
-.navDisplayOff {
-  opacity: 0;
-  transition: 0.5s;
-}
+// #crossout {
+//   opacity: 0;
+//   transition: 0.5s;
+// }
+// #crossout:hover {
+//   opacity: 1;
+// }
 .navDisplayOn {
-  opacity: 0;
+  opacity: 1 !important;
 }
-
-// #hamburger_menu #box_tight #hamburger_menu #box rect {
-//  fill: #89714D
-// }
-//
-// #hamburger_menu #box_tight #hamburger_menu #box rect {
-//  fill: #89714D
-// }
-
-
-
-
 
 @media (max-width: 667px) {
    #hamburger_menu {
@@ -63,14 +54,13 @@ $fontText: "'Crimson Text', serif";
 .overlay {
     height: 100%;
     width: 100%;
-    position: fixed; /* Stay in place */
-    z-index: 201; /* Sit on top */
+    position: fixed;
+    z-index: 201;
     left: 0;
     top: 0;
     background-color: rgb(0,0,0); /* Black fallback color */
     background-color: rgba(0,0,0,0); /* Black w/opacity */
     overflow-x: hidden; /* Disable horizontal scroll */
-    // transition: background-color 0.5s, display 0.1s;
     transition: 0.35s;
 
 }
