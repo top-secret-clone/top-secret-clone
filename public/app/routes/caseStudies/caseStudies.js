@@ -15,18 +15,16 @@ angular.module("topSecret")
 
         let csParaStart = window.pageYOffset;
 
-        if(csParaStart < 784){
-            paraOregon.style.backgroundPositionY = csParaStart * 0.10+ '%';
-        } else if(csParaStart < 1481){
-        //    do the oregon parallax
-        } else if(csParaStart < 1965){
-            //do the creed parallax
-        } else if(csParaStart < 2462){
-            //do the Rossi parallax
-        } else if(csParaStart < 2938){
-            //do the publik parallax
-        } else if(csParaStart > 2938){
-            //do the Peli parallax
+        if(csParaStart > 0 && csParaStart < 1550){
+            paraOregon.style.backgroundPositionY = 60 - csParaStart * 0.06 + '%';   //  do the oregon parallax
+        } if(csParaStart > 400 && csParaStart < 2000){
+            paraCreed.style.backgroundPositionY = 180 - csParaStart * 0.10 + '%';  //  do the creed parallax
+        } if(csParaStart > 900 && csParaStart < 2500){
+            paraRossi.style.backgroundPositionY = 120 - csParaStart * 0.04 + '%';  //  do the rossi parallax
+        } if(csParaStart > 1400 && csParaStart < 3000){
+            paraPublik.style.backgroundPositionY = 150 - csParaStart * 0.06 + '%';  //  do the publik parallax
+        } if(csParaStart > 1900 && csParaStart <= 3178){
+            paraPeli.style.backgroundPositionY = 200 - csParaStart * 0.04 + '%';  //  do the peli parallax
         }
     }
 
