@@ -51,7 +51,7 @@ footer {
     transition: 1s;
   }
   a:hover {
-    color: $gold;
+    color: $gold !important;
   }
   .social-media-footer {
     flex-grow: 2;
