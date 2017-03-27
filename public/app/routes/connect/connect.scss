@@ -123,7 +123,7 @@ $formMargin: 8px 0;
   .left {
     width: 475px;
     height: 1222px;
-    margin-left: 60px;
+    padding: 30px;
     background-color: $cream;
 
     .super {
@@ -197,7 +197,10 @@ $formMargin: 8px 0;
     width: 475px;
     display: flex;
     justify-content: flex-start;
+    flex-flow: column;
     align-items: baseline;
+    padding: 30px;
+    background-color: $cream;
   }
   input {
     width: $formWidth;

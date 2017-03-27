@@ -43,15 +43,15 @@ footer {
       transform: translate(-8px, -28px);
     }
   }
-  a{
+  .icon a {
     font-family: 'Crimson Text', serif !important;
     font-size: 15px !important;
     text-transform: lowercase !important;
     color: $textColor;
     transition: 1s;
   }
-  a:hover {
-    color: $gold !important;
+  .icon a:hover {
+    color: $gold;
   }
   .social-media-footer {
     flex-grow: 2;
@@ -61,6 +61,9 @@ footer {
   }
   .contact-email {
     a {
+      font-family: 'Crimson Text', serif !important;
+      font-size: 15px !important;
+      text-transform: lowercase !important;
       color: $textColor;
       transition: 0.25s;
     }
@@ -68,7 +71,21 @@ footer {
       color: white;
     }
   }
+  .social-media-icon {
+    a {
+      font-family: 'Crimson Text', serif !important;
+      font-size: 15px !important;
+      text-transform: lowercase !important;
+      color: $textColor;
+      transition: 0.5s;
+    }
+    a:hover {
+      color: $gold;
+    }
+  }
   .bottom-footer-width {
-    // width: 20px !important;
+    a {
+      color: $textColor;
+    }
   }
 }
