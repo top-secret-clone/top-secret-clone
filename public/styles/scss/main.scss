@@ -307,33 +307,26 @@ $stickyNavHeight: 40px;
 
 /*~~~~~~~~~~~~~~~ Work ~~~~~~~~~~~~~~~*/
 
-//NOTE Make this a mix-in
-
 //Banner
 .work-banner {
 	position: relative;
 	top: 0;
 	left: 0;
-	height: 761px;
+	height: 100%;
 	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	.fullscreen-bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -100;
+	.work-banner-video-container {
+		height: 100%;
+		width: 100%;
+		.work-banner-video {
+			height: 100%;
+			width: 100%;
+		}
 	}
-	.title-container {
-
-	}
-	#work-title {
+	.work-banner-title-img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		z-index: 100;
 		height: 350px;
 		width: 450px;
@@ -387,7 +380,7 @@ $stickyNavHeight: 40px;
 	left: 0;
 	height: 100%;
 	width:100%;
-	.banner-video-container{
+	.about-banner-video-container{
 		height: 100%;
 		width: 100%;
 		.banner-video{
@@ -569,8 +562,6 @@ $stickyNavHeight: 40px;
 		}
 	}
 }
-
-
 
 // Manifesto
 .manifesto {
