@@ -14,13 +14,10 @@
       </li>
     </ul>
   </div> <!-- end of nav menu items / overlay-content class -->
-  <!-- Music animation and contrller -->
+</div> <!-- end of overlay-content class -->
 
 
-</div> <!-- end of musik-kontroller class -->
-
-
-<div class="home-nav-container">
+<div class="home-nav-container"> <!-- Letters in nav icon -->
 
   <div class="home-nav" ng-click='navMenu()'>
     <svg
@@ -115,9 +112,11 @@
             x="246.17"
             y="187.13"
             class="gray_fill"
-            width="74" height="6"/>
-        </g>
-        <g id="crossout">
+            width="74"
+            height="6"/>
+        </g> <!-- end hamburger_menu -->
+
+        <g id="crossout" ng-class='{navDisplayOn: !menuDisplay}'>
           <rect
             id="crossout_top"
             x="0"
@@ -139,7 +138,8 @@
             class="gray_fill"
             width="388.14"
             height="24"/>
-        </g>
+        </g> <!-- end crossout -->
+
         <g id="box">
           <rect
             class="border_top_right"
@@ -171,7 +171,8 @@
             y="121.13"
             width="56"
             height="4"/>
-        </g>
+        </g> <!-- end box  -->
+
         <g id="box_tight">
           <rect
             class="border_top_right"
@@ -203,23 +204,19 @@
             y="121.13"
              width="46"
              height="4"/>
-          </g>
-      </g> <!-- end of Hamburger menu -->
+          </g> <!-- end box_tight -->
 
+      </g> <!-- end of Hamburger menu -->
     </svg> <!-- end of svg image -->
   </div> <!-- end of home nav class -->
 
-  <div class='musik-kontroller' ng-click='audioToggle()'>
-    <div class='musik-kontroller-bar1' ng-style='animateBar1'>
-
+  <div class='musik-kontroller' ng-click='audioToggle()' ng-mouseover='turnGold()' ng-mouseleave='turnSilver()'>
+      <div class='musik-kontroller-bar musik-bar1' ng-style='animateBar1'>
     </div>
-    <div class='musik-kontroller-bar2' ng-style='animateBar2'>
-
-
+    <div class='musik-kontroller-bar musik-bar2' ng-style='animateBar2'>
     </div>
-    <div class='musik-kontroller-bar3' ng-style='animateBar3'>
-
+    <div class='musik-kontroller-bar musik-bar3' ng-style='animateBar3'>
     </div>
-  </div>
+  </div> <!-- end of musik-kontroller -->
 
 </div>
