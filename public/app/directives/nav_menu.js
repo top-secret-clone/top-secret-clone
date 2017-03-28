@@ -89,7 +89,7 @@ angular.module('topSecret')
         {
           index: 1,
           name: 'HOME',
-          route: '/'
+          route: 'home'
         },
         {
           index: 2,

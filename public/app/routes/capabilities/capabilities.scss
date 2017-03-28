@@ -43,6 +43,8 @@ $offset: 550px;
   video {
     width: 100vw;
     z-index: 200;
+    overflow: hidden;
+    position: relative;
   }
 }
 
@@ -577,4 +579,129 @@ $offset: 550px;
   bottom: 0;
   height: 55px;
   z-index: 200;
+}
+@media screen and (max-width: 750px) {
+  .capabilities-title-container {
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+  #capabilities-title {
+    width: 75vw;
+    position: absolute;
+    top: 18vh;
+    left: 7vw;
+    right: 0;
+  }
+  .parallax-container {
+    display: none;
+    opacity: 0;
+  }
+  .capabilities-body {
+    margin: 0;
+    padding: 0 10px;
+    width: 90vw;
+    position: relative;
+    border: 1px solid red;
+  .main {
+    width: 100vw;
+    padding-right: 50px;
+    position: relative;
+    top: initial;
+    h2 {
+      display: none;
+    }
+    h3 {
+      font-size: 25px;
+      color: $gold;
+      border: none;
+      text-align: left;
+      padding: 15px;
+      margin: 0;
+    }
+    p {
+      text-align: left;
+      padding: 15px;
+      line-height: 19px;
+    }
+  }
+  .strategy {
+    width: 100vw;
+    position: relative;
+    top: initial;
+    h1 {
+      font-size: 35px;
+      text-align: left;
+      padding: 15px;
+      line-height: 19px;
+    }
+    p {
+      text-align: left;
+      padding: 15px;
+    }
+    .learn-our-process::after{
+      display: none;
+    }
+  }
+  .advertising {
+    width: 100vw;
+    position: relative;
+    top: initial;
+    h1 {
+      font-size: 35px;
+      text-align: left;
+      padding: 15px;
+    }
+    p {
+      text-align: left;
+      padding: 15px;
+      line-height: 19px;
+    }
+  }
+  .design {
+    width: 100vw;
+    position: relative;
+    top: initial;
+    h1 {
+      font-size: 35px;
+      text-align: left;
+      padding: 15px;
+    }
+    p {
+      text-align: left;
+      padding: 15px;
+      line-height: 19px;
+    }
+  }
+  .interactive {
+    width: 100vw;
+    position: relative;
+    top: initial;
+    h1 {
+      font-size: 35px;
+      text-align: left;
+      padding: 15px;
+    }
+    p {
+      text-align: left;
+      padding: 15px;
+      line-height: 19px;
+    }
+  }
+  .studios{
+    width: 100vw;
+    position: relative;
+    top: initial;
+    h1 {
+      font-size: 35px;
+      text-align: left;
+      padding: 15px;
+    }
+    p {
+      text-align: left;
+      padding: 15px;
+      line-height: 19px;
+    }
+  }
+}
 }
