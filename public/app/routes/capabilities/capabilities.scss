@@ -581,8 +581,14 @@ $offset: 550px;
   height: 55px;
   z-index: 200;
 }
+.bottom-of-capabilities-page {
+  display: none;
+}
 
 @media screen and (max-width: 750px) {
+  .capabilities-container {
+    height: 4240px;
+  }
   .capabilities-title-container {
     top: 0;
     left: 0;
@@ -609,7 +615,6 @@ $offset: 550px;
     padding: 0 10px;
     width: 100vw;
     position: relative;
-    border: 1px solid red;
     .main {
       width: 100vw;
       height: 400px;
@@ -664,7 +669,7 @@ $offset: 550px;
     }
     .advertising {
       width: 100vw;
-      height: 620px;
+      height: 550px;
       position: relative;
       top: initial;
       margin: 0;
@@ -682,7 +687,6 @@ $offset: 550px;
       }
       p {
         text-align: left;
-        padding: 15px;
         line-height: 21px;
       }
       .sub-row {
@@ -693,7 +697,7 @@ $offset: 550px;
       }
       .case-study {
         text-align: left;
-
+        padding-bottom: 0;
       }
       .case-study::after{
         border: none;
@@ -703,7 +707,6 @@ $offset: 550px;
       }
       .two {
         margin: 0;
-        margin-top: -19px;
       }
     }
     .design {
@@ -725,7 +728,6 @@ $offset: 550px;
       }
       p {
         text-align: left;
-        padding: 15px;
         line-height: 19px;
       }
       .all-caps {
@@ -734,9 +736,15 @@ $offset: 550px;
       .case-study::after {
         border: none;
       }
+      .goldenLine {
+        span {
+          top: 0;
+        }
+      }
     }
     .interactive {
       width: 100vw;
+      height: 630px;
       position: relative;
       top: initial;
       margin: 0;
@@ -747,12 +755,36 @@ $offset: 550px;
       }
       p {
         text-align: left;
-        padding: 15px;
         line-height: 19px;
+      }
+      .sub-row {
+        .first-component{
+          position: relative;
+          top: 12px;
+        }
+      }
+      .case-study {
+        text-align: left;
+        padding-bottom: 0;
+      }
+      .case-study::after{
+        border: none;
+      }
+      .launch {
+        text-align: left;
+      }
+      .two {
+        margin: 0;
+      }
+      .goldenLine {
+        span {
+          top: 0;
+        }
       }
     }
     .studios{
       width: 100vw;
+      height: 630px;
       position: relative;
       top: initial;
       margin: 0;
@@ -763,9 +795,15 @@ $offset: 550px;
       }
       p {
         text-align: left;
-        padding: 15px;
         line-height: 19px;
       }
+      .case-study::after{
+        border: none;
+      }
     }
+  }
+  .bottom-of-capabilities-page {
+    display: block;
+    width: 100vw;
   }
 }
