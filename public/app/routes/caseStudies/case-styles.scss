@@ -49,18 +49,25 @@ body {
   background-position-y: -23%;
   zoom: 63%;
 }
+@media only screen and (max-width: 1200px){
+  .case-studies-title-container{
+    width: 73%;
+  }
+}
+
 //styling for the scroll instructions at the bottom of the main header
 .scroll-more-container {
   position: absolute;
   height: 31px;
   width: 100px;
-  top: 94%;
-  left: 960px;
+  top: 91%;
+  left: 52%;
   transform: translate(-50%, 24%);
   z-index: 2;
   display: flex;
   flex-direction: column;
 }
+
 #down-arrows-container{
   position: absolute;
   height: 100%;
@@ -131,7 +138,14 @@ body {
   height: 48vh;
   width: 100%;
 }
-
+@media only screen and (max-width: 1200px){
+  .case-studies-main-column{
+    height: 80vh;
+  }
+  #case-files{
+    height: 90vh;
+  }
+}
 .cs-image-container{
   position: relative;
   height: 100%;
@@ -164,7 +178,7 @@ body {
 .cs-title{
   position: absolute;
   height: 486px;
-  width: 1655px;
+  width: 100%;
   background-color: transparent;
   top: 50%;
   left: 50%;
