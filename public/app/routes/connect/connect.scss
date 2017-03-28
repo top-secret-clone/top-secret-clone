@@ -53,17 +53,12 @@ $formMargin: 8px 0;
   width: 100vw;
   display: flex;
   flex-flow: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
   background-image: url('./images/map.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-
-  div{
-    // width: 95%;
-    // padding: 22px;
-  }
 
   .sub-row {
     width: 50%;
@@ -125,7 +120,7 @@ $formMargin: 8px 0;
     height: 1222px;
     padding: 30px;
     background-color: $cream;
-
+    margin: 0 0 0 120px;
     .super {
       .goldenLine:hover:after {
         margin-top: -0.7em;
@@ -195,6 +190,7 @@ $formMargin: 8px 0;
   }
   .right {
     width: 475px;
+    margin: 0 120px 0 0;
     display: flex;
     justify-content: flex-start;
     flex-flow: column;
@@ -215,3 +211,58 @@ $formMargin: 8px 0;
     margin: $formMargin
   }
 } /* end of connect-block section */
+
+/* mobile responsive media queries */
+@media screen and (max-width: 1200px) {
+  .connect-block {
+    .right {
+      padding: 30px 2vw;
+      padding-left: 30px;
+    }
+    .left {
+      padding: 30px 2vw;
+      margin-right: 5vw;
+    }
+  }
+}
+@media screen and (max-width: 100px) {
+  .connect-block {
+    .right {
+      padding: 30px 0;
+      margin: 0;
+    }
+    .left {
+      padding: 30px 0;
+      margin: 0;
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+
+  #work-title {
+    width: 75vw;
+    position: absolute;
+    top: 18vh;
+    left: 54vw;
+    right: 0;
+  }
+  .connect-block {
+    flex-flow: column;
+    .left {
+      padding: 0;
+      width: 100vw;
+      margin: 0;
+    }
+    .right {
+      padding: 0;
+      width: 100vw;
+      margin: 0px;
+    }
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+}

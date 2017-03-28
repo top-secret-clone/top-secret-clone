@@ -32,21 +32,8 @@ $fontText: "'Crimson Text', serif";
 .gray_fill {
   fill: #B7B7B8
 }
-// #crossout {
-//   opacity: 0;
-//   transition: 0.5s;
-// }
-// #crossout:hover {
-//   opacity: 1;
-// }
 .navDisplayOn {
   opacity: 1 !important;
-}
-
-@media (max-width: 667px) {
-   #hamburger_menu {
-    width:57px;
-  }
 }
         /* Overlay modal styling */
 
@@ -146,17 +133,6 @@ span {
     position: relative;
 }
 
-
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
-}
-
 /* musik bars styling */
 
 .musik-kontroller {
@@ -199,3 +175,42 @@ span {
     background-color: $textColor;
     border: 0.5px solid $textColor;
   }
+
+@media screen and (max-width: 750px) {
+  .home-nav-container {
+    top: 2vh;
+    left: 2vh;
+  }
+  .musik-kontroller {
+    top: 90vh;
+    
+  }
+  .overlay {
+    width: 100vw;
+    top: 10vh;
+  }
+  .overlay-content {
+    ul {
+      width: 350px;
+      margin-left: -20px;
+    }
+    span {
+      .menu-item{
+        width: 70vw;
+      }
+    }
+  }
+}
+@media (max-width: 667px) {
+   #hamburger_menu {
+    width:57px;
+  }
+}
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+  }
+}
