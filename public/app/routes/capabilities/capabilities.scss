@@ -16,6 +16,7 @@ $offset: 550px;
 }
 
 .capabilities-container {
+  position: relative;
   width: 100vw;
   height: 5740px;
   margin: 0;
@@ -24,7 +25,7 @@ $offset: 550px;
   display: flex;
   flex-flow: column;
   align-items: center;
-  position: relative;
+  justify-content: center;
   color: white;
   overflow-x: hidden;
 
@@ -587,18 +588,23 @@ $offset: 550px;
 
 @media screen and (max-width: 750px) {
   .capabilities-container {
-    height: 4240px;
+    height: 3780px;
   }
   .capabilities-title-container {
     top: 0;
     left: 0;
     margin: 0;
   }
+  .capabilities-banner {
+    video {
+      width: 1400px;
+    }
+  }
   #capabilities-title {
     width: 75vw;
     position: absolute;
-    top: 18vh;
-    left: 7vw;
+    top: 25vh;
+    left: 11vw;
     right: 0;
   }
   .parallax-container {
@@ -612,6 +618,7 @@ $offset: 550px;
   }
   .capabilities-body {
     margin: 0;
+    margin-top: 55px;
     padding: 0 10px;
     width: 100vw;
     position: relative;
