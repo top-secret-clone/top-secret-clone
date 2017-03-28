@@ -573,6 +573,7 @@ $offset: 550px;
     height: $wide * 1.2;
   }
 }
+
 .capabilites-footer {
   line-height: 1.5;
   position: absolute;
@@ -580,6 +581,7 @@ $offset: 550px;
   height: 55px;
   z-index: 200;
 }
+
 @media screen and (max-width: 750px) {
   .capabilities-title-container {
     top: 0;
@@ -603,105 +605,105 @@ $offset: 550px;
     width: 90vw;
     position: relative;
     border: 1px solid red;
-  .main {
-    width: 100vw;
-    padding-right: 50px;
-    position: relative;
-    top: initial;
-    h2 {
-      display: none;
+    .main {
+      width: 100vw;
+      padding-right: 50px;
+      position: relative;
+      top: initial;
+      h2 {
+        display: none;
+      }
+      h3 {
+        font-size: 25px;
+        color: $gold;
+        border: none;
+        text-align: left;
+        padding: 15px;
+        margin: 0;
+      }
+      p {
+        text-align: left;
+        padding: 15px;
+        line-height: 19px;
+      }
     }
-    h3 {
-      font-size: 25px;
-      color: $gold;
-      border: none;
-      text-align: left;
-      padding: 15px;
-      margin: 0;
+    .strategy {
+      width: 100vw;
+      position: relative;
+      top: initial;
+      h1 {
+        font-size: 35px;
+        text-align: left;
+        padding: 15px;
+        line-height: 19px;
+      }
+      p {
+        text-align: left;
+        padding: 15px;
+      }
+      .learn-our-process::after{
+        display: none;
+      }
     }
-    p {
-      text-align: left;
-      padding: 15px;
-      line-height: 19px;
+    .advertising {
+      width: 100vw;
+      position: relative;
+      top: initial;
+      h1 {
+        font-size: 35px;
+        text-align: left;
+        padding: 15px;
+      }
+      p {
+        text-align: left;
+        padding: 15px;
+        line-height: 19px;
+      }
+    }
+    .design {
+      width: 100vw;
+      position: relative;
+      top: initial;
+      h1 {
+        font-size: 35px;
+        text-align: left;
+        padding: 15px;
+      }
+      p {
+        text-align: left;
+        padding: 15px;
+        line-height: 19px;
+      }
+    }
+    .interactive {
+      width: 100vw;
+      position: relative;
+      top: initial;
+      h1 {
+        font-size: 35px;
+        text-align: left;
+        padding: 15px;
+      }
+      p {
+        text-align: left;
+        padding: 15px;
+        line-height: 19px;
+      }
+    }
+    .studios{
+      width: 100vw;
+      position: relative;
+      top: initial;
+      h1 {
+        font-size: 35px;
+        text-align: left;
+        padding: 15px;
+      }
+      p {
+        text-align: left;
+        padding: 15px;
+        line-height: 19px;
+      }
     }
   }
-  .strategy {
-    width: 100vw;
-    position: relative;
-    top: initial;
-    h1 {
-      font-size: 35px;
-      text-align: left;
-      padding: 15px;
-      line-height: 19px;
-    }
-    p {
-      text-align: left;
-      padding: 15px;
-    }
-    .learn-our-process::after{
-      display: none;
-    }
-  }
-  .advertising {
-    width: 100vw;
-    position: relative;
-    top: initial;
-    h1 {
-      font-size: 35px;
-      text-align: left;
-      padding: 15px;
-    }
-    p {
-      text-align: left;
-      padding: 15px;
-      line-height: 19px;
-    }
-  }
-  .design {
-    width: 100vw;
-    position: relative;
-    top: initial;
-    h1 {
-      font-size: 35px;
-      text-align: left;
-      padding: 15px;
-    }
-    p {
-      text-align: left;
-      padding: 15px;
-      line-height: 19px;
-    }
-  }
-  .interactive {
-    width: 100vw;
-    position: relative;
-    top: initial;
-    h1 {
-      font-size: 35px;
-      text-align: left;
-      padding: 15px;
-    }
-    p {
-      text-align: left;
-      padding: 15px;
-      line-height: 19px;
-    }
-  }
-  .studios{
-    width: 100vw;
-    position: relative;
-    top: initial;
-    h1 {
-      font-size: 35px;
-      text-align: left;
-      padding: 15px;
-    }
-    p {
-      text-align: left;
-      padding: 15px;
-      line-height: 19px;
-    }
-  }
-}
 }
