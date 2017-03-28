@@ -599,22 +599,26 @@ $offset: 550px;
     display: none;
     opacity: 0;
   }
+  .capabilities-main {
+    .sub-row {
+      flex-flow: column;
+    }
+  }
   .capabilities-body {
     margin: 0;
     padding: 0 10px;
-    width: 90vw;
+    width: 100vw;
     position: relative;
     border: 1px solid red;
     .main {
       width: 100vw;
-      padding-right: 50px;
       position: relative;
       top: initial;
       h2 {
         display: none;
       }
       h3 {
-        font-size: 25px;
+        font-size: 22px;
         color: $gold;
         border: none;
         text-align: left;
@@ -624,7 +628,7 @@ $offset: 550px;
       p {
         text-align: left;
         padding: 15px;
-        line-height: 19px;
+        line-height: 21px;
       }
     }
     .strategy {
@@ -632,7 +636,8 @@ $offset: 550px;
       position: relative;
       top: initial;
       h1 {
-        font-size: 35px;
+        font-size: 42px;
+        letter-spacing: 4px;
         text-align: left;
         padding: 15px;
         line-height: 19px;
@@ -640,24 +645,42 @@ $offset: 550px;
       p {
         text-align: left;
         padding: 15px;
+        line-height: 21px;
+      }
+      hr {
+        margin-left: 25px;
+      }
+      .learn-our-process {
+        text-align: left;
       }
       .learn-our-process::after{
         display: none;
+      }
+      .contact-us {
+        text-align: left;
       }
     }
     .advertising {
       width: 100vw;
       position: relative;
       top: initial;
+      margin: 0;
+      display: flex;
+      flex-flow: column;
       h1 {
-        font-size: 35px;
+        font-size: 42px;
+        letter-spacing: 4px;
         text-align: left;
         padding: 15px;
+        line-height: 19px;
+      }
+      hr {
+        margin-left: 25px;
       }
       p {
         text-align: left;
         padding: 15px;
-        line-height: 19px;
+        line-height: 21px;
       }
     }
     .design {
@@ -679,6 +702,7 @@ $offset: 550px;
       width: 100vw;
       position: relative;
       top: initial;
+      margin: 0;
       h1 {
         font-size: 35px;
         text-align: left;
@@ -694,6 +718,7 @@ $offset: 550px;
       width: 100vw;
       position: relative;
       top: initial;
+      margin: 0;
       h1 {
         font-size: 35px;
         text-align: left;
