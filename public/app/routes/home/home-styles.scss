@@ -2,11 +2,15 @@
   position: absolute;
   height: 250%;
   width: 100%;
-    margin: 0;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 .home-main-wrapper{
   position: relative;
   margin: 0 0 0 0;
+  height: 100%;
+  overflow-y: hidden;
 }
 
 //This is the styling for the fluid effect
@@ -74,17 +78,7 @@
 
 
 
-.sound-icon-container{
-  position: fixed;
-  bottom: 2vh;
-  right: 2vh;
-  background-color: #b7b7b8;
-  height: 2vh;
-  width: 2vh;
-}
-.sound-icon-container:hover {
-  background-color: #89714D;
-}
+
 #home-main-header{
   margin-top: 37vh;
 }
@@ -151,6 +145,11 @@
 
 #home-footer {
   background-color: #1f1f1f;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  //width: 100%;
+  //overflow-x: hidden;
 }
 #home-bottom-three{
   background-color: transparent;
