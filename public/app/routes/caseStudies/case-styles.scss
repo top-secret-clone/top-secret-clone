@@ -12,12 +12,6 @@ body {
   height: 100%;
 }
 
-//styling for the nav svg
-// #hamburger_menu{
-//   height: 100%;
-//   width: 100%;
-// }
-
 //Top div with video and header
 .case-studies-header{
   position: relative;
@@ -42,7 +36,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  background-image: url(http://www.wearetopsecret.com/images/spritesheet-case-studies.png);
+  background-image: url('http://www.wearetopsecret.com/images/spritesheet-case-studies.png');
   background-size: inherit;
   background-position: bottom;
   background-position-x: -8252px;
@@ -51,6 +45,8 @@ body {
 }
 @media only screen and (max-width: 1200px){
   .case-studies-title-container{
+    zoom: 34%;
+    left: 67%;
     width: 73%;
   }
 }
@@ -137,6 +133,7 @@ body {
   position: relative;
   height: 48vh;
   width: 100%;
+  cursor: pointer;
 }
 @media only screen and (max-width: 1200px){
   .case-studies-main-column{
@@ -297,36 +294,92 @@ color: white;
   font-size: x-large;
   letter-spacing: 3px;
 }
-#view-case-strike{
+.view-case-p:after {
+  content: url('http://www.wearetopsecret.com/images/arrow-tip-forward.png');
   position: absolute;
+  top: 26%;
+}
+
+//Oregon view case study strike thru
+#oregon-view-case-strike{
+  position: absolute;
+  top: 50%;
+  left: -12%;
   height: 1px;
   width: 0;
   background-color: #88714d;
-  top: 48%;
-  left: -10%;
+  transition-duration: .25s;
 }
-.view-case-arrow{
-  background-image: url('http://www.wearetopsecret.com/images/arrow-tip-forward.png');
+#oregon-main:hover #oregon-view-case-strike{
+  width: 150px;
+}
+
+//Creed view case study strike thru
+#creed-view-case-strike{
   position: absolute;
-  height: 9px;
-  width: 9px;
-  background-repeat: no-repeat;
-  top: 42%;
-  left: 102%;
+  top: 50%;
+  left: -12%;
+  height: 1px;
+  width: 0;
+  background-color: #88714d;
+  transition-duration: .25s;
 }
+#creed-main:hover #creed-view-case-strike{
+  width: 150px;
+}
+
+//Rossi view case study strike thru
+#rossi-view-case-strike{
+  position: absolute;
+  top: 50%;
+  left: -12%;
+  height: 1px;
+  width: 0;
+  background-color: #88714d;
+  transition-duration: .25s;
+}
+#rossi-main:hover #rossi-view-case-strike{
+  width: 150px;
+}
+
+//publik view case strike thru
+#publik-view-case-strike{
+  position: absolute;
+  top: 50%;
+  left: -12%;
+  height: 1px;
+  width: 0;
+  background-color: #88714d;
+  transition-duration: .25s;
+}
+#publik-main:hover #publik-view-case-strike{
+  width: 150px;
+}
+
+//peli case study strike thru
+#peli-view-case-strike{
+  position: absolute;
+  top: 50%;
+  left: -12%;
+  height: 1px;
+  width: 0;
+  background-color: #88714d;
+  transition-duration: .25s;
+}
+#peli-main:hover #peli-view-case-strike{
+  width: 150px;
+}
+
 .view-case:hover {
   cursor: pointer;
 }
-.view-case:hover #view-case-strike{
-  width: 148px;
-}
-
 //styling and background for the bottom case files div
 #case-files{
   height: 75vh;
   background-image: url("http://www.wearetopsecret.com/images/case-studies/case-files-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  cursor: default;
 }
 //cool triangle in the background
 #cs-triangle{
@@ -341,6 +394,41 @@ color: white;
   left: 54%;
   top: 42%;
 }
+@media only screen and (max-width: 1200px){
+  #cs-redacted{
+    position: absolute;
+    left: 56%;
+    top: 51%;
+  }
+  #case-files-title{
+    position: absolute;
+    top: 32%;
+  }
+}
+
+//case files hover heading
+.case-files-hover-title{
+  position: absolute;
+  font-family: 'Lora', serif;
+  color: #88714d;
+  letter-spacing: 2px;
+  top: 68%;
+  left: 39%;
+  text-transform: uppercase;
+  font-size: large;
+  opacity: 0;
+  transition-duration: .25s;
+  width: 30vw;
+  z-index: -2;
+}
+.case-files-hover:hover {
+  opacity: 0;
+}
+.case-files-hover:hover ~ .case-files-hover-title{
+  top: 58%;
+  opacity: 1;
+}
+
 
 
 //the nav icon and the sound icon need to be position:fixed with high z index
