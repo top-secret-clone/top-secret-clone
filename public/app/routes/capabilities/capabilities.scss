@@ -612,6 +612,7 @@ $offset: 550px;
     border: 1px solid red;
     .main {
       width: 100vw;
+      height: 400px;
       position: relative;
       top: initial;
       h2 {
@@ -633,6 +634,7 @@ $offset: 550px;
     }
     .strategy {
       width: 100vw;
+      height: 470px;
       position: relative;
       top: initial;
       h1 {
@@ -662,6 +664,7 @@ $offset: 550px;
     }
     .advertising {
       width: 100vw;
+      height: 620px;
       position: relative;
       top: initial;
       margin: 0;
@@ -682,20 +685,54 @@ $offset: 550px;
         padding: 15px;
         line-height: 21px;
       }
+      .sub-row {
+        .first-component{
+          position: relative;
+          top: 12px;
+        }
+      }
+      .case-study {
+        text-align: left;
+
+      }
+      .case-study::after{
+        border: none;
+      }
+      .launch {
+        text-align: left;
+      }
+      .two {
+        margin: 0;
+        margin-top: -19px;
+      }
     }
     .design {
       width: 100vw;
       position: relative;
       top: initial;
+      display: flex;
+      flex-flow: column;
+      margin: 0;
       h1 {
-        font-size: 35px;
+        font-size: 42px;
+        letter-spacing: 4px;
         text-align: left;
         padding: 15px;
+        line-height: 19px;
+      }
+      hr {
+        margin-left: 25px;
       }
       p {
         text-align: left;
         padding: 15px;
         line-height: 19px;
+      }
+      .all-caps {
+        margin-top: -20px;
+      }
+      .case-study::after {
+        border: none;
       }
     }
     .interactive {
