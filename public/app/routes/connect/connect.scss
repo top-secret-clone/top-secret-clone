@@ -225,7 +225,7 @@ $formMargin: 8px 0;
     }
   }
 }
-@media screen and (max-width: 100px) {
+@media screen and (max-width: 1000px) {
   .connect-block {
     .right {
       padding: 30px 0;
@@ -252,6 +252,7 @@ $formMargin: 8px 0;
       padding: 0;
       width: 100vw;
       margin: 0;
+      height: 1276px;
     }
     .right {
       padding: 0;
@@ -264,5 +265,8 @@ $formMargin: 8px 0;
   }
   h3 {
     font-size: 26px;
+  }
+  footer-dir {
+    bottom: -120vh;
   }
 }
