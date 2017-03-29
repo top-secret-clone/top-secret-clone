@@ -90,7 +90,7 @@
 }
 
 #view-reel:hover + #view-strike-thru{
-  width: 105px;
+  width: 110px;
 }
 #view-reel:after {
   content: url('http://www.wearetopsecret.com/images/arrow-tip-forward.png');
@@ -621,11 +621,11 @@
   }
 
   .bottom-three-title {
-    font-size: 215%;
-    letter-spacing: 15px;
+    font-size: 384%;
+    letter-spacing: 5px;
     z-index: 3;
     left: 50%;
-    top: 23%;
+    top: 0;
     transform: translate(-50%);
     position: absolute;
     color: #88714D;
@@ -654,6 +654,48 @@
     width: 68%;
     left: -2%;
     position: absolute;
+  }
+
+  #view-reel {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: x-large;
+    color: white;
+    font-family: 'built-titling', sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    top: 58%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    width: 9%;
+    letter-spacing: 4px;
+  }
+
+  #work{
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  #capabilities{
+    display: none;
+  }
+  #connect {
+    display: none;
+  }
+
+  #bthree-work{
+    background-image: url("http://www.wearetopsecret.com/images/view-work-cta.jpg");
+    //background-position-x: 50%;
+    //background-attachment: fixed;
+
+  }
+  #bthree-capabilities{
+    background-image: url("http://www.wearetopsecret.com/images/new-landing/Capabilities.jpg");
+    //background-attachment: fixed;
+  }
+  #bthree-connect {
+    background-image: url("http://www.wearetopsecret.com/images/join-team-cta.jpg");
+    //background-attachment: fixed;
   }
 
 }
