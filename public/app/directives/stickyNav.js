@@ -11,8 +11,10 @@ angular.module("topSecret").directive('stickyNav', function() {
           var scrollPosition = $(this).scrollTop();
           if(scrollPosition > distance){
             $("sticky-nav").addClass('fix');
+            // $("sticky-nav").removeClass('sticky-nav')
           } else {
             $("sticky-nav").removeClass('fix');
+            // $("sticky-nav").addClass('sticky-nav');
           }
         })
    }

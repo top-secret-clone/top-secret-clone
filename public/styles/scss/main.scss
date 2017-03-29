@@ -285,11 +285,20 @@ button {
 //
 $stickyNavHeight: 71px;
 
+.jump-fix {
+	background: center top url(http://www.wearetopsecret.com/images/work-filter-background.jpg);
+	height: $stickyNavHeight;
+}
+
 sticky-nav {
+	z-index: 150;
+}
+
+.sticky-nav {
 	background: center top url(http://www.wearetopsecret.com/images/work-filter-background.jpg);
 	background-size: cover;
 	height: $stickyNavHeight;
-	z-index: 15;
+	z-index: 100;
 	ul {
 		display: flex;
 		align-items: center;
@@ -305,10 +314,6 @@ sticky-nav {
 	height: $stickyNavHeight;
 }
 
-.jump-fix {
-	height: $stickyNavHeight;
-}
-
 // 9.) Pages:
 // ~~~~~~~~~~
 
@@ -317,6 +322,10 @@ sticky-nav {
 /*~~~~~~~~~~~~~~~ Case Studies ~~~~~~~~~~~~~~~*/
 
 /*~~~~~~~~~~~~~~~ Work ~~~~~~~~~~~~~~~*/
+
+.work {
+	background-color: black;
+}
 
 // Banner
 .work-banner {
