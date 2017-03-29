@@ -32,30 +32,8 @@ $fontText: "'Crimson Text', serif";
 .gray_fill {
   fill: #B7B7B8
 }
-.navDisplayOff {
-  opacity: 0;
-  transition: 0.5s;
-}
 .navDisplayOn {
-  opacity: 0;
-}
-
-// #hamburger_menu #box_tight #hamburger_menu #box rect {
-//  fill: #89714D
-// }
-//
-// #hamburger_menu #box_tight #hamburger_menu #box rect {
-//  fill: #89714D
-// }
-
-
-
-
-
-@media (max-width: 667px) {
-   #hamburger_menu {
-    width:57px;
-  }
+  opacity: 1 !important;
 }
         /* Overlay modal styling */
 
@@ -63,14 +41,13 @@ $fontText: "'Crimson Text', serif";
 .overlay {
     height: 100%;
     width: 100%;
-    position: fixed; /* Stay in place */
-    z-index: 201; /* Sit on top */
+    position: fixed;
+    z-index: 201;
     left: 0;
     top: 0;
     background-color: rgb(0,0,0); /* Black fallback color */
     background-color: rgba(0,0,0,0); /* Black w/opacity */
     overflow-x: hidden; /* Disable horizontal scroll */
-    // transition: background-color 0.5s, display 0.1s;
     transition: 0.35s;
 
 }
@@ -156,17 +133,6 @@ span {
     position: relative;
 }
 
-
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
-}
-
 /* musik bars styling */
 
 .musik-kontroller {
@@ -209,3 +175,42 @@ span {
     background-color: $textColor;
     border: 0.5px solid $textColor;
   }
+
+@media screen and (max-width: 750px) {
+  .home-nav-container {
+    top: 2vh;
+    left: 2vh;
+  }
+  .musik-kontroller {
+    top: 90vh;
+    
+  }
+  .overlay {
+    width: 100vw;
+    top: 10vh;
+  }
+  .overlay-content {
+    ul {
+      width: 350px;
+      margin-left: -20px;
+    }
+    span {
+      .menu-item{
+        width: 70vw;
+      }
+    }
+  }
+}
+@media (max-width: 667px) {
+   #hamburger_menu {
+    width:57px;
+  }
+}
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+  }
+}

@@ -5,39 +5,39 @@ angular.module('topSecret')
     templateUrl: './app/directives/nav_menu.html',
     link: function(scope, elem, attrs) {
       scope.menuDisplay = false;
+      scope.crossoutActive = false;
+      console.log('menuDisplay:', scope.menuDisplay, 'crossoutActive', scope.crossoutActive);
       const
         overlayActive = { 'background-color': 'rgba(0,0,0,0.9)' },
         overlayInactive = { 'background-color': 'rgba(0,0,0,0)' },
         contentActive = { top: '10%' },
         contentInactive = { top: '110%' };
       const
-        box = document.getElementById('box'),
-        crossout = document.getElementById('crossout'),
-        hamburgerMenu = document.getElementById('hamburger'),
-        boxCross = document.getElementById('box_tight');
+        crossout = document.getElementById('crossout');
 
       scope.navMenu = function() { /* toggle menu display */
         scope.menuDisplay = !scope.menuDisplay;
 
         if (scope.menuDisplay === true) {
-          console.log('Display on-->', crossout);
           scope.css = overlayActive;
           scope.cssContent = contentActive;
-          $(boxCross).addClass('navDisplayOn'); /* addClass is not working */
-          $(crossout).addClass('navDisplayOn');
+          scope.crossoutActive = true;
         }
         else {
-          console.log('<--Display off',boxCross);
           scope.css = overlayInactive;
           scope.cssContent = contentInactive;
-          $(boxCross).removeClass('navDisplayOn');
-          $(crossout).removeClass('navDisplayOn');
+          scope.crossoutActive = false;
         }
-        // scope.menuDisplay ? scope.css = overlayActive :
-        //   scope.css = overlayInactive;
-        // scope.menuDisplay ? scope.cssContent = contentActive :
-        //   scope.cssContent = contentInactive;
+
       } /* end of navMenu toggle function */
+      scope.navOver = function() {
+        console.log('mouseEnter-->',scope.crossoutActive)
+        scope.crossoutActive = true;
+      }
+      scope.navOut = function() {
+        console.log('<--mouseLeave', scope.crossoutActive)
+        scope.crossoutActive = false;
+      }
 
     }, /* end of LINK function */
 
@@ -84,12 +84,12 @@ angular.module('topSecret')
           $(bar).removeClass('gold-bars');
         });
       }
-      $scope.menuDisplay ? $(crossout).addClass('navDisplayOn') : $(crossout).removeClass('navDisplayOn'); /* add/removeClass not working */
+
       $scope.menuItems = [
         {
           index: 1,
           name: 'HOME',
-          route: '/'
+          route: 'home'
         },
         {
           index: 2,
