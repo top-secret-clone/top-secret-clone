@@ -24,7 +24,7 @@ angular.module("topSecret")
         } if(csParaStart > 1400 && csParaStart < 3000){
             paraPublik.style.backgroundPositionY = 150 - csParaStart * 0.06 + '%';  //  do the publik parallax
         } if(csParaStart > 1900 && csParaStart <= 3178){
-            paraPeli.style.backgroundPositionY = 200 - csParaStart * 0.04 + '%';  //  do the peli parallax
+            paraPeli.style.backgroundPositionY = 150 - csParaStart * 0.04 + '%';  //  do the peli parallax
         }
     }
 

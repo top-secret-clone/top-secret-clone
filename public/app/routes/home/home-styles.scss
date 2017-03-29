@@ -122,18 +122,29 @@
   width: 5%;
   letter-spacing: 4px;
 }
+@media only screen and (max-width: 1200px){
+  #view-reel{
+    top: 58%;
+    width: 9%;
+  }
+}
 #view-strike-thru{
   position: absolute;
-  top: 570px;
-  left: 902px;
-  transform: translate(-50%, -50%);
+  top: 56.25%;
+  left: 46%;
   height: 1px;
   width: 0;
   background-color: #88714d;
   transition: .25s ease;
 }
+@media only screen and (max-width: 1200px){
+  #view-strike-thru{
+    top: 63%;
+    left: 43%;
+  }
+}
 #view-reel:hover + #view-strike-thru{
-  width: 108px;
+  width: 105px;
 }
 #view-reel:after {
   content: url('http://www.wearetopsecret.com/images/arrow-tip-forward.png');
@@ -187,6 +198,15 @@
   overflow: hidden;
   display: block;
   background-size: cover;
+}
+@media only screen and (max-width: 1200px){
+  .case-studies-container{
+    height: 70vh;
+  }
+  #case-studies{
+    width: 90vw;
+    margin-left: 4vw;
+  }
 }
 
 
@@ -281,6 +301,16 @@
   transition: .25s ease;
 }
 
+@media only screen and (max-width: 1200px){
+  #home-view-case-studies{
+    width: 14%;
+  }
+  #home-view-strike-thru{
+    top: 64%;
+    left: 41%;
+  }
+}
+
 
 
 //styling for all the hover animations on case studies
@@ -373,6 +403,16 @@
   opacity: 0;
   transition-duration: .5s;
 }
+@media only screen and(max-width: 1200px) {
+  .fade-heading-top{
+    margin-top: 44px;
+  }
+  .fade-heading-bottom{
+    margin-top: 54px;
+  }
+}
+
+
 .about-us {
   color: white;
   font-family: 'built-titling', sans-serif;
@@ -397,6 +437,11 @@
   top: 49%;
   left: -25%;
   transition-duration: .25s;
+}
+@media only screen and (max-width: 1200px){
+  .about-us{
+    top: 85%;
+  }
 }
 
 .about-sts:hover #about-sts-title{
