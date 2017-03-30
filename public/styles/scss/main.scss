@@ -218,7 +218,8 @@ a {
 .two-thirds-column,
 .one-quarter-column,
 .one-half-column,
-.three-quarters-column, {
+.three-quarters-column,
+.full-column {
 	flex: 100%;
 	height: 250px;
 }
@@ -232,10 +233,10 @@ a {
 @media screen and (min-width: 800px) {
 
 	//NOTE For evenly sized columns use this:
-	.column {
-	  flex: 1;
-		height: 425px;
-	}
+	// .column {
+	//   flex: 1;
+	// 	height: 425px;
+	// }
 
 	//NOTE For unevenly sized columns, use these
 
@@ -261,6 +262,11 @@ a {
 
 	.three-quarters-column {
 		flex-basis: calc(100% * (3/4));
+		height: 425px;
+	}
+
+	.full-column {
+		flex-basis: 100%;
 		height: 425px;
 	}
 }
@@ -299,17 +305,26 @@ sticky-nav {
 	background-size: cover;
 	height: $stickyNavHeight;
 	z-index: 100;
+	display: flex;
 	ul {
+		font-family: built-titling;
+		color: 	#867970;
+		font-size: 26px;
+		letter-spacing: 2px;
+		font-weight: lighter;
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
+		margin-top: 0;
+		width: 50%;
+		margin: 0 auto;
 	}
 }
 
 .fix {
   top: 0px;
   position: fixed;
-	background-color: transparent;
+
 	width: 100%;
 	height: $stickyNavHeight;
 }
@@ -398,6 +413,13 @@ sticky-nav {
 			// opacity: 0;
 			transition: all 0.5s ease-in-out;
 		}
+	}
+	.work-category {
+		bottom: 15px;
+    position: absolute;
+    color: white;
+    font-weight: lighter;
+    font-size: 20px;
 	}
 }
 
