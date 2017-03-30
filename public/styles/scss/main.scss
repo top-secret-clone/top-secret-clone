@@ -472,12 +472,12 @@ sticky-nav {
 	.about-banner-video-container{
 		height: 100%;
 		width: 100%;
-		.banner-video{
+		.about-banner-video{
 			height: 100%;
 			width: 100%;
 		}
 	}
-	.banner-title-img{
+	.about-banner-title-img{
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -533,11 +533,9 @@ sticky-nav {
 		.clients-served-column{
 			height: auto;
 			margin-bottom: 5%;
-			img {
-				height: 80px;
-				// width: 194px;
-				// margin: 15.5px 93.5px;
-			}
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 }
@@ -644,11 +642,22 @@ sticky-nav {
 .slider-controls {
 	display: flex;
 	justify-content: space-between;
+	.slider-arrows {
+		display: flex;
+		justify-content: center;
+	}
 	.slider-buttons {
 		display: inline-flex;
 		.slick-dots {
 			display: inline-flex;
+			transform: translate(-25%);
 		}
+	}
+	.slider-pager {
+ 	color: #000;
+	}
+	.slider-pager-page.active {
+	color: #f90;
 	}
 }
 
@@ -669,7 +678,7 @@ sticky-nav {
 	}
 	.about-footer {
 		margin-left: -196px;
-
+		bottom: 0 !important;
 	}
 }
 
