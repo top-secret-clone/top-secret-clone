@@ -167,7 +167,7 @@ a {
 }
 
 .background-img-fix2 {
-	zoom: 45%;
+	// zoom: 45%;
 	background-position-x: -393px;
 }
 
@@ -218,7 +218,8 @@ a {
 .two-thirds-column,
 .one-quarter-column,
 .one-half-column,
-.three-quarters-column, {
+.three-quarters-column,
+.full-column {
 	flex: 100%;
 	height: 250px;
 }
@@ -232,10 +233,10 @@ a {
 @media screen and (min-width: 800px) {
 
 	//NOTE For evenly sized columns use this:
-	.column {
-	  flex: 1;
-		height: 425px;
-	}
+	// .column {
+	//   flex: 1;
+	// 	height: 425px;
+	// }
 
 	//NOTE For unevenly sized columns, use these
 
@@ -263,6 +264,11 @@ a {
 		flex-basis: calc(100% * (3/4));
 		height: 425px;
 	}
+
+	.full-column {
+		flex-basis: 100%;
+		height: 425px;
+	}
 }
 
 // 8.) Components:
@@ -285,27 +291,41 @@ button {
 //
 $stickyNavHeight: 71px;
 
+.jump-fix {
+	background: center top url(http://www.wearetopsecret.com/images/work-filter-background.jpg);
+	height: $stickyNavHeight;
+}
+
 sticky-nav {
+	z-index: 150;
+}
+
+.sticky-nav {
 	background: center top url(http://www.wearetopsecret.com/images/work-filter-background.jpg);
 	background-size: cover;
 	height: $stickyNavHeight;
-	z-index: 15;
+	z-index: 100;
+	display: flex;
 	ul {
+		font-family: built-titling;
+		color: 	#867970;
+		font-size: 26px;
+		letter-spacing: 2px;
+		font-weight: lighter;
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
+		margin-top: 0;
+		width: 50%;
+		margin: 0 auto;
 	}
 }
 
 .fix {
   top: 0px;
   position: fixed;
-	background-color: transparent;
-	width: 100%;
-	height: $stickyNavHeight;
-}
 
-.jump-fix {
+	width: 100%;
 	height: $stickyNavHeight;
 }
 
@@ -317,6 +337,10 @@ sticky-nav {
 /*~~~~~~~~~~~~~~~ Case Studies ~~~~~~~~~~~~~~~*/
 
 /*~~~~~~~~~~~~~~~ Work ~~~~~~~~~~~~~~~*/
+
+.work {
+	background-color: black;
+}
 
 // Banner
 .work-banner {
@@ -346,6 +370,58 @@ sticky-nav {
 }
 
 // Main
+.work-grid {
+	h2 {
+		font-family: Crimson-text, serif;
+		color: #88714D;
+		margin: 0 auto;
+		padding-top: 20px;
+		padding-left: 20px;
+		font-weight: lighter;
+	}
+	h1 {
+		font-family: built-titling;
+		color: white;
+		padding-left: 20px;
+		font-size: 75px;
+		font-weight: lighter;
+		margin-top: 0;
+	}
+	.darken {
+		// background: linear-gradient(
+    //   rgba(0, 0, 0, 0.9),
+    //   rgba(0, 0, 0, 0.9)
+    // );
+		background-color: rgba(0, 0, 0, 0.9);
+		position: relative;
+		height: 100%;
+		width: 100%;
+		cursor: pointer;
+		// transition: 1s;
+		&:hover {
+			content: '';
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			// background: linear-gradient(
+	    //   rgba(0, 0, 0, 0.5),
+	    //   rgba(0, 0, 0, 0.5)
+	    // );
+			background-color: rgba(0, 0, 0, 0.5);
+			// opacity: 0;
+			transition: all 0.5s ease-in-out;
+		}
+	}
+	.work-category {
+		bottom: 15px;
+    position: absolute;
+    color: white;
+    font-weight: lighter;
+    font-size: 20px;
+	}
+}
 
 /*~~~~~~~~~~~~~~~ About ~~~~~~~~~~~~~~~*/
 
@@ -396,12 +472,12 @@ sticky-nav {
 	.about-banner-video-container{
 		height: 100%;
 		width: 100%;
-		.banner-video{
+		.about-banner-video{
 			height: 100%;
 			width: 100%;
 		}
 	}
-	.banner-title-img{
+	.about-banner-title-img{
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -457,11 +533,9 @@ sticky-nav {
 		.clients-served-column{
 			height: auto;
 			margin-bottom: 5%;
-			img {
-				height: 80px;
-				// width: 194px;
-				// margin: 15.5px 93.5px;
-			}
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 }
@@ -568,11 +642,22 @@ sticky-nav {
 .slider-controls {
 	display: flex;
 	justify-content: space-between;
+	.slider-arrows {
+		display: flex;
+		justify-content: center;
+	}
 	.slider-buttons {
 		display: inline-flex;
 		.slick-dots {
 			display: inline-flex;
+			transform: translate(-25%);
 		}
+	}
+	.slider-pager {
+ 	color: #000;
+	}
+	.slider-pager-page.active {
+	color: #f90;
 	}
 }
 
@@ -593,7 +678,7 @@ sticky-nav {
 	}
 	.about-footer {
 		margin-left: -196px;
-
+		bottom: 0 !important;
 	}
 }
 
