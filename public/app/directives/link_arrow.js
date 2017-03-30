@@ -1,3 +1,5 @@
+// create by Khayyam Jones
+
 angular.module("topSecret")
 .directive('linkArrow', function() {
   return {
@@ -10,10 +12,8 @@ angular.module("topSecret")
       scope.toggleLine = function() {
         scope.isActive = !scope.isActive;
 
-        console.log('isActive: ', scope.isActive);
       }
-      // line.addEventListener('onMouseEnter', alert('enter'));
-      // line.addEventListener('onMouseLeave', alert('leave'));
+
     }
   };
 });

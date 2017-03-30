@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 // Controllers //
 var userController = require('./controllers/userController');
-
+var formController = require('./controllers/formController.js');
 // Services //
 var passport = require('./services/passport');
 
@@ -47,6 +47,9 @@ app.post('/register', userController.register);
 app.get('/user', userController.read);
 app.get('/me', isAuthed, userController.me);
 app.put('/user/:_id');
+
+// Form Endpoints //
+app.post('/api/form', formController.postForm);
 
 // Connections //
 var mongoURI = config.MONGO_URI;
