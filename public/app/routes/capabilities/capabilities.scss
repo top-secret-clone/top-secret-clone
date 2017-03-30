@@ -16,6 +16,7 @@ $offset: 550px;
 }
 
 .capabilities-container {
+  position: relative;
   width: 100vw;
   height: 5740px;
   margin: 0;
@@ -24,7 +25,7 @@ $offset: 550px;
   display: flex;
   flex-flow: column;
   align-items: center;
-  position: relative;
+  justify-content: center;
   color: white;
   overflow-x: hidden;
 
@@ -43,6 +44,8 @@ $offset: 550px;
   video {
     width: 100vw;
     z-index: 200;
+    overflow: hidden;
+    position: relative;
   }
 }
 
@@ -578,4 +581,237 @@ $offset: 550px;
   bottom: 0;
   height: 55px;
   z-index: 200;
+}
+
+.bottom-of-capabilities-page {
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  .capabilities-container {
+    height: 3780px;
+  }
+  .capabilities-title-container {
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+  .capabilities-banner {
+    video {
+      width: 1400px;
+    }
+  }
+  #capabilities-title {
+    width: 75vw;
+    position: absolute;
+    top: 25vh;
+    left: 11vw;
+    right: 0;
+  }
+  .parallax-container {
+    display: none;
+    opacity: 0;
+  }
+  .capabilities-main {
+    .sub-row {
+      flex-flow: column;
+    }
+  }
+  .capabilities-body {
+    margin: 0;
+    margin-top: 55px;
+    padding: 0 10px;
+    width: 100vw;
+    position: relative;
+    .main {
+      width: 100vw;
+      height: 400px;
+      position: relative;
+      top: initial;
+      h2 {
+        display: none;
+      }
+      h3 {
+        font-size: 22px;
+        color: $gold;
+        border: none;
+        text-align: left;
+        padding: 15px;
+        margin: 0;
+      }
+      p {
+        text-align: left;
+        padding: 15px;
+        line-height: 21px;
+      }
+    }
+    .strategy {
+      width: 100vw;
+      height: 470px;
+      position: relative;
+      top: initial;
+      h1 {
+        font-size: 42px;
+        letter-spacing: 4px;
+        text-align: left;
+        padding: 15px;
+        line-height: 19px;
+      }
+      p {
+        text-align: left;
+        padding: 15px;
+        line-height: 21px;
+      }
+      hr {
+        margin-left: 25px;
+      }
+      .learn-our-process {
+        text-align: left;
+      }
+      .learn-our-process::after{
+        display: none;
+      }
+      .contact-us {
+        text-align: left;
+      }
+    }
+    .advertising {
+      width: 100vw;
+      height: 550px;
+      position: relative;
+      top: initial;
+      margin: 0;
+      display: flex;
+      flex-flow: column;
+      h1 {
+        font-size: 42px;
+        letter-spacing: 4px;
+        text-align: left;
+        padding: 15px;
+        line-height: 19px;
+      }
+      hr {
+        margin-left: 25px;
+      }
+      p {
+        text-align: left;
+        line-height: 21px;
+      }
+      .sub-row {
+        .first-component{
+          position: relative;
+          top: 12px;
+        }
+      }
+      .case-study {
+        text-align: left;
+        padding-bottom: 0;
+      }
+      .case-study::after{
+        border: none;
+      }
+      .launch {
+        text-align: left;
+      }
+      .two {
+        margin: 0;
+      }
+    }
+    .design {
+      width: 100vw;
+      position: relative;
+      top: initial;
+      display: flex;
+      flex-flow: column;
+      margin: 0;
+      h1 {
+        font-size: 42px;
+        letter-spacing: 4px;
+        text-align: left;
+        padding: 15px;
+        line-height: 19px;
+      }
+      hr {
+        margin-left: 25px;
+      }
+      p {
+        text-align: left;
+        line-height: 19px;
+      }
+      .all-caps {
+        margin-top: -20px;
+      }
+      .case-study::after {
+        border: none;
+      }
+      .goldenLine {
+        span {
+          top: 0;
+        }
+      }
+    }
+    .interactive {
+      width: 100vw;
+      height: 630px;
+      position: relative;
+      top: initial;
+      margin: 0;
+      h1 {
+        font-size: 35px;
+        text-align: left;
+        padding: 15px;
+      }
+      p {
+        text-align: left;
+        line-height: 19px;
+      }
+      .sub-row {
+        .first-component{
+          position: relative;
+          top: 12px;
+        }
+      }
+      .case-study {
+        text-align: left;
+        padding-bottom: 0;
+      }
+      .case-study::after{
+        border: none;
+      }
+      .launch {
+        text-align: left;
+      }
+      .two {
+        margin: 0;
+      }
+      .goldenLine {
+        span {
+          top: 0;
+        }
+      }
+    }
+    .studios{
+      width: 100vw;
+      height: 630px;
+      position: relative;
+      top: initial;
+      margin: 0;
+      h1 {
+        font-size: 35px;
+        text-align: left;
+        padding: 15px;
+      }
+      p {
+        text-align: left;
+        line-height: 19px;
+      }
+      .case-study::after{
+        border: none;
+      }
+    }
+  }
+  .bottom-of-capabilities-page {
+    display: block;
+    width: 100vw;
+  }
 }

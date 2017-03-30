@@ -6,15 +6,11 @@ footer-dir {
   bottom: 0;
   width: 100vw;
   box-sizing: border-box;
-  // position: absolute;
-  // right: 0;
-  // bottom: 0;
-  // left: 0;
 }
 footer {
-  // position: relative;
   height: 55px;
   width: 100vw;
+  max-width: 100vw;
   padding: 17px 60px 10px 17px;
   background-color: black;
   background-image: url('./images/footer-bg.jpg');
@@ -43,14 +39,14 @@ footer {
       transform: translate(-8px, -28px);
     }
   }
-  a{
+  .icon a {
     font-family: 'Crimson Text', serif !important;
     font-size: 15px !important;
     text-transform: lowercase !important;
     color: $textColor;
     transition: 1s;
   }
-  a:hover {
+  .icon a:hover {
     color: $gold;
   }
   .social-media-footer {
@@ -61,6 +57,9 @@ footer {
   }
   .contact-email {
     a {
+      font-family: 'Crimson Text', serif !important;
+      font-size: 15px !important;
+      text-transform: lowercase !important;
       color: $textColor;
       transition: 0.25s;
     }
@@ -68,7 +67,54 @@ footer {
       color: white;
     }
   }
+  .social-media-icon {
+    a {
+      font-family: 'Crimson Text', serif !important;
+      font-size: 15px !important;
+      text-transform: lowercase !important;
+      color: $textColor;
+      transition: 0.5s;
+    }
+    a:hover {
+      color: $gold;
+    }
+  }
   .bottom-footer-width {
-    // width: 20px !important;
+    a {
+      color: $textColor;
+      font-family: 'Crimson Text', serif !important;
+      font-size: 15px !important;
+      text-transform: lowercase !important;
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  footer-dir {
+    position: absolute;
+    bottom: -100vh;
+    .media-footer {
+      height: 120px;
+      max-width: 100vw;
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-start;
+      .bottom-footer-width {
+        padding-left: 10px;
+        width: 90vw;
+      }
+    }
+    div i {
+      padding: 0px;
+      width: 33px;
+    }
+    .social-media-footer {
+      justify-content: center;
+      .social-media-icon {
+        padding: 0 15px;
+      }
+    }
+    footer {
+      padding: 0;
+    }
   }
 }

@@ -381,12 +381,15 @@ color: white;
   background-repeat: no-repeat;
   cursor: default;
 }
+
+
 //cool triangle in the background
 #cs-triangle{
   position: absolute;
   left: 50%;
   top: 30%;
   transform: translate(-50%);
+  cursor: pointer;
 }
 //little text thingy
 #cs-redacted{
@@ -406,18 +409,23 @@ color: white;
   }
 }
 
+#case-files-title{
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
 //case files hover heading
 .case-files-hover-title{
   position: absolute;
   font-family: 'Lora', serif;
   color: #88714d;
   letter-spacing: 2px;
-  top: 68%;
-  left: 39%;
+  top: 50%;
+  left: 40%;
   text-transform: uppercase;
-  font-size: large;
+  font-size: xx-large;
   opacity: 0;
-  transition-duration: .25s;
+  transition-duration: .5s;
   width: 30vw;
   z-index: -2;
 }
@@ -425,8 +433,21 @@ color: white;
   opacity: 0;
 }
 .case-files-hover:hover ~ .case-files-hover-title{
-  top: 58%;
+  top: 42%;
   opacity: 1;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px){
+  .case-files-hover-title {
+    width: 36vw;
+    left: 34%;
+  }
+  .case-files-hover:hover ~ .case-files-hover-title{
+    top: 52%;
+    opacity: 1;
+    cursor: pointer;
+  }
 }
 
 
@@ -459,4 +480,30 @@ color: white;
 .case-studies-main-column:hover .cs-hover-heading{
   opacity: 1;
  margin-top: 0;
+}
+
+
+@media only screen and (max-width: 1200px){
+  #case-files{
+    height: 100vh;
+  }
+
+  #cs-triangle{
+    top: 20%;
+  }
+  #cs-redacted{
+    top: 36%;
+  }
+
+  #case-files-title {
+    position: absolute;
+    top: 18%;
+    left: 34%;
+  }
+
+  .case-files-hover:hover ~ .case-files-hover-title{
+    top: 37%;
+    opacity: 1;
+    cursor: pointer;
+  }
 }

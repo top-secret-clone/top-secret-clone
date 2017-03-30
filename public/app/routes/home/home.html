@@ -23,9 +23,15 @@
             <div id="view-strike-thru"></div>
         </div>
 
+            <div class="main-reel-vid">
+                <video>
+                    <source src="https://01-lvl3-pdl.vimeocdn.com/01/4914/4/124574880/359408239.mp4?expires=1490893895&amp;token=0f6afb22e0fdb4d72ff4a">
+                </video>
+            </div>
 
 
-            <div class="case-studies-container">
+
+            <div class="case-studies-container" ui-sref="caseStudies">
 
                 <div id="case-studies">
 
@@ -53,7 +59,7 @@
 
             <div class="about-sts-container">
                 <div class="about-sts">
-                    <img class="about-hover" id="triangle" src="http://www.wearetopsecret.com/images/new-landing/about-eye.png">
+                    <img class="about-hover" id="triangle" ui-sref="about" src="http://www.wearetopsecret.com/images/new-landing/about-eye.png">
                     <p class="about-hover" id="about-sts-title">about sts</p>
                     <img id="redacted" src="http://www.wearetopsecret.com/images/case-studies/case-files-redacted.png">
                     <div class="fade-heading-top"><p>calculated.</p><p>methodical.</p></div>
@@ -68,19 +74,18 @@
 
             <div class="bottom-three-container">
                 <div class="home-bottom-three-wrapper">
-                    <div class="bottom-three">
+                    <div class="bottom-three" id="bthree-work">
                         <img  id="work" src="http://www.wearetopsecret.com/images/view-work-cta.jpg">
                     </div>
-                    <div class="bottom-three">
-
+                    <div class="bottom-three" id="bthree-capabilities">
                         <img  id="capabilities" src="http://www.wearetopsecret.com/images/new-landing/Capabilities.jpg">
                     </div>
-                    <div class="bottom-three">
+                    <div class="bottom-three" id="bthree-connect">
                         <img  id="connect" src="http://www.wearetopsecret.com/images/join-team-cta.jpg">
                     </div>
                 </div>
                 <div class="bottom-three-titles">
-                    <div class="bottom-three-title-wrapper" id="work-hover-hack">
+                    <div class="bottom-three-title-wrapper" id="work-hover-hack" ui-sref="work">
 
                         <gold-outline cname="'work'"></gold-outline>
                         <p class="bottom-three-title" id="work-three-title">work</p>
@@ -101,7 +106,7 @@
 
                         </div>
                     </div>
-                    <div class="bottom-three-title-wrapper" id="capabilities-hover-hack">
+                    <div class="bottom-three-title-wrapper" id="capabilities-hover-hack" ui-sref="capabilities">
                         <gold-outline cname="'capabilities'"></gold-outline>
                         <p class="bottom-three-title" id="capa-three-title">capabilities</p>
                         <div class="view-case">
@@ -113,14 +118,14 @@
                             </div>
 
                             <div class="view-case-inner">
-                                <p class="view-case-p"><strong>meet the crew</strong></p>
+                                <p class="view-case-p"><strong>view offerings</strong></p>
                                 <div id="view-offerings-strike"></div>
                                 <span class="view-case-arrow"></span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bottom-three-title-wrapper" id="connect-hover-hack">
+                    <div class="bottom-three-title-wrapper" id="connect-hover-hack" ui-sref="connect">
                         <gold-outline cname="'connect'"></gold-outline>
                         <p class="bottom-three-title" id="con-three-title">connect</p>
                         <div class="view-case">
@@ -143,9 +148,9 @@
 
             </div> <!-- end bottom-three-container -->
 
-            <!--<span class='home-footer' id="home-footer">-->
-                  <!--<footer-dir></footer-dir>-->
-                <!--</span>-->
+            <span class='home-footer' id="home-footer">
+                  <footer-dir style="width: 98vw; overflow: hidden;"></footer-dir>
+                </span>
 
         </div>
 

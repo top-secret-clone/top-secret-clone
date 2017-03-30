@@ -35,50 +35,6 @@
   opacity: 1;
 }
 
-
-//Styling for the hamburger menu
-// #hamburger_menu {
-//   height: 100%;
-//   width: 100%;
-//   cursor: pointer
-// }
-// @media (max-width: 667px) {
-//    #hamburger_menu {
-//     width:57px;
-//   }
-// }
-// .gold_fill {
-//   fill: #89714D
-// }
-//
-// .gray_fill {
-//   fill: #B7B7B8
-// }
-//  #hamburger_menu #box_tight #hamburger_menu #box rect {
-//   fill: #89714D
-// }
-//  #hamburger_menu {
-//   width: 67px;
-//   cursor: pointer
-// }
-// #hamburger_menu #box_tight #hamburger_menu #box rect {
-//   fill: #89714D
-// }
-// //hamburger sections
-//
-// .home-nav-container {
-//   position: fixed;
-//   top: 3vh;
-//   left: 3vh;
-// }
-// .home-nav {
-//   position: absolute;
-// }
-//end of hamburger menu style
-
-
-
-
 #home-main-header{
   margin-top: 37vh;
 }
@@ -122,12 +78,7 @@
   width: 5%;
   letter-spacing: 4px;
 }
-@media only screen and (max-width: 1200px){
-  #view-reel{
-    top: 58%;
-    width: 9%;
-  }
-}
+
 #view-strike-thru{
   position: absolute;
   top: 56.25%;
@@ -137,14 +88,9 @@
   background-color: #88714d;
   transition: .25s ease;
 }
-@media only screen and (max-width: 1200px){
-  #view-strike-thru{
-    top: 63%;
-    left: 43%;
-  }
-}
+
 #view-reel:hover + #view-strike-thru{
-  width: 105px;
+  width: 110px;
 }
 #view-reel:after {
   content: url('http://www.wearetopsecret.com/images/arrow-tip-forward.png');
@@ -198,15 +144,6 @@
   overflow: hidden;
   display: block;
   background-size: cover;
-}
-@media only screen and (max-width: 1200px){
-  .case-studies-container{
-    height: 70vh;
-  }
-  #case-studies{
-    width: 90vw;
-    margin-left: 4vw;
-  }
 }
 
 
@@ -301,17 +238,6 @@
   transition: .25s ease;
 }
 
-@media only screen and (max-width: 1200px){
-  #home-view-case-studies{
-    width: 14%;
-  }
-  #home-view-strike-thru{
-    top: 64%;
-    left: 41%;
-  }
-}
-
-
 
 //styling for all the hover animations on case studies
 #case-studies:hover {
@@ -356,6 +282,7 @@
   color: #88714D;
   text-transform: uppercase;
   font-family: 'built-titling', sans-serif;
+  transition-duration: 1s;
 }
 #triangle{
   z-index: 1;
@@ -403,14 +330,7 @@
   opacity: 0;
   transition-duration: .5s;
 }
-@media only screen and(max-width: 1200px) {
-  .fade-heading-top{
-    margin-top: 44px;
-  }
-  .fade-heading-bottom{
-    margin-top: 54px;
-  }
-}
+
 
 
 .about-us {
@@ -438,14 +358,10 @@
   left: -25%;
   transition-duration: .25s;
 }
-@media only screen and (max-width: 1200px){
-  .about-us{
-    top: 85%;
-  }
-}
+
 
 .about-sts:hover #about-sts-title{
-  color: #313131;
+  color: #000000;
 }
 .about-sts:hover .fade-heading-top{
   opacity: 1;
@@ -469,7 +385,7 @@
   width: 100%;
   margin: 0 0 0 0;
   display: flex;
-  align-content: center;
+  align-content: center
 }
 .home-bottom-three-wrapper{
   position: relative;
@@ -496,6 +412,7 @@
   position: relative;
   height: 100%;
   width: 100%;
+  cursor: pointer;
 }
 .bottom-three-title{
   font-size: 500%;
@@ -551,7 +468,7 @@
   background-color: #88714d;
   height: 1px;
   width: 0;
-  top: 47%;
+  top: 49%;
   left: -16%;
   transition-duration: .25s;
 }
@@ -560,7 +477,7 @@
   background-color: #88714d;
   height: 1px;
   width: 0;
-  top: 47%;
+  top: 49%;
   left: -16%;
   transition-duration: .25s;
 }
@@ -569,16 +486,16 @@
   background-color: #88714d;
   height: 1px;
   width: 0;
-  top: 47%;
+  top: 49%;
   left: -20%;
   transition-duration: .25s;
 }
 
 #work-hover-hack:hover #view-thegoods-strike{
-  width: 150px;
+  width: 147px;
 }
 #capabilities-hover-hack:hover #view-offerings-strike{
-  width: 150px;
+  width: 141px;
 }
 #connect-hover-hack:hover #view-office-strike{
   width: 118px;
@@ -633,6 +550,8 @@
 }
 
 
+
+
 //home footer
 .home-footer-container{
   position: relative;
@@ -646,4 +565,137 @@
   position: relative;
   left: -1060px;
   bottom: -80px;
+}
+
+//media queries
+
+@media only screen and (max-width: 1200px){
+  #view-strike-thru{
+    top: 63%;
+    left: 43%;
+  }
+}
+
+@media only screen and (max-width: 1200px){
+  .case-studies-container{
+    height: 70vh;
+  }
+  #case-studies{
+    width: 90vw;
+    margin-left: 4vw;
+  }
+}
+
+@media only screen and (max-width: 1200px){
+  #home-view-case-studies{
+    width: 14%;
+  }
+  #home-view-strike-thru{
+    top: 64%;
+    left: 41%;
+  }
+}
+
+@media only screen and(max-width: 1200px) {
+  .fade-heading-top{
+    margin-top: 44px;
+  }
+  .fade-heading-bottom{
+    margin-top: 54px;
+  }
+}
+
+@media only screen and (max-width: 1200px){
+  .about-us{
+    top: 85%;
+  }
+}
+
+@media only screen and (max-width: 1200px){
+  .home-main-container {
+    height: 325%;
+  }
+
+  .bottom-three-container{
+    top: 110vh;
+  }
+
+  .bottom-three-title {
+    font-size: 384%;
+    letter-spacing: 5px;
+    z-index: 3;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    position: absolute;
+    color: #88714D;
+    text-transform: uppercase;
+    font-family: 'built-titling', sans-serif;
+  }
+
+  .bthree-fade-heading {
+    opacity: 0;
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 73%;
+    transform: translate(-50%, -479%);
+    width: 140%;
+    font-size: small;
+    letter-spacing: 2px;
+    transition-duration: .25s;
+  }
+
+  .bthree-fade-div {
+    height: 1px;
+    background-color: #777777;
+    width: 68%;
+    left: -2%;
+    position: absolute;
+  }
+
+  #view-reel {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: x-large;
+    color: white;
+    font-family: 'built-titling', sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    top: 58%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    width: 9%;
+    letter-spacing: 4px;
+  }
+
+  #work{
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  #capabilities{
+    display: none;
+  }
+  #connect {
+    display: none;
+  }
+
+  #bthree-work{
+    background-image: url("http://www.wearetopsecret.com/images/view-work-cta.jpg");
+    //background-position-x: 50%;
+    //background-attachment: fixed;
+
+  }
+  #bthree-capabilities{
+    background-image: url("http://www.wearetopsecret.com/images/new-landing/Capabilities.jpg");
+    //background-attachment: fixed;
+  }
+  #bthree-connect {
+    background-image: url("http://www.wearetopsecret.com/images/join-team-cta.jpg");
+    //background-attachment: fixed;
+  }
+
 }
