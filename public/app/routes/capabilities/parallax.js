@@ -1,3 +1,5 @@
+// created by Khayyam Jones
+
 angular.module("topSecret")
 .directive("parallax", function($window) {
   return {
@@ -5,7 +7,7 @@ angular.module("topSecret")
     scope: {
       start: '@',
       foo: '@className',
-      parallaxScroll: '='
+      // parallaxScroll: '='
     },
     link: function (scope, elem, attrs) {
       const win = $(window);
@@ -25,14 +27,12 @@ angular.module("topSecret")
       }
 
       if (winWidth > 750) { /* size of screen when media queries begin */
-        console.log('adjusted start for full-screen effect');
         $(section).css('top', startPosition);
       }
 
       setTimeout(function() {
           $(window).scroll( () => {
             if (winWidth > 750) { /* if width < 750 don't run parallax function */
-              console.log("winWidth > 750px");
 
               var scrollTop = pageYOffset;
               var startAnimation = start + adjustedViewHeight;
@@ -46,7 +46,6 @@ angular.module("topSecret")
 
               /* while item is on screen */
               if (scrollTop > startAnimation && scrollTop <= endAnimation) {
-                console.log('engaging parallax-->', section)
                 var translate = 'translateY('+scope.parallaxScroll+'px)'
                 $(section).addClass('test');
                 $(section).css('transform', translate);

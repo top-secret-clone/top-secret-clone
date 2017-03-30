@@ -1,3 +1,5 @@
+// created by Khayyam Jones
+
 angular.module('topSecret')
 .directive('menuDir', function() {
   return {
@@ -6,7 +8,6 @@ angular.module('topSecret')
     link: function(scope, elem, attrs) {
       scope.menuDisplay = false;
       scope.crossoutActive = false;
-      console.log('menuDisplay:', scope.menuDisplay, 'crossoutActive', scope.crossoutActive);
       const
         overlayActive = { 'background-color': 'rgba(0,0,0,0.9)' },
         overlayInactive = { 'background-color': 'rgba(0,0,0,0)' },
@@ -31,11 +32,9 @@ angular.module('topSecret')
 
       } /* end of navMenu toggle function */
       scope.navOver = function() {
-        console.log('mouseEnter-->',scope.crossoutActive)
         scope.crossoutActive = true;
       }
       scope.navOut = function() {
-        console.log('<--mouseLeave', scope.crossoutActive)
         scope.crossoutActive = false;
       }
 

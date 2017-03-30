@@ -1,3 +1,5 @@
+// created by Khayyam Jones
+
 angular.module('topSecret')
 .directive('connectForm', function($http) {
   return {
@@ -7,13 +9,13 @@ angular.module('topSecret')
 
       $scope.submitForm = function(connect) {
         console.log('form submitted...');
-        // return http.get({
-        //   method: 'POST',
-        //   url: '',
-        //   data: connect
-        // }).then( function(response) {
-        //   return response.data;
-        // })
+        return http.get({
+          method: 'POST',
+          url: '/api/form',
+          data: connect
+        }).then( function(response) {
+          return response.data;
+        })
       }
     } /* end of controller */
   } /* end of return object */
