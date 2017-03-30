@@ -381,6 +381,8 @@ color: white;
   background-repeat: no-repeat;
   cursor: default;
 }
+
+
 //cool triangle in the background
 #cs-triangle{
   position: absolute;
@@ -478,4 +480,30 @@ color: white;
 .case-studies-main-column:hover .cs-hover-heading{
   opacity: 1;
  margin-top: 0;
+}
+
+
+@media only screen and (max-width: 1200px){
+  #case-files{
+    height: 100vh;
+  }
+
+  #cs-triangle{
+    top: 20%;
+  }
+  #cs-redacted{
+    top: 36%;
+  }
+
+  #case-files-title {
+    position: absolute;
+    top: 18%;
+    left: 34%;
+  }
+
+  .case-files-hover:hover ~ .case-files-hover-title{
+    top: 37%;
+    opacity: 1;
+    cursor: pointer;
+  }
 }
