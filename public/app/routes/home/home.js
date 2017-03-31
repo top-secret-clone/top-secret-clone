@@ -36,4 +36,80 @@ angular.module("topSecret")
         $window.FluidEffect.start();
     }, 0);
 
+    //video controls
+    let video = document.getElementById('video');
+
+    let playButton = document.getElementById('play-pause');
+    let mute = document.getElementById('mute');
+    let fullScreen = document.getElementById('full-screen');
+
+    let seekBar = document.getElementById('seek-bar');
+    let volumeBar = document.getElementById('volume-bar');
+
+    playButton.addEventListener('click', function(){
+       if(video.paused == true){
+           video.play();
+
+           playButton.innerHTML = 'Pause'
+       } else{
+           video.pause();
+           playButton.innerHTML = 'Play'
+       }
+
+    });
+
+    mute.addEventListener('click', function(){
+        if(video.muted == false){
+            video.muted = true;
+            mute.innerHTML = 'Unmute'
+        } else {
+            video.muted = false;
+
+            mute.innerHTML = 'Mute'
+        }
+    });
+
+    fullScreen.addEventListener('click', function(){
+       if(video.requestFullScreen){
+           video.requestFullScreen();
+       }  else if (video.mozRequestFullScreen){
+           video.mozRequestFullScreen();
+       } else if (video.webkitRequestFullScreen){
+           video.webkitRequestFullScreen();
+       }
+    });
+
+    seekBar.addEventListener('change', function(){
+        let time = video.duration * (seekBar.value / 100)
+        video.currentTime = time;
+    });
+
+    video.addEventListener('timeupdate', function(){
+       let value = (100 / video.duration) * video.currentTime;
+       seekBar.value = value;
+    });
+
+    seekBar.addEventListener('mousedown', function(){
+        video.pause();
+    });
+    seekBar.addEventListener('mouseup', function(){
+       video.play();
+        playButton.innerHTML = 'Pause'
+    });
+
+    volumeBar.addEventListener('change', function () {
+        video.volume = volumeBar.value;
+    });
+
+    $scope.showVid = function(){
+        document.getElementsByClassName('main-reel-vid')[0].style.display = 'inline';
+    };
+    $scope.hideVid = function(){
+        document.getElementsByClassName('main-reel-vid')[0].style.display = 'none';
+        video.load();
+        seekBar.value = 0;
+        playButton.innerHTML = 'Play'
+    };
+
+
 });

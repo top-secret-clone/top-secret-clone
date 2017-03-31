@@ -19,14 +19,24 @@
             </div>
 
             <!--this is the view reel with the elements for the strike thru on hover-->
-            <p id="view-reel"><strong>view reel</strong></p>
+            <p id="view-reel" ng-click="showVid()"><strong>view reel</strong></p>
             <div id="view-strike-thru"></div>
         </div>
 
-            <div class="main-reel-vid">
-                <video>
+            <div class="main-reel-vid" style="position: absolute">
+                <div id="video-exit">
+                    <span ng-click="hideVid()">exit</span>
+                </div>
+                <video id="video">
                     <source src="https://01-lvl3-pdl.vimeocdn.com/01/4914/4/124574880/359408239.mp4?expires=1490893895&amp;token=0f6afb22e0fdb4d72ff4a">
                 </video>
+                <div id="video-controls" ng-model="video">
+                    <button id="play-pause" ng-model="video.play">play</button>
+                    <input type="range" id="seek-bar" value="0" ng-model="video.seekBar">
+                    <button id="mute" ng-model="video.mute">mute</button>
+                    <input ng-model="video.volumeBar" type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
+                    <button  ng-model="video.fullScreen" type="button" id="full-screen">Full Screen</button>
+                </div>
             </div>
 
 
