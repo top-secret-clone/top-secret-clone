@@ -329,6 +329,8 @@ sticky-nav {
 	height: $stickyNavHeight;
 }
 
+
+
 // 9.) Pages:
 // ~~~~~~~~~~
 
@@ -420,6 +422,25 @@ sticky-nav {
     color: white;
     font-weight: lighter;
     font-size: 20px;
+	}
+}
+
+@media only screen
+and (max-width: 1100px){
+	.sticky-nav-list {
+		visibility: hidden;
+	}
+}
+
+@media only screen
+and (max-width: 800px){
+	.work-grid {
+		h1 {
+			font-size: 50px;
+		}
+		h2 {
+			font-size: 25px;
+		}
 	}
 }
 
